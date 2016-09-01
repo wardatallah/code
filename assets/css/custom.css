@@ -37,3 +37,12 @@
 footer .footer-logo a img {
     width: 275px;
 }
+
+
+.furniture .parallex-fur .overlay.banner {
+	    padding: 60px 0 !important;
+}
+
+.parallex .btn.margin-top-20 {
+	margin-top: 20px !important;
+}

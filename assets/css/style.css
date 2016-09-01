@@ -308,7 +308,7 @@ section {
 	text-transform: uppercase;
 }
 .tittle p {
-	color: #b8b8b8;
+	color: #000000;
 	font-style: italic;
 	letter-spacing: 3px;
 	margin-bottom: 0px;
@@ -3668,8 +3668,8 @@ footer .flicker img {
 }
 .tittle-cont hr {
 	width: 80px;
-	height: 16px;
-	background: #ffc000;
+	height: 10px;
+	background: #0b479d;
 	-webkit-transform: skew(-40deg);
 	-moz-transform: skew(-40deg);
 	-o-transform: skew(-40deg);

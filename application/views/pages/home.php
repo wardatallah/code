@@ -274,14 +274,40 @@
       </div>
     </section>
     
+	
+	<!--======= WHAT WE DO  =========-->
+    <section class="section-p-30px feature-con">
+      <div class="container"> 
+        
+        <!-- TITTLE -->
+        <div class="tittle tittle-cont  animate fadeInUp" data-wow-delay="0.4s">
+          <h3>WELCOME TO INTERMED CERAMICA</h3>
+          <hr>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised </p>
+        </div>
+      </div>
+    </section>
+	
+	
+	<!--======= PARALLAX SECTION =========-->
+    <section class="parallex parallex-fur animate fadeInUp" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
+      <div class="overlay banner">
+        <div class="container">
+          <div class="col-sm-8"><h3 class="text-left" >Get a Quote .... </h3></div>
+          <div class="col-sm-4"><a href="#." class="btn margin-top-20">NOW</a> </div>
+		</div>
+      </div>
+    </section>
+	
+	
     <!--======= FURNITURE ITEMS =========-->
     <section class="section-p-60px no-padding-b">
       <div class="container"> 
         <!--  Tittle -->
         <div class="tittle tittle-2 animate fadeInUp" data-wow-delay="0.4s">
-          <h5>NEW ARRIVAL</h5>
+          <h5>Trending</h5>
           <hr>
-          <p>Treding 2015</p>
+          <p>2015</p>
         </div>
       </div>
       
@@ -468,15 +494,184 @@
         </li>
       </ul>
     </section>
-    
-    <!--======= PARALLAX SECTION =========-->
+	
+	
+	<!--======= PARALLAX SECTION =========-->
     <section class="parallex parallex-fur animate fadeInUp" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
-      <div class="overlay">
+      <div class="overlay banner">
         <div class="container">
-          <h3>Local Love: Coffee Meets Design at SF's Coffee Bar</h3>
-          <a href="#." class="btn">LEARN MORE</a> </div>
+          <div class="col-sm-8"><h3 class="text-left" >Get a Quote .... </h3></div>
+          <div class="col-sm-4"><a href="#." class="btn margin-top-20">NOW</a> </div>
+		</div>
       </div>
     </section>
+	
+	
+	<!--======= Portfolio =========-->
+    <section class="section-p-60px portfolio port-wrap portfolio-style-2">
+      <div class="container"> 
+        
+        <!--======= NAV LINKS =========-->
+        <ul class="nav-links filter filter-style-2 animate fadeInUp" data-wow-delay="0.4s">
+          <li><a class="active" href="#." data-filter="*">ALL</a></li>
+          <li><a href="#" data-filter=".int">MEN’S</a></li>
+          <li><a href="#" data-filter=".arch">WOMAN</a></li>
+          <li><a href="#" data-filter=".build">ACCESSORIES</a></li>
+          <li><a href="#" data-filter=".plumb">SHOES</a></li>
+        </ul>
+      </div>
+      <div class="container"> 
+        <!-- Portfolio Row -->
+        <ul class="port-folio-row row col-4 items animate fadeInUp" data-wow-delay="0.4s">
+          
+          <!-- Project 1 -->
+          <li class="item int plumb">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item  plumb">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-2.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int plumb">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-3.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item  build plumb">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-4.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-5.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-6.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"><a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-7.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-8.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-9.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-10.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-11.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+          
+          <!-- Project 1 -->
+          <li class="item int arch build col-sm-3">
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/portfolio-img-9.jpg" alt=""> 
+              <!-- Hover Info -->
+              <div class="hover-port">
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
+                  <h6>Mieux Derma Art Direction</h6>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    
   </div>
   
   
