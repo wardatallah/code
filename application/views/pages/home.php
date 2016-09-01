@@ -6,7 +6,7 @@
         <ul>
           
           <!-- Slider 1 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="images/slides/slide-17.jpg" data-bgposition="center top" alt="" />
+          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/slide-17.jpg" data-bgposition="center top" alt="" />
             <div class="tp-caption sfr tp-resizeme" 
                   data-x="right" 
                   data-y="300"
@@ -19,7 +19,7 @@
                   data-elementdelay="0.1" 
                   data-endelementdelay="0.1" 
                   data-endspeed="300" 
-                  data-captionhidden="on"><img src="images/slides/slide-17-2.png"  alt="" > </div>
+                  data-captionhidden="on"><img src="<?php echo base_url().'assets/'; ?>images/slides/slide-17-2.png"  alt="" > </div>
             
             <!-- Layer -->
             <div class="tp-caption sfb  font-montserrat text-center tp-resizeme" 
@@ -73,7 +73,7 @@
           </li>
           
           <!-- Slider 2 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="images/slides/slide-18.jpg" data-bgposition="center top" alt="" /> 
+          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/slide-18.jpg" data-bgposition="center top" alt="" /> 
             <!-- Layer -->
             <div class="tp-caption sfr tp-resizeme" 
                   data-x="right" 
@@ -87,7 +87,7 @@
                   data-elementdelay="0.1" 
                   data-endelementdelay="0.1" 
                   data-endspeed="300" 
-                  data-captionhidden="on"><img src="images/slides/slide-18-1.png"  alt="" > </div>
+                  data-captionhidden="on"><img src="<?php echo base_url().'assets/'; ?>images/slides/slide-18-1.png"  alt="" > </div>
             
             <!-- Layer -->
             <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
@@ -139,7 +139,7 @@
           </li>
           
           <!-- Slider 3 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="images/slides/slide-19.jpg" data-bgposition="center top" alt="" /> 
+          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/slide-19.jpg" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
             <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
@@ -201,7 +201,7 @@
       <div class="fur-slide"> 
         
         <!--  ITEM 1 -->
-        <div class="item"> <img src="images/furniture/large-img-1.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-1.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -213,7 +213,7 @@
         </div>
         
         <!--  ITEM 2 -->
-        <div class="item"> <img src="images/furniture/large-img-2.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-2.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -225,7 +225,7 @@
         </div>
         
         <!--  ITEM 1 -->
-        <div class="item"> <img src="images/furniture/large-img-1.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-1.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -237,7 +237,7 @@
         </div>
         
         <!--  ITEM 2 -->
-        <div class="item"> <img src="images/furniture/large-img-2.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-2.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -249,7 +249,7 @@
         </div>
         
         <!--  ITEM 1 -->
-        <div class="item"> <img src="images/furniture/large-img-1.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-1.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -261,7 +261,7 @@
         </div>
         
         <!--  ITEM 2 -->
-        <div class="item"> <img src="images/furniture/large-img-2.jpg" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/furniture/large-img-2.jpg" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -291,10 +291,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.2s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-1.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-1.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-1.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-1.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -309,10 +309,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.4s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-2.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-2.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-2.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-2.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -327,10 +327,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.6s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-3.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-3.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-3.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-3.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -345,10 +345,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.8s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-4.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-4.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-4.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-4.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -363,10 +363,10 @@
         <li class="animate fadeInUp" data-wow-delay="1s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-5.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-5.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-5.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-5.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -381,10 +381,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.2s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-6.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-6.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-6.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-6.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -399,10 +399,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.4s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-7.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-7.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-7.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-7.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -417,10 +417,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.6s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-8.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-8.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-8.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-8.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -435,10 +435,10 @@
         <li class="animate fadeInUp" data-wow-delay="0.8s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-9.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-9.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-9.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-9.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>
@@ -453,10 +453,10 @@
         <li class="animate fadeInUp" data-wow-delay="1s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="images/furniture/item-10.jpg" alt="" > 
+            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/furniture/item-10.jpg" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="images/furniture/item-10.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/furniture/item-10.jpg" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6>LOOSE-FIT TRENCH COAT</h6>

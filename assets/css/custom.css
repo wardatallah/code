@@ -3,3 +3,37 @@
 	
 	IT WILL BE HELPFUL FOR YOU IN FUTURE UPDATES
 -------------------------------------------------------------------*/
+
+
+
+
+.search-box {
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 400px;
+}
+
+@media (max-width: 767px){
+.ownmenu > li > a {
+    padding: 10px 0;
+    text-align: left;
+    color: #ffffff !important;
+}
+
+
+.logo img {
+    width: 250px;
+}
+
+.loader img {
+    width: 250px;
+}
+
+}
+
+
+footer .footer-logo a img {
+    width: 275px;
+}

@@ -14,7 +14,7 @@
     
     <!--======= ABOUT IMG LARGE =========-->
     <div class="row">
-      <div class="col-md-6 animate fadeInLeft" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/about-img-1.jpg" alt=""> </div>
+      <div class="col-md-6 animate fadeInLeft" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/about-img-1.jpg" alt=""> </div>
       <div class="col-md-6 animate fadeInRight" data-wow-delay="0.4s"> 
         <!--======= About Us =========-->
         <section class="section-p-30px about-us about-con">
@@ -85,7 +85,7 @@
           </div>
           
           <!--  Video Section -->
-          <div class="col-md-7 animate fadeInRight" data-wow-delay="0.4s"> <img src="<?php echo base_url(); ?>images/about-img-3.jpg" alt=""> 
+          <div class="col-md-7 animate fadeInRight" data-wow-delay="0.4s"> <img src="<?php echo base_url().'assets/'; ?>images/about-img-3.jpg" alt=""> 
             
             <!--  Video Section -->
             <div class="position-center-center"> <a href="#pop-open" class="link popup-vedio video-btn"></a> </div>
@@ -115,7 +115,7 @@
       <ul>
         
         <!-- TEAM 1 -->
-        <li class="animate fadeInUp" data-wow-delay="0.2s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/team-2-1.jpg" alt="" > 
+        <li class="animate fadeInUp" data-wow-delay="0.2s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/team-2-1.jpg" alt="" > 
           <!-- TEAM HOVE -->
           <div class="over-team">
             <h4>JOHN DOE</h4>
@@ -133,7 +133,7 @@
         </li>
         
         <!-- TEAM 2 -->
-        <li class="animate fadeInUp" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/team-2-2.jpg" alt="" > 
+        <li class="animate fadeInUp" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/team-2-2.jpg" alt="" > 
           <!-- TEAM HOVE -->
           <div class="over-team">
             <h4>MARRY DOE</h4>
@@ -151,7 +151,7 @@
         </li>
         
         <!-- TEAM 3 -->
-        <li class="animate fadeInUp" data-wow-delay="0.6s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/team-2-3.jpg" alt="" > 
+        <li class="animate fadeInUp" data-wow-delay="0.6s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/team-2-3.jpg" alt="" > 
           <!-- TEAM HOVE -->
           <div class="over-team">
             <h4>LADY TECH</h4>
@@ -169,7 +169,7 @@
         </li>
         
         <!-- TEAM 4 -->
-        <li class="animate fadeInUp" data-wow-delay="0.8s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/team-2-4.jpg" alt="" > 
+        <li class="animate fadeInUp" data-wow-delay="0.8s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/team-2-4.jpg" alt="" > 
           <!-- TEAM HOVE -->
           <div class="over-team">
             <h4>JOHN DOE</h4>
@@ -187,7 +187,7 @@
         </li>
         
         <!-- TEAM 5 -->
-        <li class="animate fadeInUp" data-wow-delay="1s"> <img class="img-responsive" src="<?php echo base_url(); ?>images/team-2-5.jpg" alt="" > 
+        <li class="animate fadeInUp" data-wow-delay="1s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/team-2-5.jpg" alt="" > 
           <!-- TEAM HOVE -->
           <div class="over-team">
             <h4>MARRY DOE</h4>
