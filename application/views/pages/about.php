@@ -49,6 +49,31 @@
             <p>Fast & pro 24/7</p>
           </li>
         </ul>
+		
+		
+        <ul class="row">
+          <!--  WORLD WIDE SHIP -->
+          <li class="col-sm-4  animate fadeInLeft" data-wow-delay="0.4s">
+            <div class="icon"><i class="fa fa-clock-o"></i></div>
+            <h5>WORLD WIDE SHIP</h5>
+            <p>All oder over $85.00</p>
+          </li>
+          
+          <!--  MONEY BACK -->
+          <li class="col-sm-4  animate fadeInUp" data-wow-delay="0.6s">
+            <div class="icon"><i class="fa fa-dollar"></i></div>
+            <h5>MONEY BACK</h5>
+            <p>100% Money back - 30 Days</p>
+          </li>
+          
+          <!--  BEST SUPPORT -->
+          <li class="col-sm-4  animate fadeInRight" data-wow-delay="0.8s">
+            <div class="icon"><i class="fa fa-whatsapp"></i></div>
+            <h5>BEST SUPPORT</h5>
+            <p>Fast & pro 24/7</p>
+          </li>
+        </ul>
+		
       </div>
     </section>
     
