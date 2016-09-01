@@ -1987,7 +1987,7 @@ header .ownmenu .look-book .media-body a {
 	height: 100%;
 	width: 100%;
 	padding: 30px;
-	background: rgba(175,88,117,0.9);
+	background: rgba(11, 72, 157, 0.7);
 	opacity: 0;
 	text-align: center;
 	-webkit-transition: all 0.4s ease-in-out;
@@ -3074,20 +3074,11 @@ header .ownmenu .look-book .media-body a {
 	letter-spacing: 1px;
 }
 .welcome .tittle hr {
-	/*
 	height: 3px;
 	width: 58px;
 	margin: 20px auto;
 	border: none;
 	background: #272727;
-	*/
-	width: 80px;
-    height: 10px;
-    background: #0b479d;
-    -webkit-transform: skew(-40deg);
-    -moz-transform: skew(-40deg);
-    -o-transform: skew(-40deg);
-    transform: skew(-40deg);
 }
 .welcome ul {
 	margin-top: 10px;
@@ -4494,12 +4485,12 @@ footer .flicker img {
       FURNITURE
 ========================================================*/
 .furniture p {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 0px;
 }
 .furniture .tittle p {
 	font-family: 'Playfair Display', serif;
-	letter-spacing: 1.5px;
+	letter-spacing: 3px;
 }
 .furniture-large .item-hover {
 	background: rgba(0,0,0,0.8);
@@ -4588,7 +4579,7 @@ footer .flicker img {
 	left: 0px;
 	bottom: -100%;
 	width: 100%;
-	background: #6d831c;
+	background: #0b479d;
 	padding: 25px 20px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;

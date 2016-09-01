@@ -510,17 +510,6 @@
 	<!--======= Portfolio =========-->
     <section class="section-p-60px portfolio port-wrap portfolio-style-2">
       <div class="container"> 
-        
-        <!--======= NAV LINKS =========-->
-        <ul class="nav-links filter filter-style-2 animate fadeInUp" data-wow-delay="0.4s">
-          <li><a class="active" href="#." data-filter="*">ALL</a></li>
-          <li><a href="#" data-filter=".int">MEN’S</a></li>
-          <li><a href="#" data-filter=".arch">WOMAN</a></li>
-          <li><a href="#" data-filter=".build">ACCESSORIES</a></li>
-          <li><a href="#" data-filter=".plumb">SHOES</a></li>
-        </ul>
-      </div>
-      <div class="container"> 
         <!-- Portfolio Row -->
         <ul class="port-folio-row row col-4 items animate fadeInUp" data-wow-delay="0.4s">
           

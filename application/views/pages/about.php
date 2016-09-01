@@ -1,7 +1,18 @@
 <div class="content"> 
-    
-    <!--======= SUB BANNER =========-->
-	<section class="section-p-60px services welcome no-padding-b">
+        <!--======= SUB BANNER =========-->
+	  <section class="sub-banner animate fadeInUp" data-wow-delay="0.4s">
+		<div class="container">
+		  <h4>ABOUT US</h4>
+		  <!-- Breadcrumb -->
+		  <ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li class="active">ABOUT US</li>
+		  </ol>
+		</div>
+	  </section>
+	  
+	  
+	<section class="section-p-60px services welcome">
       <div class="container"> 
         <!--  Tittle -->
          <div class="tittle tittle-cont  animate fadeInUp" data-wow-delay="0.4s">
