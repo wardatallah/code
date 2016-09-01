@@ -87,7 +87,49 @@
         </ul>
       </div>
     </section>
-    
+    <section class="testimonial" data-stellar-background-ratio="0.7">
+      <div class="section-p-60px overlay">
+        <div class="container"> 
+          
+          <!-- Tittle -->
+          <div class="tittle tittle-cont white  animate fadeInUp" data-wow-delay="0.4s animate fadeInUp" data-wow-delay="0.4s">
+            <h3>WHAT CLIENTS SAY?</h3>
+            <hr>
+          </div>
+          
+          <!-- Slider Section -->
+          <div class="testi-slides  animate fadeInUp" data-wow-delay="0.4s"> 
+            
+            <!-- Slider 1 -->
+            <div class="testi">
+              <div class="avatar"> <img src="<?php echo base_url().'assets/'; ?>images/avatar-9.jpg" alt=""> </div>
+              <p>“It is a long established fact that a reader will be distracted by the readable content of a page when 
+                looking at its layout.”</p>
+              <h5>TYRION LANNISTER</h5>
+              <p class="posi">Founder-Ceo. Dell Corp</p>
+            </div>
+            
+            <!-- Slider 2 -->
+            <div class="testi">
+              <div class="avatar"> <img src="<?php echo base_url().'assets/'; ?>images/avatar-10.jpg" alt=""> </div>
+              <p>“Lorem ipsum dolor sit amet, quis nostrud exercitation consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, ”</p>
+              <h5>LANNISTER TYRION </h5>
+              <p class="posi">Founder-Ceo. Dell Corp</p>
+            </div>
+            
+            <!-- Slider 3 -->
+            <div class="testi">
+              <div class="avatar"> <img src="<?php echo base_url().'assets/'; ?>images/avatar-6.jpg" alt=""> </div>
+              <p>“It is a long established fact that a reader will be distracted by the readable content of a page when 
+                looking at its layout.”</p>
+              <h5>TYRION STERLANNI</h5>
+              <p class="posi">Founder-Ceo. Dell Corp</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 	<section class="section-p-60px our-clients">
 		<div class="container"> 
 		  <!--  Tittle -->
