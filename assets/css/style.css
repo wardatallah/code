@@ -3074,11 +3074,20 @@ header .ownmenu .look-book .media-body a {
 	letter-spacing: 1px;
 }
 .welcome .tittle hr {
+	/*
 	height: 3px;
 	width: 58px;
 	margin: 20px auto;
 	border: none;
 	background: #272727;
+	*/
+	width: 80px;
+    height: 10px;
+    background: #0b479d;
+    -webkit-transform: skew(-40deg);
+    -moz-transform: skew(-40deg);
+    -o-transform: skew(-40deg);
+    transform: skew(-40deg);
 }
 .welcome ul {
 	margin-top: 10px;
@@ -4485,12 +4494,12 @@ footer .flicker img {
       FURNITURE
 ========================================================*/
 .furniture p {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Playfair Display', serif;
 	letter-spacing: 0px;
 }
 .furniture .tittle p {
 	font-family: 'Playfair Display', serif;
-	letter-spacing: 3px;
+	letter-spacing: 1.5px;
 }
 .furniture-large .item-hover {
 	background: rgba(0,0,0,0.8);
