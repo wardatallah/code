@@ -30,6 +30,16 @@ class Pages extends CI_Controller {
 			$data['types_view'] = $this->home_model->get_types();
 			
 		}
+		
+		if ($page == 'about'){   
+			$data['welcome_section'] = $this->about_model->get_heading("about","welcome");
+			$data['whatwedo_section'] = $this->about_model->get_what_we_do("about","whatwedo");
+			$data['about_banner_section'] = $this->about_model->get_banner("about");
+			$data['locations_section'] = $this->about_model->get_locations("about");
+			$data['clients_say_section'] = $this->about_model->get_what_clients_say("about");
+			$data['our_clients_section'] = $this->about_model->get_our_clients("about");
+			$data['our_clients_heading'] = $this->about_model->get_our_clients_heading("about","ourclient");
+		} 
     
 
 		$data['title'] = ucfirst($page); // Capitalize the first letter
