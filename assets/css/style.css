@@ -2018,8 +2018,8 @@ header .ownmenu .look-book .media-body a {
 	margin: 0 5px;
 }
 .port-folio-row li .hover-port a:hover {
-	background: rgba(175,88,117,1);
-	color: #fff;
+	background: #ffffff;
+	color: #0b479d;
 }
 .portfolio-defult h6 {
 	margin-top: 0px;
@@ -3437,7 +3437,7 @@ footer .footer-link a {
 	width: 100%;
 }
 footer .footer-link a:hover {
-	color: #954d65;
+	color: #0b479d;
 }
 footer .footer-link p {
 	font-size: 12px;
@@ -4621,7 +4621,7 @@ footer .flicker img {
 	margin-top: -50px;
 }
 .furniture .parallex-fur {
-	background: url(../images/bg/bg-13.jpg) fixed no-repeat;
+	background: url(../images/bg/banner-home-1.jpg) fixed no-repeat;
 	background-size: cover;
 }
 .furniture .parallex-fur h3 {

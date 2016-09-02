@@ -112,7 +112,10 @@
         </ul>
       </div>
     </section>
-    <section class="testimonial" data-stellar-background-ratio="0.7">
+	
+	
+    <!--======= TESTIMONIALS =========-->
+    <section class="testimonial parallex parallex-fur animate fadeInUp" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
       <div class="section-p-60px overlay">
         <div class="container"> 
           
@@ -155,6 +158,9 @@
         </div>
       </div>
     </section>
+	
+	
+	
 	<section class="section-p-60px our-clients">
 		<div class="container"> 
 		  <!--  Tittle -->

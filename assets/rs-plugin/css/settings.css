@@ -2570,7 +2570,7 @@ img.tp-slider-alternative-image {
 	background: rgba(255, 255, 255, 1) !important;
 	width: 6px !important;
 	height: 6px !important;
-	border: 5px solid rgba(0, 0, 0, 1) !important;
+	border: 5px solid rgb(11, 71, 157) !important;
 }
  @media only screen and (max-width: 767px) {
 .tparrows.preview4 {

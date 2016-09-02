@@ -18,7 +18,9 @@
 <link href="<?php echo base_url().'assets/'; ?>css/style.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url().'assets/'; ?>css/responsive.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url().'assets/'; ?>css/animate.css" rel="stylesheet" type="text/css">
+<link href="<?php echo base_url().'assets/'; ?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 <!-- ADD YOUR OWN STYLING HERE. AVOID TO USE STYLE.CSS AND MAIN.CSS. IT WILL BE HELPFUL FOR YOU IN FUTURE UPDATES -->
 <link href="<?php echo base_url().'assets/'; ?>css/custom.css" rel="stylesheet" type="text/css">
 
@@ -66,12 +68,6 @@
           <ul>
             <li><a href="#.">MY ACCOUNT</a></li>
             <li><a href="#.">MY WISHLIST</a></li>
-            <li class="font-montserrat">CURRENCY:
-              <select class="selectpicker">
-                <option>USD</option>
-                <option>EURO</option>
-              </select>
-            </li>
           </ul>
           <!-- Social Icons -->
           <ul class="social_icons">
@@ -100,7 +96,7 @@
           <ul class="ownmenu">
             <li class="active"><a href="<?php echo base_url(); ?>">HOME</a></li>
             <li><a href="<?php echo base_url(); ?>about/">About Us</a></li>
-            <li class="meganav"><a href="02-shop-sidebar-right.html">Products</a> 
+            <li class="meganav"><a href="<?php echo base_url(); ?>products/">Products</a> 
               <!--======= MEGA MENU =========-->
               <ul class="megamenu full-width">
                 <li class="row nav-post">
@@ -146,11 +142,8 @@
                     </div>
                     <div class="media-body">
                       <h6 class="media-heading">DRAEY TRENCH COAT</h6>
-                      <span class="price">129.00 USD</span> <span class="qty">QTY: 01</span> </div>
+                      <span class="qty">QTY: 01</span> </div>
                   </div>
-                </li>
-                <li class="no-padding no-border">
-                  <h5 class="text-center">SUBTOTAL: 129.00 USD</h5>
                 </li>
                 <li class="no-padding no-border">
                   <div class="row">

@@ -154,9 +154,9 @@
 var map;
 function initialize_map() {
 if ($('#map').length) {
-	var myLatLng = new google.maps.LatLng(-37.814199, 144.961560);
+	var myLatLng = new google.maps.LatLng(33.8584621 , 35.5163281);
 	var mapOptions = {
-		zoom: 17,
+		zoom: 15,
 		center: myLatLng,
 		scrollwheel: false,
 		panControl: false,
