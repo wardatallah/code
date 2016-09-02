@@ -257,25 +257,25 @@
       <div class="overlay banner">
         <div class="container">
           <div class="col-sm-8"><h3 class="text-left" ><?php echo $banner_quote[1]['title']; ?> </h3></div>
-          <div class="col-sm-4"><a href="<?php echo $banner_quote[1]['btn_link']; ?>" class="btn margin-top-20"><?php echo $banner_quote[1]['btn_text']; ?></a> </div>
+          <div class="col-sm-4"><a href="<?php echo base_url().'assets/'.$banner_quote[1]['btn_link']; ?>" class="btn margin-top-20"><i class="fa fa-android android-size" aria-hidden="true"></i><?php echo $banner_quote[1]['btn_text']; ?></a> </div>
 		</div>
       </div>
     </section>
 	
 	
 	<!--======= Portfolio =========-->
-    <section class="section-p-60px portfolio port-wrap portfolio-style-2">
+    <section class="no-padding-b full-width portfolio port-wrap portfolio-style-2">
       <div class="container-fluid"> 
         <!-- Portfolio Row -->
         <ul class="port-folio-row row col-4 items animate fadeInUp" data-wow-delay="0.4s">
           
-          <?php foreach ($products_view as $product): ?>
+          <?php foreach ($types_view as $type): ?>
           <li class="item int arch build col-sm-3">
-            <article> <img src="images/portfolio-img-9.jpg" alt=""> 
+            <article> <img src="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" alt=""> 
               <!-- Hover Info -->
               <div class="hover-port">
-                <div class="position-center-center"> <a href="images/portfolio-img-1.jpg" data-lighter><i class="fa fa-search"></i></a> <a href="#."><i class="fa fa-link"></i></a>
-                  <h6>Mieux Derma Art Direction</h6>
+                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $type['link']; ?>"><i class="fa fa-link"></i></a>
+                  <h6><?php echo $type['name']; ?></h6>
                 </div>
               </div>
             </article>

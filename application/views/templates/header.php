@@ -129,7 +129,7 @@
               </ul>
             </li>
             <li><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
-			<li><a href="#">PRIVATE GALLARY</a></li>
+			<li><a href="#" data-toggle="modal" data-target="#myModal" >PRIVATE GALLARY</a></li>
             <li><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
             
             <!--======= Shopping Cart =========-->
@@ -176,5 +176,29 @@
       </div>
     </div>
   </header>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><?php echo $private_gallery->title; ?></h4>
+        </div>
+		<form method="post" action="">
+        <div class="modal-body">
+          <p><?php echo $private_gallery->subtitle; ?></p>
+		  <p><label for="password">Password</label><input name="password" id="password" type="password" class="form-control" required="true" /></p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-dark">Enter</button>
+        </div>
+		</form>
+      </div>
+      
+    </div>
+  </div>
   <!-- Header End --> 
   
