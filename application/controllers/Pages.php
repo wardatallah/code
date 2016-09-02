@@ -6,6 +6,7 @@ class Pages extends CI_Controller {
         {
 				parent::__construct();
                 $this->load->model('home_model');
+				$this->load->model('about_model');
 				$this->load->model('header_model');
                 $this->load->helper('url_helper');
 				
