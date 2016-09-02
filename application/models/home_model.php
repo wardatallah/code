@@ -33,6 +33,10 @@ class Home_model extends CI_Model {
 				return $query->result_array();
 		}
 		
+		public function get_types(){
+				$query = $this->db->get('home-type');
+				return $query->result_array();
+		}
 		
 		
 		

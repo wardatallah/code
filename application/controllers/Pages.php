@@ -6,7 +6,7 @@ class Pages extends CI_Controller {
         {
 				parent::__construct();
                 $this->load->model('home_model');
-				
+				$this->load->model('header_model');
                 $this->load->helper('url_helper');
 				
         }
@@ -27,11 +27,13 @@ class Pages extends CI_Controller {
 			$data['banner_quote'] = $this->home_model->get_banner("home");
 			$data['products_section'] = $this->home_model->get_heading("home","products");
 			$data['products_view'] = $this->home_model->get_products();
-
+			$data['types_view'] = $this->home_model->get_types();
+			
 		}
     
 
 		$data['title'] = ucfirst($page); // Capitalize the first letter
+		$data['private_gallery'] = $this->header_model->get_heading("all","header");
 		$this->load->helper('url');
 		
 		
