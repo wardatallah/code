@@ -62,3 +62,36 @@ footer .footer-logo a img {
 .close:focus, .close:hover {
     opacity: 1;
 }
+
+.gm-style-iw , .gm-style-iw > div , .gm-style-iw > div > div  {
+    height: 310px !important;
+	width: 350px !important;
+}
+
+div#map-content div#bodyContent {
+    height: 20px !important;
+}
+
+.map-info .boxes-in {
+	border : none;
+	padding : 0px;
+	min-height: 225px;
+}
+
+.map-info .boxes-in .location i {
+	margin-right : 15px;
+}
+
+div#map-content {
+	width: 330px;
+}
+
+.map-info h6 {
+    padding-left: 5px;
+    text-transform: uppercase;
+	border-bottom: 1px solid #b5b5b5;
+}
+
+.boxes-in h6 {
+	text-transform: uppercase;
+}

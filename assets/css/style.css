@@ -3128,7 +3128,7 @@ header .ownmenu .look-book .media-body a {
 }
 .boxes-in p {
 	font-family: 'Montserrat', sans-serif;
-	color: #b8b8b8;
+	color: #525252;
 	font-size: 11px;
 	text-transform: uppercase;
 	margin: 0px;
@@ -3308,7 +3308,7 @@ header .ownmenu .look-book .media-body a {
 	padding: 10px 20px;
 }
 #map {
-	height: 400px;
+	height: 500px;
 	margin-bottom: 0px;
 }
 .contact ::-webkit-input-placeholder {

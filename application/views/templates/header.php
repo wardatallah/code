@@ -67,15 +67,12 @@
         <div class="top-links">
           <ul>
             <li><a href="#.">MY ACCOUNT</a></li>
-            <li><a href="#.">MY WISHLIST</a></li>
           </ul>
           <!-- Social Icons -->
           <ul class="social_icons">
-            <li class="facebook"><a href="#."><i class="fa fa-facebook"></i> </a></li>
-            <li class="twitter"><a href="#."><i class="fa fa-twitter"></i> </a></li>
-            <li class="dribbble"><a href="#."><i class="fa fa-dribbble"></i> </a></li>
-            <li class="googleplus"><a href="#."><i class="fa fa-google-plus"></i> </a></li>
-            <li class="linkedin"><a href="#."><i class="fa fa-linkedin"></i> </a></li>
+            <?php foreach ($social_media as $media): ?>
+			<li class="<?php echo $media['type']; ?>"><a href="<?php echo $media['link']; ?>"><i class="fa fa-<?php echo $media['type']; ?>"></i> </a></li>
+            <?php endforeach; ?>
           </ul>
         </div>
       </div>
@@ -83,7 +80,7 @@
     
     <!-- Logo -->
     <div class="container">
-      <div class="logo"> <a href="#."><img src="<?php echo base_url().'assets/'; ?>images/intermed-logo.png" alt=""></a> </div>
+      <div class="logo"> <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url().'assets/'; ?>images/<?php echo $header_logo->name; ?>" alt=""></a> </div>
     </div>
     
     <!-- Nav -->
