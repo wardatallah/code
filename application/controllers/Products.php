@@ -7,6 +7,7 @@ class Products extends CI_Controller {
 				parent::__construct();
 				$this->load->model('header_model');
 				$this->load->model('products_model');
+				$this->load->model('product_model');
                 $this->load->helper('url_helper');
 				
         }
@@ -24,11 +25,19 @@ class Products extends CI_Controller {
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				
+				
+				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("products"); 
 				
 				// get Projects
 				$data['products'] = $this->products_model->get_ProductById();
+				$data['country_cat'] = $this->product_model->get_categories("products","country");
+				$data['type_cat'] = $this->product_model->get_categories("products","type");
+				$data['color_cat'] = $this->product_model->get_categories("products","color");
+				$data['size_cat'] = $this->product_model->get_categories("products","size");
+				$data['product_by_condition'] = $this->product_model->get_products(null,null,null,null);
+				
 				
 				$this->load->helper('url');
 				
