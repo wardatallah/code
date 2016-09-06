@@ -58,5 +58,6 @@ $route['projects/(:any)'] = 'projects/view/$1';
 $route['projects'] = 'projects';
 $route['about'] = 'about';
 $route['contact-us'] = 'contact';
+$route['getproducts'] = 'ProductItem/getproducts';
 $route['default_controller'] = 'home/view';
 $route['(:any)'] = 'home';

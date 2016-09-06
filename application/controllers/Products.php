@@ -28,7 +28,7 @@ class Products extends CI_Controller {
 				$data['title'] = ucfirst("products"); 
 				
 				// get Projects
-				$data['products'] = $this->products_model->get_products();
+				$data['products'] = $this->products_model->get_ProductById();
 				
 				$this->load->helper('url');
 				
@@ -49,7 +49,7 @@ class Products extends CI_Controller {
 				
 				$this->load->helper('url');
 				
-				$data['product'] = $this->products_model->get_products($id);
+				$data['product'] = $this->products_model->get_ProductById($id);
 				
 				
 				$this->load->view('templates/header', $data);

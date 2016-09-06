@@ -9,7 +9,7 @@
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
           <li><a href="#">Home</a></li>
-          <li class="active">Projects</li>
+          <li class="active">Products</li>
         </ol>
       </div>
     </section>
@@ -37,7 +37,12 @@
 					<option>Spain</option>                    
                   </select>
 				  <select class="selectpicker">
-                    <option>By Type</option>
+                    <option
+                  </select>
+                </div>
+              </div>
+            </div>
+            >By Type</option>
                     <option>Marble</option>
                     <option>Granite</option>
                   </select>
@@ -60,11 +65,6 @@
                     <option>Large </option>
                     <option>X Large</option>
                     <option>XX Large</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            
             <!--======= Products =========-->
             <div class="popurlar_product animate fadeInUp" data-wow-delay="0.4s">
               <ul class="row">

@@ -8,7 +8,7 @@ class Products_model extends CI_Model {
 		
 		
 		
-		public function get_Products($id = FALSE){
+		public function get_ProductById($id = FALSE){
 			
 				if ($id === FALSE)
 				{
