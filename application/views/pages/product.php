@@ -23,7 +23,7 @@
           
           <!--======= IMAGES SLIDER =========-->
           <div class="col-sm-6 large-detail animate fadeInLeft" data-wow-delay="0.4s"> 
-          	<img class="zoom_05 img-responsive" src="<?php echo base_url().'assets/images/' . $product->img_name; ?>" data-zoom-image="<?php echo base_url().'assets/images/' . $product->img_name; ?>">
+          	<img class="zoom_05 img-responsive" src="<?php echo base_url().'assets/images/products/' . $product->img_name; ?>" data-zoom-image="<?php echo base_url().'assets/images/products/' . $product->img_name; ?>">
           </div>
           
           <!--======= ITEM DETAILS =========-->

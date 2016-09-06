@@ -70,7 +70,7 @@
 						<div class="over-item">
 						  <ul class="animated fadeIn">
 							<li> <a href="<?php echo base_url().'assets/images/products/'; ?>#img_name_a" data-lighter><i class="ion-search"></i></a></li>
-							<li> <a href="#."><i class="ion-shuffle"></i></a></li>
+							<li> <a href="#link"><i class="fa fa-link"></i></a></li>
 							<li> <a href="#."><i class="fa fa-heart-o"></i></a></li>
 							<li class="full-w"> <a href="#." class="btn">ADD TO CART</a></li>
 							<!-- Rating Stars -->

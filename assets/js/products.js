@@ -177,6 +177,7 @@ var getproduct = function()
 						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
 						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
 						innerhtml	=  innerhtml.replace("#name",item.name);
+						innerhtml	=  innerhtml.replace("#link",item.id);
 						new_li.html(innerhtml);
 						$('.productlist').append(new_li);
 					});	
@@ -198,6 +199,7 @@ var getproduct = function()
 						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
 						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
 						innerhtml	=  innerhtml.replace("#name",item.name);
+						innerhtml	=  innerhtml.replace("#link",item.id);
 						new_li.html(innerhtml);
 						$('.productlist').append(new_li);
 					});
@@ -257,6 +259,7 @@ $('#searchItem').keyup(function(e) {
 						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
 						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
 						innerhtml	=  innerhtml.replace("#name",item.name);
+						innerhtml	=  innerhtml.replace("#link",item.id);
 						new_li.html(innerhtml);
 						$('.productlist').append(new_li);
 					});
