@@ -29,6 +29,7 @@ class Home_model extends CI_Model {
 		
 		
 		public function get_products(){
+				$this->db->limit(10);
 				$query = $this->db->get('products');
 				return $query->result_array();
 		}
