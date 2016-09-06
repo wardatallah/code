@@ -1,4 +1,3 @@
-
 var self = this ;
 
 window.ajax = function(url, method,body) {
@@ -27,6 +26,22 @@ window.ajax = function(url, method,body) {
     return deferred;
 };
 
+
+var createLiElement = function(data){
+				$(".productitem").remove();
+					$.each(data , function(i, item) {
+						var new_li = $('.productitemsample').clone();
+						new_li.removeClass("productitemsample");
+						new_li.addClass("productitem");
+						new_li.css("display", ""); 
+						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
+						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
+						innerhtml	=  innerhtml.replace("#name",item.name);
+						innerhtml	=  innerhtml.replace("#link",item.id);
+						new_li.html(innerhtml);
+						$('.productlist').append(new_li);
+					});
+}
 
 var filterDataByCretiria = function (data , offset)
 {
@@ -163,46 +178,17 @@ var getproduct = function()
 		
 		if(localStorage.getItem('productitems')){
 			
-					
 					var data = filterDataByCretiria(JSON.parse(localStorage.getItem('productitems')),$('#searchItem').val()) ;
 					data = filterData(data) ;
-					
-					$(".productitem").remove();
-					
-					$.each(data , function(i, item) {
-						var new_li = $('.productitemsample').clone();
-						new_li.removeClass("productitemsample");
-						new_li.addClass("productitem");
-						new_li.css("display", ""); 
-						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
-						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
-						innerhtml	=  innerhtml.replace("#name",item.name);
-						innerhtml	=  innerhtml.replace("#link",item.id);
-						new_li.html(innerhtml);
-						$('.productlist').append(new_li);
-					});	
+					createLiElement(data);
 		}
-		else{
+		else {
 				var body = {country: self.getcountry(), type: self.gettype() , color : self.getcolor , size : self.getsize() };
+				
 				ajax('productsItem/getproducts', 'POST', body).done(function(data) {
-					
 					var dataItems =  data['product_by_condition'];
-					
 					localStorage.setItem('productitems',JSON.stringify(dataItems));	
-					$(".productitem").remove();
-					
-					$.each(dataItems , function(i, item) {
-						var new_li = $('.productitemsample').clone();
-						new_li.removeClass("productitemsample");
-						new_li.addClass("productitem");
-						new_li.css("display", "");
-						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
-						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
-						innerhtml	=  innerhtml.replace("#name",item.name);
-						innerhtml	=  innerhtml.replace("#link",item.id);
-						new_li.html(innerhtml);
-						$('.productlist').append(new_li);
-					});
+					createLiElement(dataItems);
 					 				
 				}); 
 		}
@@ -213,8 +199,6 @@ var getproduct = function()
 }
 
 getproduct();
-
-
 
 $('#country_cat').on('change', function() {
 	self.setcountry(this.value) ;
@@ -240,35 +224,12 @@ $('#size_cat').on('change', function() {
 });
 
 
-
-
-
 $('#searchItem').keyup(function(e) {
-	
 					var data = filterDataByCretiria(JSON.parse(localStorage.getItem('productitems')) , e.target.value) ;
 					data = filterData(data) ;
-					
-					
-					$(".productitem").remove();
-					
-					$.each(data , function(i, item) {
-						var new_li = $('.productitemsample').clone();
-						new_li.removeClass("productitemsample");
-						new_li.addClass("productitem");
-						new_li.css("display", ""); 
-						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
-						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
-						innerhtml	=  innerhtml.replace("#name",item.name);
-						innerhtml	=  innerhtml.replace("#link",item.id);
-						new_li.html(innerhtml);
-						$('.productlist').append(new_li);
-					});
+					createLiElement(data);
 });
-
-
-
-
-
+ 
 
 
 
