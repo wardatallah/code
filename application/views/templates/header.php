@@ -21,6 +21,8 @@
 <link href="<?php echo base_url().'assets/'; ?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
 <!-- ADD YOUR OWN STYLING HERE. AVOID TO USE STYLE.CSS AND MAIN.CSS. IT WILL BE HELPFUL FOR YOU IN FUTURE UPDATES -->
 <link href="<?php echo base_url().'assets/'; ?>css/custom.css" rel="stylesheet" type="text/css">
 

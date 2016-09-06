@@ -186,7 +186,7 @@ section {
 }
 .form-control {
 	box-shadow: none;
-	border: 1px solid #bdbdbd;
+	border: 1px solid #666666;
 	border-radius: 0px;
 	height: 40px;
 }
@@ -3281,7 +3281,7 @@ header .ownmenu .look-book .media-body a {
 	box-shadow: none;
 	border-radius: 0px;
 	background: #fff;
-	border: 1px solid #ebebeb;
+	border: 1px solid #666666;
 }
 #contact_form label {
 	width: 100%;

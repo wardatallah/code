@@ -60,6 +60,7 @@
             
             <!--======= Products =========-->
             <div class="popurlar_product animate fadeInUp" data-wow-delay="0.4s">
+<<<<<<< HEAD
               <ul class="row productlist">
 				 <li class="col-sm-3 animate fadeIn productitemsample" data-wow-delay="0.2s" style="display:none;">
 					  <div class="items-in"> 
@@ -80,6 +81,31 @@
 						<div class="details-sec"> <a href="#.">#name</a></div>
 					  </div>
 				 </li>
+=======
+              <ul class="row">
+                
+                <?php foreach($products as $product): ?>
+                <li class="col-sm-3 animate fadeIn" data-wow-delay="0.2s">
+                  <div class="items-in"> 
+                    <!-- Image --> 
+                    <img src="<?php echo base_url().'assets/'; ?>images/new-item-1.jpg" alt=""> 
+                    <!-- Hover Details -->
+                    <div class="over-item">
+                      <ul class="animated fadeIn">
+                        <li> <a href="<?php echo base_url().'assets/'; ?>images/new-item-1.jpg" data-lighter><i class="ion-search"></i></a></li>
+                        <li> <a href="<?php echo $product['id']; ?>"><i class="fa fa-link"></i></a></li>
+                        <li> <a href="#."><i class="fa fa-heart-o"></i></a></li>
+                        <li class="full-w"> <a href="#." class="btn">ADD TO CART</a></li>
+                        
+                      </ul>
+                    </div>
+                    <!-- Item Name -->
+                    <div class="details-sec"> <a href="<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a> </div>
+                  </div>
+                </li>
+                <?php endforeach; ?>
+                
+>>>>>>> 6413e5a1de0684009f78307700a4e5ae27cb459d
               </ul>
             </div>
             

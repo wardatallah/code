@@ -170,7 +170,7 @@
       <div class="fur-slide"> 
         
         <?php foreach ($slider_home as $slider): ?>
-        <div class="item"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $slider['img_name']; ?>" alt="" >
+        <div class="item"> <img src="<?php echo base_url().'assets/images/slides/' .$slider['img_name']; ?>" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
