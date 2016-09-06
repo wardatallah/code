@@ -64,6 +64,21 @@ class Admin extends CI_Controller {
 			   }
 			 }
 
+			 function edit($slug)
+			 {
+			   if($this->session->userdata('logged_in'))
+			   {
+					 $this->load->library('form_validation');
+					 $session_data = $this->session->userdata('logged_in');
+					 $data['username'] = $session_data['username'];
+					 $this->load->view('admin/template/header', $data);
+					 $this->load->view('admin/pages/'.$slug);
+					 $this->load->view('admin/template/footer', $data);	
+			   }
+			   else {
+				   redirect("admin","refresh");
+			   }
+			 }
 }
 
 ?>

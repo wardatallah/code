@@ -9,7 +9,9 @@
 
   </head>
   <body>
-  <?php if (!isset($this->session->userdata['logged_in'])) {
+  <?php 
+		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		if (!isset($this->session->userdata['logged_in'])) {
 
 			header("location: http://localhost/code/admin");
 		}
@@ -60,7 +62,7 @@
 		  	<div class="sidebar content-box" style="display: block;">
                 <ul class="nav">
                     <!-- Main menu -->
-                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li <?php if ($actual_link==base_url(). 'admin') echo 'class="active"';?> ><a href="<?php echo base_url() . 'admin'; ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                     <li class="submenu">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Pages
@@ -68,7 +70,7 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Home</a></li>
+                            <li <?php if ($actual_link==base_url(). 'Admin/edit/home') echo 'class="active"';?>><a href="<?php echo base_url() . 'Admin/edit/home'; ?>">Home</a></li>
 							<li><a href="signup.html">About Us</a></li>
 							<li><a href="signup.html">Products</a></li>
 							<li><a href="signup.html">Projects</a></li>
