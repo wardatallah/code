@@ -86,5 +86,6 @@
 <script type="text/javascript" src="<?php echo base_url().'assets/'; ?>rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
 <script type="text/javascript" src="<?php echo base_url().'assets/'; ?>rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
 <script src="<?php echo base_url().'assets/'; ?>js/main.js"></script>
+<script src="<?php echo base_url().'assets/'; ?>js/products.js"></script>
 </body>
 </html>

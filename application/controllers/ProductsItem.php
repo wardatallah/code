@@ -1,21 +1,16 @@
 <?php
-class Pages extends CI_Controller {
+class ProductsItem extends CI_Controller {
 
 
 		public function __construct()
         {
 				parent::__construct();
-                $this->load->model('home_model');
-				$this->load->model('about_model');
-				$this->load->model('contact_model');
 				$this->load->model('product_model');
-				$this->load->model('header_model');
                 $this->load->helper('url_helper');
 				
         }
 		
-		
-        public function view($page = 'home')
+        public function view($page = 'products')
         {
 			if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
 			{
@@ -75,5 +70,34 @@ class Pages extends CI_Controller {
         $this->load->view('templates/footer', $data);
         }
 		
+
+		public function getproducts() 
+		{
+			
+			 $country = null ; $type = null ;  $size=null ; $color=null;
+			 
+			 if(isset($_POST["country"])) {
+					$country = $_POST["country"];
+			 }
+			 
+			 if(isset($_POST["type"])) {
+					$type = $_POST["type"] ;
+			 }
+			 
+			 if(isset($_POST["size"])) {
+					$size = $_POST["size"] ;
+			 }
+			 
+			 if(isset($_POST["color"])) {
+					$color = $_POST["color"] ;
+			 }
+			 
+			 $data['product_by_condition'] = $this->product_model->get_products($country,$type,$size,$color) ;
+			 
+			
+			 echo json_encode($data);
+		}
+		
 		
 }
+
