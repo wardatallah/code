@@ -17,6 +17,7 @@ Class Userlogin extends CI_Controller {
 			// Load database
 			$this->load->model('user');
 			$this->load->model('header_model');
+			$this->load->helper('url_helper');
 		}
 
 		// Show login page
@@ -126,6 +127,88 @@ Class Userlogin extends CI_Controller {
 			$this->session->unset_userdata('logged_in', $sess_array);
 			$data['message_display'] = 'Successfully Logout';
 			redirect('admin', 'refresh');
+		}
+		
+		
+		
+		
+		public function changePassword() {
+		
+			$this->form_validation->set_rules('currentPassword', 'Current Password', 'trim|required');
+			$this->form_validation->set_rules('newPassword', 'New Password', 'trim|required');
+			$this->form_validation->set_rules('confirmNewPassword', 'Confirm Password', 'trim|required');
+			
+			
+			
+			if ($this->form_validation->run() == FALSE) {
+					if(isset($this->session->userdata['logged_in'])){
+						$this->load->library('form_validation');
+						$session_data = $this->session->userdata('logged_in');
+						$data['username'] = $session_data['username'];
+						$this->load->view('admin/template/header', $data);
+						$this->load->view('admin/settings');
+						$this->load->view('admin/template/footer', $data);
+					}else{
+						$data['header_logo'] = $this->header_model->get_logo("header");
+						$data['social_media'] = $this->header_model->get_social();
+						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
+						$data['private_gallery'] = $this->header_model->get_heading("all","header");
+						$this->load->view('templates/header', $data);
+				
+						$this->load->view('admin/login');
+					
+						$this->load->view('templates/footer', $data);	
+					}
+			} else { 
+						$data = array(
+						'password' => $this->input->post('currentPassword'),
+						'newpassword' => $this->input->post('newPassword'),
+						'confpassword' => $this->input->post('confirmNewPassword')
+						);
+						
+					
+					
+					$password = $this->input->post('currentPassword');
+					if ($data['newpassword'] === $data['confpassword']){
+							$result = $this->user->checkPassword($password);
+							
+							if ($result == TRUE){
+								$changed = $this->user->changePassword($data);
+								
+								$sess_array = array(
+								'username' => ''
+								);
+								$this->session->unset_userdata('logged_in', $sess_array);
+								$data['message_display'] = 'Successfully Logout';
+								redirect('admin', 'refresh');
+								
+								
+							} else {
+								
+								$data = array(
+								'error_message' => 'Current Passsword is invalid !'
+								);
+								 $this->load->library('form_validation');
+								 $session_data = $this->session->userdata('logged_in');
+								 $data['username'] = $session_data['username'];
+								 $this->load->view('admin/template/header', $data);
+								 $this->load->view('admin/settings');
+								 $this->load->view('admin/template/footer', $data);
+								
+							}
+					} else {
+						$data = array(
+						'error_message' => 'Passwords don\'t match !'
+						);
+						 $this->load->library('form_validation');
+						 $session_data = $this->session->userdata('logged_in');
+						 $data['username'] = $session_data['username'];
+						 $this->load->view('admin/template/header', $data);
+						 $this->load->view('admin/settings');
+						 $this->load->view('admin/template/footer', $data);
+					}
+					
+			}
 		}
 
 }
