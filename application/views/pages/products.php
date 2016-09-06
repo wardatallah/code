@@ -26,70 +26,61 @@
               <!--======= VIEW ITEM NUMBER =========-->
               <div class="view-num">
 				<div class="search-box">
-					<input type="text" class="form-control" placeholder="Search" />
+					<input id="searchItem" type="text" class="form-control" placeholder="Search" />
 				</div>
 			  
                 <div class="short-by">
-				<select class="selectpicker">
+				  <select id="country_cat" class="selectpicker">
                     <option>By Country</option>
-                    <option>Lebanon</option>
-					<option>China</option>
-					<option>Spain</option>                    
+					<?php foreach ($country_cat as $item): ?>
+						<option><?php echo $item['cat_item_name']; ?> </option>
+					<?php endforeach; ?>					
                   </select>
-				  <select class="selectpicker">
-                    <option
+
+				  <select  id="type_cat" class="selectpicker">
+                    <option>By Type</option>
+                    <?php foreach ($type_cat as $item): ?>
+						<option><?php echo $item['cat_item_name']; ?> </option>
+					<?php endforeach; ?>
+                  </select>
+                  <select  id="color_cat" class="selectpicker">
+                    <option>By Color</option>
+                    <?php foreach ($color_cat as $item): ?>
+						<option><?php echo $item['cat_item_name']; ?> </option>
+					<?php endforeach; ?>
+                  </select>
+                  <select  id="size_cat" class="selectpicker">
+                    <option>By Size</option>
+					<?php foreach ($size_cat as $item): ?>
+						<option><?php echo $item['cat_item_name']; ?> </option>
+					<?php endforeach; ?>
                   </select>
                 </div>
               </div>
             </div>
-            >By Type</option>
-                    <option>Marble</option>
-                    <option>Granite</option>
-                  </select>
-                  <select class="selectpicker">
-                    <option>By Price</option>
-                    <option>100$ - 200$</option>
-                    <option>1000$ - 2000$</option>
-                    <option>10000$ - 20000$</option>
-                  </select>
-                  <select class="selectpicker">
-                    <option>By Color</option>
-                    <option>RED</option>
-                    <option>BLUE</option>
-                    <option>GREEN</option>
-                    <option>YELLOW</option>
-                  </select>
-                  <select class="selectpicker">
-                    <option>By Size</option>
-                    <option>Small</option>
-                    <option>Large </option>
-                    <option>X Large</option>
-                    <option>XX Large</option>
+            
             <!--======= Products =========-->
             <div class="popurlar_product animate fadeInUp" data-wow-delay="0.4s">
-              <ul class="row">
-                
-                <?php foreach($products as $product): ?>
-                <li class="col-sm-3 animate fadeIn" data-wow-delay="0.2s">
-                  <div class="items-in"> 
-                    <!-- Image --> 
-                    <img src="<?php echo base_url().'assets/'; ?>images/new-item-1.jpg" alt=""> 
-                    <!-- Hover Details -->
-                    <div class="over-item">
-                      <ul class="animated fadeIn">
-                        <li> <a href="<?php echo base_url().'assets/'; ?>images/new-item-1.jpg" data-lighter><i class="ion-search"></i></a></li>
-                        <li> <a href="<?php echo $product['id']; ?>"><i class="fa fa-link"></i></a></li>
-                        <li> <a href="#."><i class="fa fa-heart-o"></i></a></li>
-                        <li class="full-w"> <a href="#." class="btn">ADD TO CART</a></li>
-                        
-                      </ul>
-                    </div>
-                    <!-- Item Name -->
-                    <div class="details-sec"> <a href="<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a> </div>
-                  </div>
-                </li>
-                <?php endforeach; ?>
-                
+              <ul class="row productlist">
+				 <li class="col-sm-3 animate fadeIn productitemsample" data-wow-delay="0.2s" style="display:none;">
+					  <div class="items-in"> 
+						<!-- Image --> 
+						<img src="<?php echo base_url().'assets/images/products/'; ?>#img_name" alt=""> 
+						<!-- Hover Details -->
+						<div class="over-item">
+						  <ul class="animated fadeIn">
+							<li> <a href="<?php echo base_url().'assets/images/products/'; ?>#img_name_a" data-lighter><i class="ion-search"></i></a></li>
+							<li> <a href="#."><i class="ion-shuffle"></i></a></li>
+							<li> <a href="#."><i class="fa fa-heart-o"></i></a></li>
+							<li class="full-w"> <a href="#." class="btn">ADD TO CART</a></li>
+							<!-- Rating Stars -->
+							<li class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></li>
+						  </ul>
+						</div>
+						<!-- Item Name -->
+						<div class="details-sec"> <a href="#.">#name</a></div>
+					  </div>
+				 </li>
               </ul>
             </div>
             
@@ -107,37 +98,3 @@
       </div>
     </section>
   </div>
-  
-  
-  <script>
-	jQuery(document).ready(function($) {
-	  
-	  //  Price Filter ( noUiSlider Plugin)
-		$("#price-range").noUiSlider({
-		range: {
-		  'min': [ 0 ],
-		  'max': [ 1000 ]
-		},
-		start: [40, 940],
-			connect:true,
-			serialization:{
-				lower: [
-			$.Link({
-			  target: $("#price-min")
-			})
-		  ],
-		  upper: [
-			$.Link({
-			  target: $("#price-max")
-			})
-		  ],
-		  format: {
-		  // Set formatting
-			decimals: 2,
-			prefix: '$'
-		  }
-			}
-	  })
-	})
-
-  </script>
