@@ -3,7 +3,7 @@
     <div class="tp-banner-container">
       <div class="tp-banner">
         <ul>
-          <?php foreach($banner_home as $ban) ?>
+          <?php foreach($banner_home as $ban){ ?>
           <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
@@ -53,7 +53,7 @@
                   data-endspeed="300" 
                   data-captionhidden="on"> <a href="<?php echo $ban['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $ban['btn_text']; ?></a> </div>
           </li>
-		  <? endforeach; ?>
+		  <? } ?>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@
     <section class="furniture-large animate fadeInUp" data-wow-delay="0.4s">
       <div class="fur-slide"> 
         
-        <?php foreach ($slider_home as $slider): ?>
+        <?php foreach ($slider_home as $slider){ ?>
         <div class="item"> <img src="<?php echo base_url().'assets/images/slides/' .$slider['img_name']; ?>" alt="" >
           <div class="item-inn">
             <div class="item-hover">
@@ -77,7 +77,7 @@
             </div>
           </div>
         </div>
-        <?php endforeach; ?>
+        <?php } ?>
 		
       </div>
     </section>
@@ -123,7 +123,7 @@
       <ul class="items-fer animate fadeInUp" data-wow-delay="0.4s">
         
 		<?php 	$delayer=0.2;
-				foreach ($products_view as $product): ?>
+				foreach ($products_view as $product){ ?>
         <li class="animate fadeInUp" data-wow-delay="<?php echo $delayer; ?>s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
@@ -144,7 +144,7 @@
 			$delayer=0.2;
 		else
 			$delayer+=0.2;
-		endforeach; ?>
+				} ?>
       </ul>
     </section>
 	
@@ -166,7 +166,7 @@
         <!-- Portfolio Row -->
         <ul class="port-folio-row row col-4 items animate fadeInUp" data-wow-delay="0.4s">
           
-          <?php foreach ($types_view as $type): ?>
+          <?php foreach ($types_view as $type){ ?>
           <li class="item int arch build col-sm-3">
             <article> <img src="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" alt=""> 
               <!-- Hover Info -->
@@ -177,7 +177,7 @@
               </div>
             </article>
           </li>
-		  <?php endforeach; ?>
+		  <?php } ?>
 		  
         </ul>
       </div>
