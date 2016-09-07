@@ -3,7 +3,7 @@
     <div class="tp-banner-container">
       <div class="tp-banner">
         <ul>
-          <?php foreach($banner_home as $ban){ ?>
+          <?php foreach($banner_home as $ban) ?>
           <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
@@ -53,7 +53,7 @@
                   data-endspeed="300" 
                   data-captionhidden="on"> <a href="<?php echo $ban['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $ban['btn_text']; ?></a> </div>
           </li>
-		  <? } ?>
+		  <? echo endforeach ; ?>
         </ul>
       </div>
     </div>
@@ -96,6 +96,45 @@
       </div>
     </section>
 	
+	
+	
+	<div class="add-bnr-4">
+      <div class="container">
+		<div class="tittle tittle-cont  animate fadeInUp" data-wow-delay="0.4s">
+          <h3>What You Are Looking For ?</h3>
+          <hr>
+        </div>
+        <ul class="row">
+          
+          <!-- Add Banner 1 -->
+          <li class="col-md-4 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
+              <div class="upper">
+                <h4 class="text-uppercase">SANITARY</h4>
+                <a href="#.">SHOP NOW</a> </div>
+            </div>
+          </li>
+          
+          <!-- Add Banner 2 -->
+          <li class="col-md-4 animate fadeInUp" data-wow-delay="0.4s">
+            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
+              <div class="upper">
+                <h4>CERAMIC</h4>
+                <a href="#.">SHOP NOW</a> </div>
+            </div>
+          </li>
+          
+          <!-- Add Banner 3 -->
+          <li class="col-md-4 animate fadeInRight" data-wow-delay="0.4s">
+            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
+              <div class="upper">
+                <h4>ACCESSORIS</h4>
+                <a href="#.">SHOP NOW</a> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 	
 	<!--======= PARALLAX SECTION =========-->
     <section class="parallex parallex-fur animate fadeInUp" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
