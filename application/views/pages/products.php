@@ -5,7 +5,7 @@
     <!--======= SUB BANNER =========-->
     <section class="sub-banner animate fadeInUp" data-wow-delay="0.4s">
       <div class="container">
-        <h4>Best Of Our Work</h4>
+        <h4>PRODUCTS</h4>
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
           <li><a href="#">Home</a></li>
@@ -30,27 +30,28 @@
 				</div>
 			  
                 <div class="short-by">
-				  <select id="country_cat" class="selectpicker">
-                    <option>By Country</option>
-					<?php foreach ($country_cat as $item): ?>
-						<option><?php echo $item['cat_item_name']; ?> </option>
-					<?php endforeach; ?>					
-                  </select>
-
 				  <select  id="type_cat" class="selectpicker">
-                    <option>By Type</option>
+                    <option>Filter By Type</option>
                     <?php foreach ($type_cat as $item): ?>
 						<option><?php echo $item['cat_item_name']; ?> </option>
 					<?php endforeach; ?>
                   </select>
+				  <select id="country_cat" class="selectpicker">
+                    <option>Filter By Origin</option>
+					<?php foreach ($country_cat as $item): ?>
+						<option><?php echo $item['cat_item_name']; ?> </option>
+					<?php endforeach; ?>					
+                  </select>
+				  <!--
                   <select  id="color_cat" class="selectpicker">
                     <option>By Color</option>
                     <?php foreach ($color_cat as $item): ?>
 						<option><?php echo $item['cat_item_name']; ?> </option>
 					<?php endforeach; ?>
                   </select>
+				  -->
                   <select  id="size_cat" class="selectpicker">
-                    <option>By Size</option>
+                    <option>Filter By Format</option>
 					<?php foreach ($size_cat as $item): ?>
 						<option><?php echo $item['cat_item_name']; ?> </option>
 					<?php endforeach; ?>

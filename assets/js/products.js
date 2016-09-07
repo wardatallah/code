@@ -105,7 +105,7 @@ var filterData = function(data)
 			country = country + " & " ;
 		}
 		else{
-			if(getcountry() == undefined || getcountry() == "By Country")
+			if(getcountry() == undefined || getcountry() == "Filter By Origin")
 			{
 				country = true ;
 				country = country + " & " ;
@@ -121,7 +121,7 @@ var filterData = function(data)
 			type = type + " & " ;
 		}
 		else{
-			if(gettype() == undefined || gettype() == "By Type")
+			if(gettype() == undefined || gettype() == "Filter By Type")
 			{
 					type = true ;
 				type = type + " & " ;
@@ -137,7 +137,7 @@ var filterData = function(data)
 			size = size + " & " ;
 		}
 		else{
-			if(getsize() == undefined || getsize() == "By Size")
+			if(getsize() == undefined || getsize() == "Filter By Format")
 			{
 				size = true ;
 				size = size + " & " ;
@@ -203,6 +203,13 @@ getproduct();
 $('#country_cat').on('change', function() {
 	self.setcountry(this.value) ;
 	self.getproduct();
+	
+	var afterElement = $(this).next() ;
+	var elementPrev = afterElement.find('.filter-option');
+	$('#spantext').remove();
+	var spanText = $('<span id="spantext" style="float:left;color:red;">Searching By This</span>');
+	elementPrev.after(spanText);
+	
 });
 
 
@@ -210,6 +217,13 @@ $('#country_cat').on('change', function() {
 $('#type_cat').on('change', function() {
 	self.settype(this.value) ;
 	self.getproduct();
+	
+	var afterElement = $(this).next() ;
+	var elementPrev = afterElement.find('.filter-option');
+	var spanText = $('<span id="spantext" style="float:left;color:red;">Searching By This</span>');
+	$('#spantext').remove();
+	elementPrev.after(spanText);
+	
 });
 
 
@@ -221,6 +235,13 @@ $('#color_cat').on('change', function() {
 $('#size_cat').on('change', function() {
     self.setsize(this.value) ;
 	self.getproduct();
+	
+	var afterElement = $(this).next() ;
+	var elementPrev = afterElement.find('.filter-option');
+	var spanText = $('<span id="spantext" style="float:left;color:red;">Searching By This</span>');
+	$('#spantext').remove();
+	elementPrev.after(spanText);
+
 });
 
 

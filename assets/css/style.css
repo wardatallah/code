@@ -186,14 +186,15 @@ section {
 }
 .form-control {
 	box-shadow: none;
-	border: 1px solid #666666;
+	border: 1px solid #bdbdbd;
 	border-radius: 0px;
-	height: 40px;
+	height: 35px;
+	width : 100%;
 }
 .form-control:focus {
 	border: none;
 	box-shadow: none;
-	border: 1px solid #0b479d;
+	border: 1px solid #666666;
 }
 .no-space {
 	letter-spacing: 0px !important;
@@ -4994,10 +4995,10 @@ footer .flicker img {
 	font-family: 'Montserrat', sans-serif;
 }
 .short-by .bootstrap-select .btn {
-	height: 30px;
+	height: 35px;
 	padding-top: 0px;
 	font-family: 'Montserrat', sans-serif;
-	line-height: 30px;
+	line-height: 35px;
 	letter-spacing: 0px;
 	color: #272727;
 	padding-left: 10px;
@@ -5073,7 +5074,7 @@ footer .flicker img {
 	border-color: #0b479d;
 }
 .view-num .short-by .bootstrap-select.btn-group {
-	width: 15%;
+	width: 33%;
 }
 .short-by .bootstrap-select.btn-group .dropdown-menu li {
 	width: 100%;
@@ -5991,3 +5992,10 @@ input:focus {
 	opacity: 1;
 	color: #fff;
 }
+
+.btn-group bootstrap-select:after{
+	content : 'Searchiing By This';
+	color : red ; 
+	font-size:12px ;
+	
+} 
