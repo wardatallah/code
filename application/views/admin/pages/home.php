@@ -229,6 +229,51 @@
 		  			</div>
   				</div>
 			</div>
+			
+			<div class="row">
+  				<div class="col-md-12">
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">Types Section</div>
+						</div>
+		  				<div class="content-box-large box-with-header">
+							<?php foreach($types_view as $type): ?>
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<div  class="thumbnail">
+									  <img src="<?php echo base_url() . 'assets/images/types/' .$type['img_name']; ?>" alt="<?php echo $type['name']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-9">
+									<div class="form-group row">
+											<label class="col-md-2 control-label">File input</label>
+												<div class="col-md-4">
+													<input type="file" class="btn btn-default" >
+												</div>
+												<label class="col-md-2 control-label">Image Link</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/types/' .$type['img_name']; ?>">
+												</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-2 control-label">Title</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $type['name']; ?>">
+											</div>
+											<label class="col-md-2 control-label">Button Link</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control"  value="<?php echo $type['link']; ?>">
+												</div>
+									</div>
+								</div>
+							</div>
+							<hr/>
+							<?php endforeach; ?>
+		  				</div>
+		  			</div>
+  				</div>
+			</div>
 
 
 

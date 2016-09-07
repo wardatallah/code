@@ -11,7 +11,7 @@
 <!-- FONTS ONLINE -->
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.ico"/>
 <!--MAIN STYLE-->
 <link href="<?php echo base_url().'assets/'; ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url().'assets/'; ?>css/main.css" rel="stylesheet" type="text/css">
