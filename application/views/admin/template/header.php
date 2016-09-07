@@ -70,7 +70,7 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li <?php if ($actual_link==base_url(). 'Admin/edit/home') echo 'class="active"';?>><a href="<?php echo base_url() . 'Admin/edit/home'; ?>">Home</a></li>
+                            <li <?php if ($actual_link==base_url(). 'editpages/home') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/home'; ?>">Home</a></li>
 							<li><a href="signup.html">About Us</a></li>
 							<li><a href="signup.html">Products</a></li>
 							<li><a href="signup.html">Projects</a></li>

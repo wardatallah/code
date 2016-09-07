@@ -1,742 +1,235 @@
+<div style="position:absolute;min-width:20px;">
+ <input type="submit" class="save-section" value="Save" />
+</div>
 <div class="col-md-10">
 
 		  	<div class="row">
-  				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Basic Table</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
+  				<div class="col-md-12">
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">Top Slider</div>
 						</div>
-		  				<div class="panel-body">
-		  					<table class="table">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr>
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr>
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
+		  				<div class="content-box-large box-with-header">
+							<?php foreach($banner_home as $banner): ?>
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<div  class="thumbnail">
+									  <img src="<?php echo base_url() . 'assets/images/slides/' .$banner['img_name']; ?>" alt="<?php echo $banner['title']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-9">
+									<div class="form-group row">
+											<label class="col-md-1 control-label">File input</label>
+											<div class="col-md-4">
+												<input type="file" class="btn btn-default" >
+											</div>
+											<label class="col-md-1 control-label">Image Link</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/slides/' .$banner['img_name']; ?>">
+											</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-1 control-label">Title</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $banner['title']; ?>">
+											</div>
+											<label class="col-md-1 control-label">Sub Title</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo $banner['sub_title']; ?>">
+											</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-1 control-label">Button Title</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $banner['btn_text']; ?>">
+											</div>
+											<label class="col-md-1 control-label">Button Link</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo $banner['btn_link']; ?>">
+											</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-1 control-label">X-Position</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $banner['xposition']; ?>">
+											</div>
+											<label class="col-md-1 control-label">Font Size</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo $banner['fontsize'].'px'; ?>">
+											</div>
+									</div>
+								</div>
+							</div>
+							<hr/>
+							<?php endforeach; ?>
 		  				</div>
 		  			</div>
   				</div>
-  				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Striped Rows</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
-						</div>
-		  				<div class="panel-body">
-		  					<table class="table table-striped">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr>
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr>
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
-		  				</div>
-		  			</div>
-  				</div>
-  			</div>
-
+			</div>
   			<div class="row">
-  				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Border Table</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
+  				<div class="col-md-12">
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">Carousel Slider</div>
 						</div>
-		  				<div class="panel-body">
-		  					<table class="table table-bordered">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr>
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr>
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
+		  				<div class="content-box-large box-with-header">
+							<?php foreach($slider_home as $slider): ?>
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<div  class="thumbnail">
+									  <img src="<?php echo base_url() . 'assets/images/slides/' .$slider['img_name']; ?>" alt="<?php echo $slider['title']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-9">
+									<div class="form-group row">
+											<label class="col-md-1 control-label">File input</label>
+											<div class="col-md-4">
+												<input type="file" class="btn btn-default" >
+											</div>
+											<label class="col-md-1 control-label">Image Link</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/slides/' .$slider['img_name']; ?>">
+											</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-1 control-label">Title</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $slider['title']; ?>">
+											</div>
+											<label class="col-md-1 control-label">Sub Title</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo $slider['sub_title']; ?>">
+											</div>
+									</div>
+									<hr/>
+									<div class="form-group row">
+											<label class="col-md-1 control-label">Button Title</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $slider['btn_text']; ?>">
+											</div>
+											<label class="col-md-1 control-label">Button Link</label>
+											<div class="col-md-6">
+												<input type="text" class="form-control"  value="<?php echo $slider['btn_link']; ?>">
+											</div>
+									</div>
+								</div>
+							</div>
+							<hr/>
+							<?php endforeach; ?>
 		  				</div>
 		  			</div>
   				</div>
-  				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Hover Rows</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
+			</div>
+			
+			<div class="row">
+  				<div class="col-md-12">
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">Welcome Section</div>
 						</div>
-		  				<div class="panel-body">
-		  					<table class="table table-hover">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr>
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr>
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
+		  				<div class="content-box-large box-with-header">
+							<div class="row">
+								<div class="col-xs-6 col-md-2">
+									<label class="col-md-12 control-label">Title</label>
+								</div>
+								<div class="col-xs-6 col-md-10">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $welcome_section->title; ?>">
+									</div>
+								</div>
+								<hr/>
+								<div class="col-xs-6 col-md-2">
+									<label class="col-md-12 control-label">Sub Title</label>
+								</div>
+								<div class="col-xs-6 col-md-10">
+									<div class="form-group row">
+											<textarea rows="4" class="form-control" ><?php echo $welcome_section->subtitle; ?></textarea>
+									</div>
+								</div>
+							</div>
 		  				</div>
 		  			</div>
   				</div>
-  			</div>
-
-  			<div class="row">
+			</div>
+			
+			<div class="row">
   				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Condensed Table</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">First Banner</div>
 						</div>
-		  				<div class="panel-body">
-		  					<table class="table table-condensed">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr>
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr>
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
+		  				<div class="content-box-large box-with-header">
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Title</label>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['title']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Button Title</label>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['btn_text']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Button Link</label>
+								</div>
+								<div class="col-xs-6 col-md-9">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['btn_link']; ?>">
+									</div>
+								</div>
+							</div>
 		  				</div>
 		  			</div>
   				</div>
+			
   				<div class="col-md-6">
-  					<div class="content-box-large">
-		  				<div class="panel-heading">
-							<div class="panel-title">Table with row classes</div>
-							
-							<div class="panel-options">
-								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
-								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
-							</div>
+  					<div class="panel-default">
+		  				<div class="content-box-header  panel-heading">
+							<div class="panel-title">Android App Banner</div>
 						</div>
-		  				<div class="panel-body">
-		  					<table class="table">
-				              <thead>
-				                <tr>
-				                  <th>#</th>
-				                  <th>First Name</th>
-				                  <th>Last Name</th>
-				                  <th>Username</th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr class="success">
-				                  <td>1</td>
-				                  <td>Mark</td>
-				                  <td>Otto</td>
-				                  <td>@mdo</td>
-				                </tr>
-				                <tr class="danger">
-				                  <td>2</td>
-				                  <td>Jacob</td>
-				                  <td>Thornton</td>
-				                  <td>@fat</td>
-				                </tr>
-				                <tr class="warning">
-				                  <td>3</td>
-				                  <td>Larry</td>
-				                  <td>the Bird</td>
-				                  <td>@twitter</td>
-				                </tr>
-				              </tbody>
-				            </table>
+		  				<div class="content-box-large box-with-header">
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Title</label>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $banner_quote[1]['title']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Button Title</label>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $banner_quote[1]['btn_text']; ?>">
+									</div>
+								</div>
+								<div class="col-xs-6 col-md-3">
+									<label class="col-md-12 control-label">Download Link</label>
+								</div>
+								<div class="col-xs-6 col-md-9">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo base_url() . 'assets/'.$banner_quote[1]['btn_link']; ?>">
+									</div>
+								</div>
+							</div>
 		  				</div>
 		  			</div>
   				</div>
-  			</div>
-
-  			<div class="content-box-large">
-  				<div class="panel-heading">
-					<div class="panel-title">Responsive Tables</div>
-				</div>
-  				<div class="panel-body">
-  					<div class="table-responsive">
-  						<table class="table">
-			              <thead>
-			                <tr>
-			                  <th>#</th>
-			                  <th>First Name</th>
-			                  <th>Last Name</th>
-			                  <th>Username</th>
-			                </tr>
-			              </thead>
-			              <tbody>
-			                <tr>
-			                  <td>1</td>
-			                  <td>Mark</td>
-			                  <td>Otto</td>
-			                  <td>@mdo</td>
-			                </tr>
-			                <tr>
-			                  <td>2</td>
-			                  <td>Jacob</td>
-			                  <td>Thornton</td>
-			                  <td>@fat</td>
-			                </tr>
-			                <tr>
-			                  <td>3</td>
-			                  <td>Larry</td>
-			                  <td>the Bird</td>
-			                  <td>@twitter</td>
-			                </tr>
-			              </tbody>
-			            </table>
-  					</div>
-  				</div>
-  			</div>
-
-  			<div class="content-box-large">
-  				<div class="panel-heading">
-					<div class="panel-title">Bootstrap dataTables</div>
-				</div>
-  				<div class="panel-body">
-  					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
-						<thead>
-							<tr>
-								<th>Rendering engine</th>
-								<th>Browser</th>
-								<th>Platform(s)</th>
-								<th>Engine version</th>
-								<th>CSS grade</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="odd gradeX">
-								<td>Trident</td>
-								<td>Internet
-									 Explorer 4.0</td>
-								<td>Win 95+</td>
-								<td class="center"> 4</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="even gradeC">
-								<td>Trident</td>
-								<td>Internet
-									 Explorer 5.0</td>
-								<td>Win 95+</td>
-								<td class="center">5</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="odd gradeA">
-								<td>Trident</td>
-								<td>Internet
-									 Explorer 5.5</td>
-								<td>Win 95+</td>
-								<td class="center">5.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="even gradeA">
-								<td>Trident</td>
-								<td>Internet
-									 Explorer 6</td>
-								<td>Win 98+</td>
-								<td class="center">6</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="odd gradeA">
-								<td>Trident</td>
-								<td>Internet Explorer 7</td>
-								<td>Win XP SP2+</td>
-								<td class="center">7</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="even gradeA">
-								<td>Trident</td>
-								<td>AOL browser (AOL desktop)</td>
-								<td>Win XP</td>
-								<td class="center">6</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 1.0</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.7</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 1.5</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 2.0</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Firefox 3.0</td>
-								<td>Win 2k+ / OSX.3+</td>
-								<td class="center">1.9</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Camino 1.0</td>
-								<td>OSX.2+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Camino 1.5</td>
-								<td>OSX.3+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Netscape 7.2</td>
-								<td>Win 95+ / Mac OS 8.6-9.2</td>
-								<td class="center">1.7</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Netscape Browser 8</td>
-								<td>Win 98SE+</td>
-								<td class="center">1.7</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Netscape Navigator 9</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.0</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.1</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.2</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.2</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.3</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.3</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.4</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.4</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.5</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.6</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">1.6</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.7</td>
-								<td>Win 98+ / OSX.1+</td>
-								<td class="center">1.7</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Mozilla 1.8</td>
-								<td>Win 98+ / OSX.1+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Seamonkey 1.1</td>
-								<td>Win 98+ / OSX.2+</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Gecko</td>
-								<td>Epiphany 2.20</td>
-								<td>Gnome</td>
-								<td class="center">1.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 1.2</td>
-								<td>OSX.3</td>
-								<td class="center">125.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 1.3</td>
-								<td>OSX.3</td>
-								<td class="center">312.8</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 2.0</td>
-								<td>OSX.4+</td>
-								<td class="center">419.3</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>Safari 3.0</td>
-								<td>OSX.4+</td>
-								<td class="center">522.1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>OmniWeb 5.5</td>
-								<td>OSX.4+</td>
-								<td class="center">420</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>iPod Touch / iPhone</td>
-								<td>iPod</td>
-								<td class="center">420.1</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Webkit</td>
-								<td>S60</td>
-								<td>S60</td>
-								<td class="center">413</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 7.0</td>
-								<td>Win 95+ / OSX.1+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 7.5</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 8.0</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 8.5</td>
-								<td>Win 95+ / OSX.2+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.0</td>
-								<td>Win 95+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.2</td>
-								<td>Win 88+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera 9.5</td>
-								<td>Win 88+ / OSX.3+</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Opera for Wii</td>
-								<td>Wii</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Nokia N800</td>
-								<td>N800</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Presto</td>
-								<td>Nintendo DS browser</td>
-								<td>Nintendo DS</td>
-								<td class="center">8.5</td>
-								<td class="center">C/A<sup>1</sup></td>
-							</tr>
-							<tr class="gradeC">
-								<td>KHTML</td>
-								<td>Konqureror 3.1</td>
-								<td>KDE 3.1</td>
-								<td class="center">3.1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>KHTML</td>
-								<td>Konqureror 3.3</td>
-								<td>KDE 3.3</td>
-								<td class="center">3.3</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeA">
-								<td>KHTML</td>
-								<td>Konqureror 3.5</td>
-								<td>KDE 3.5</td>
-								<td class="center">3.5</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Tasman</td>
-								<td>Internet Explorer 4.5</td>
-								<td>Mac OS 8-9</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Tasman</td>
-								<td>Internet Explorer 5.1</td>
-								<td>Mac OS 7.6-9</td>
-								<td class="center">1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Tasman</td>
-								<td>Internet Explorer 5.2</td>
-								<td>Mac OS 8-X</td>
-								<td class="center">1</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Misc</td>
-								<td>NetFront 3.1</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeA">
-								<td>Misc</td>
-								<td>NetFront 3.4</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">A</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Misc</td>
-								<td>Dillo 0.8</td>
-								<td>Embedded devices</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Misc</td>
-								<td>Links</td>
-								<td>Text only</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="gradeX">
-								<td>Misc</td>
-								<td>Lynx</td>
-								<td>Text only</td>
-								<td class="center">-</td>
-								<td class="center">X</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Misc</td>
-								<td>IE Mobile</td>
-								<td>Windows Mobile 6</td>
-								<td class="center">-</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeC">
-								<td>Misc</td>
-								<td>PSP browser</td>
-								<td>PSP</td>
-								<td class="center">-</td>
-								<td class="center">C</td>
-							</tr>
-							<tr class="gradeU">
-								<td>Other browsers</td>
-								<td>All others</td>
-								<td>-</td>
-								<td class="center">-</td>
-								<td class="center">U</td>
-							</tr>
-						</tbody>
-					</table>
-  				</div>
-  			</div>
+			</div>
 
 
 
-		  </div>
+</div>

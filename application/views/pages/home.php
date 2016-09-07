@@ -4,13 +4,12 @@
     <div class="tp-banner-container">
       <div class="tp-banner">
         <ul>
-          
-          <!-- Slider 1 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $banner_home[0]['img_name']; ?>" data-bgposition="center top" alt="" />
+          <?php foreach($banner_home as $ban): ?>
+          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
             <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
-                  data-x="left" 
+                  data-x="<?php echo $ban['xposition']; ?>" 
                   data-y="center" 
                   data-speed="700" 
                   data-start="1200" 
@@ -22,113 +21,11 @@
                   data-endelementdelay="0.1" 
                   data-endspeed="300" 
                   data-captionhidden="on" 
-                  style="color: #272727; font-size: 30px;font-weight:bold"> <?php echo $banner_home[0]['title']; ?> </div>
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb  font-montserrat no-space text-left tp-resizeme" 
-                  data-x="left" 
-                  data-y="center" data-voffset="80" 
-                  data-speed="700" 
-                  data-start="1600" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on" 
-                  style="color: #959595; font-size: 12px; line-height:24px;"> <?php echo $banner_home[0]['sub_title']; ?></div>
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb tp-resizeme" 
-                  data-x="left" 
-                  data-y="500" 
-                  data-speed="700" 
-                  data-start="2000" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on"> <a href="<?php echo $banner_home[0]['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $banner_home[0]['btn_text']; ?></a> </div>
-          </li>
-          
-          <!-- banner_home 2 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $banner_home[1]['img_name']; ?>" data-bgposition="center top" alt="" /> 
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
-                  data-x="left" 
-                  data-y="center" 
-                  data-speed="700" 
-                  data-start="1200" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on" 
-                  style="color: #272727; font-size: 24px; font-weight:bold;"> <?php echo $banner_home[1]['title']; ?> </div>
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb  font-montserrat no-space text-left tp-resizeme" 
-                  data-x="left" 
-                  data-y="center" data-voffset="50" 
-                  data-speed="700" 
-                  data-start="1600" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on" 
-                  style="color: #959595; font-size: 12px; line-height:24px;"> <?php echo $banner_home[1]['sub_title']; ?> </div>
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb tp-resizeme" 
-                  data-x="left" 
-                  data-y="500" 
-                  data-speed="700" 
-                  data-start="2000" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on"> <a href="<?php echo $banner_home[1]['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $banner_home[1]['btn_text']; ?></a> </div>
-          </li>
-          
-          <!-- banner_home 3 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $banner_home[2]['img_name']; ?>" data-bgposition="center top" alt="" /> 
-            
-            <!-- Layer -->
-            <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
-                  data-x="center" 
-                  data-y="center" 
-                  data-speed="700" 
-                  data-start="1200" 
-                  data-easing="easeOutBack"
-                  data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-elementdelay="0.1" 
-                  data-endelementdelay="0.1" 
-                  data-endspeed="300" 
-                  data-captionhidden="on" 
-                  style="color: #272727; font-size: 60px; font-weight:bold;"> <?php echo $banner_home[2]['title']; ?> </div>
+                  style="color: #272727; font-size: <?php echo $ban['fontsize']; ?>px; font-weight:bold;"> <?php echo $ban['title']; ?> </div>
             
             <!-- Layer -->
             <div class="tp-caption sfb text-uppercase font-montserrat no-space text-left tp-resizeme" 
-                  data-x="center" 
+                  data-x="<?php echo $ban['xposition']; ?>" 
                   data-y="center" data-voffset="70" 
                   data-speed="700" 
                   data-start="1600" 
@@ -140,11 +37,11 @@
                   data-endelementdelay="0.1" 
                   data-endspeed="300" 
                   data-captionhidden="on" 
-                  style="color: #272727; font-size: 36px; font-weight:bold; line-height:24px;"> <?php echo $banner_home[2]['sub_title']; ?> </div>
+                  style="color: #272727; font-size: <?php echo $ban['fontsize']*0.6; ?>px; font-weight:400; line-height:24px;"> <?php echo $ban['sub_title']; ?> </div>
             
             <!-- Layer -->
             <div class="tp-caption sfb tp-resizeme" 
-                  data-x="center" 
+                  data-x="<?php echo $ban['xposition']; ?>" 
                   data-y="500" 
                   data-speed="700" 
                   data-start="2000" 
@@ -155,8 +52,9 @@
                   data-elementdelay="0.1" 
                   data-endelementdelay="0.1" 
                   data-endspeed="300" 
-                  data-captionhidden="on"> <a href="<?php echo $banner_home[2]['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $banner_home[2]['btn_text']; ?></a> </div>
+                  data-captionhidden="on"> <a href="<?php echo $ban['btn_link']; ?>" class="btn btn-small btn-dark"><?php echo $ban['btn_text']; ?></a> </div>
           </li>
+		  <? endforeach; ?>
         </ul>
       </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SEBIAN - Multi Purpose eCommerce HTML5 Template</title>
+<title>INTERMED CERAMICA</title>
 <meta name="keywords" content="HTML5,CSS3,HTML,Template,Multi-Purpose,M_Adnan,Corporate Theme,SEBIAN Multi Purpose Care,eCommerce,SEBIAN - Multi Purpose eCommerce HTML5 Template">
 <meta name="description" content="SEBIAN - Multi Purpose eCommerce HTML5 Template">
 <meta name="author" content="M_Adnan">
@@ -11,7 +11,7 @@
 <!-- FONTS ONLINE -->
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
+<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.png"/>
 <!--MAIN STYLE-->
 <link href="<?php echo base_url().'assets/'; ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url().'assets/'; ?>css/main.css" rel="stylesheet" type="text/css">
