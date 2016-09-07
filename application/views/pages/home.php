@@ -1,4 +1,4 @@
-  
+
   <!--======= HOME MAIN SLIDER =========-->
   <section class="home-slider">
     <div class="tp-banner-container">
