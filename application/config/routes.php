@@ -64,5 +64,6 @@ $route['projects'] = 'projects';
 $route['about'] = 'about';
 $route['contact-us'] = 'contact';
 $route['getproducts'] = 'ProductItem/getproducts';
+$route['uploadImages'] = 'ImageItem/uploadImages';
 $route['default_controller'] = 'home/view';
 $route['(:any)'] = 'home';

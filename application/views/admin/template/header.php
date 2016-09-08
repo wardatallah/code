@@ -9,9 +9,163 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/dashboard/jquery.lighter.js'; ?>" type="text/javascript"></script>
 	<link href="<?php echo base_url() .'assets/css/dashboard/jquery.lighter.css'; ?>" rel="stylesheet" type="text/css" />
+ <script>
+window.ajax = function(url, method,body) {
+    var fullURL = "http://[::1]/code/" + url;
+    var deferred = $.Deferred();
+    var settings = {
+        type: method,
+		contentType: false,
+        cache: false,
+		processData:false,
+        url: fullURL,
+        error: function (error) {
+            console.log(error);
+            deferred.reject(error);
+        },
+        success: function (response) {
+			console.log("done");
+            deferred.resolve(response);
+        }
+    };
 
+    if (body) {
+        settings.data =  body ;
+    }
+
+    $.ajax(settings);
+    return deferred;
+};
+
+
+$( document ).ready(function() {
+	$("#fileImage").change(function(evt) {
+		        console.log("test");
+				var input = evt.target;
+				if (input.files && input.files[0]) {
+				  var that = this;
+				  var reader = new FileReader();
+				  reader.onload = function (e) {
+					  var data = e.target.result;
+					  $('#displayImg').attr('src', data ) ; 
+				  };
+				
+				 reader.readAsDataURL(input.files[0]);
+				 
+				}
+				
+				
+				$("#formImage").submit() ;
+				 
+	});
+	
+	
+	$("#formImage").submit(function(e) {
+		
+		e.preventDefault();
+		ajax('imageItem/uploadImages', 'POST', new FormData(this)).fail(function(error){
+						console.log(error);
+					}).done(function(data) {
+						console.log(data);
+					});
+					
+	});
+	
+});
+
+var callLibrary = function(){
+		$('.imagelibrary').addClass('active');
+		$('.imageUpload').removeClass('active');
+		$('.libraryContent').css('display','block');
+		$('.uploadContent').css('display','none');
+	}
+	
+	
+var callUpload = function(){
+		$('.imageUpload').addClass('active');
+		$('.imagelibrary').removeClass('active');
+		$('.uploadContent').css('display','block');
+		$('.libraryContent').css('display','none');
+	}
+</script>
+
+<style>
+ 
+.modal-dialog {
+    width: 90% !important; 
+	height : 600px;	
+    margin: 30px auto;
+}
+
+
+.uploadedImage {
+	height: 400px;
+	width: 400px;
+	margin: 0 40px;
+}
+
+.uploadedButton{
+	border: 1px #e5e2e2 solid;
+	padding: 5px;width: 150px;
+	text-align: center;
+	border-radius: 5px;cursor: hand;
+	background: #f8f8f8;
+}
+
+.uploadedContent {
+	border:1px solid #ccc ; 
+	border-top : 0px;
+	display:none;
+}
+
+.libraryContent {
+	border:1px solid #ccc ; border-top : 0px;	
+}
+
+</style>
   </head>
   <body>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs">
+			<li role="presentation" class="imagelibrary" onclick="callLibrary();">
+			<a href="#">Library</a>
+			</li>
+			
+			<li role="presentation" class="imageUpload  active" onclick="callUpload();" >
+			<a href="#">Upload</a></li>
+			
+		  </ul>
+		  <div class="libraryContent" class="libraryContent">
+			 library
+		  </div>
+		  <div class="uploadContent uploadedContent" >
+			   <div style="padding:40px;">
+				<form id="formImage"  method="post" enctype="multipart/form-data">
+				   <input type="file" id="fileImage" name="fileImage"   style="display:none;">
+				   <span class="uploadedButton" onclick="$('#fileImage').click();">Upload Image</span>
+				   <img id="displayImg"  class="uploadedImage">
+				</form>  
+			   </div>
+		  </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
   <?php 
 		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		if (!isset($this->session->userdata['logged_in'])) {
