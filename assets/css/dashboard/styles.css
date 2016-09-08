@@ -675,3 +675,43 @@ input.save-section {
 	top:50%;
 	vertical-align:middle;
 }
+
+.img-container {
+	width:300px;
+	height:300px;
+	float:left;
+	border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+	display: table;
+}
+
+.img-container  img {
+	border:none !important;
+	height: 100%;
+    width: auto;
+}
+
+.img-container:hover {
+	opacity:0.8;
+}
+
+.img-container:hover button.delete{
+	display:block;
+}
+
+.img-container button.delete {
+	position:absolute;
+	border: none;
+    display:none;
+	top:0;
+    right:0;
+	width:32px;
+	height:32px;
+	background:url(http://[::1]/code/assets/images/delete-icon.png) no-repeat;
+	
+}
+
+.clearfix {
+    margin-bottom: 10px;
+}

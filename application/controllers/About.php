@@ -25,7 +25,7 @@ class About extends CI_Controller {
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				
 				// Capitalize the first letter
-				$data['title'] = ucfirst("projects"); 
+				$data['title'] = ucfirst("About Us"); 
 				
 				$data['welcome_section'] = $this->about_model->get_heading("about","welcome");
 				$data['whatwedo_section'] = $this->about_model->get_what_we_do("about","whatwedo");

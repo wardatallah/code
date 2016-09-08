@@ -56,7 +56,7 @@ class Admin extends CI_Controller {
 					 $session_data = $this->session->userdata('logged_in');
 					 $data['username'] = $session_data['username'];
 					 $this->load->view('admin/template/header', $data);
-					 $this->load->view('admin/settings');
+					 $this->load->view('admin/settings',$data);
 					 $this->load->view('admin/template/footer', $data);	
 			   }
 			   else {
@@ -64,21 +64,49 @@ class Admin extends CI_Controller {
 			   }
 			 }
 
-			 function edit($slug)
-			 {
-			   if($this->session->userdata('logged_in'))
+			 
+			 function library(){
+				 if($this->session->userdata('logged_in'))
 			   {
 					 $this->load->library('form_validation');
 					 $session_data = $this->session->userdata('logged_in');
 					 $data['username'] = $session_data['username'];
+					 
+					 
 					 $this->load->view('admin/template/header', $data);
-					 $this->load->view('admin/pages/'.$slug);
+					 $this->load->view('admin/library',$data);
 					 $this->load->view('admin/template/footer', $data);	
 			   }
 			   else {
 				   redirect("admin","refresh");
 			   }
 			 }
+			 
+			 function deleteImg(){
+				 if($this->session->userdata('logged_in'))
+			   {
+				   $session_data = $this->session->userdata('logged_in');
+				   $data['username'] = $session_data['username'];
+				   $file=$this->input->post('path');
+				   if (isset($file)){
+					   $base=base_url();
+					   $path=$_SERVER['DOCUMENT_ROOT'].'/code/';
+					   $basefile=str_replace("$base",$path,$file);
+					   if (unlink($basefile)){
+					   }
+					}				   
+				   $this->load->view('admin/template/header', $data);
+				   $this->load->view('admin/library',$data);
+				   $this->load->view('admin/template/footer', $data);	
+				   
+				   
+			   } else {
+				   redirect("admin","refresh");
+			   }
+				 
+			 }
+			 
+			 
 }
 
 ?>
