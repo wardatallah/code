@@ -6,7 +6,7 @@
 					<div class="col-md-12">
 						<div class="panel-default">
 							<div class="content-box-header  panel-heading">
-								<div class="panel-title"><a href="<?php echo base_url() . 'editpages/project'; ?>" >Projects</a> <i class="glyphicon glyphicon-menu-right"></i> <?php echo $project->title;?></div>
+								<div class="panel-title"><a href="<?php echo base_url() . 'editpages/projects'; ?>" >Projects</a> <i class="glyphicon glyphicon-menu-right"></i> <?php echo $project->title;?></div>
 							</div>
 							<div class="content-box-large box-with-header">
 								<div class="row">

@@ -129,7 +129,7 @@
               </ul>
             </li>
             <li><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
-			<li><a href="#" data-toggle="modal" data-target="#myModal" >PRIVATE GALLARY</a></li>
+			<li><a href="#" data-toggle="modal" data-target="#myModal" >Collection</a></li>
             <li><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
             
             <!--======= Shopping Cart =========-->

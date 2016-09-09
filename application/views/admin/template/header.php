@@ -289,13 +289,13 @@ var callUpload = function(){
   	<div class="header">
 	     <div class="container">
 	        <div class="row">
-	           <div class="col-md-5">
+	           <div class="col-md-10">
 	              <!-- Logo -->
 	              <div class="logo">
 	                 <h1><a href="#">Intermed Ceramica Dashboard</a></h1>
 	              </div>
 	           </div>
-	           <div class="col-md-5">
+	           <!--<div class="col-md-5">
 	              <div class="row">
 	                <div class="col-lg-12">
 	                  <div class="input-group form">
@@ -306,7 +306,7 @@ var callUpload = function(){
 	                  </div>
 	                </div>
 	              </div>
-	           </div>
+	           </div>-->
 	           <div class="col-md-2">
 	              <div class="navbar navbar-inverse" role="banner">
 	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
