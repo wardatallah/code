@@ -106,32 +106,16 @@
         </div>
         <ul class="row">
           
-          <!-- Add Banner 1 -->
+          <?php foreach($categories as $category): ?>
           <li class="col-md-4 animate fadeInRight" data-wow-delay="0.4s">
-            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
+            <div class="inn-sec"> <img src="<?php echo $category['img_link']; ?>" alt="">
               <div class="upper">
-                <h4 class="text-uppercase">SANITARY</h4>
-                <a href="#.">SHOP NOW</a> </div>
+                <h4 class="text-uppercase"><?php echo $category['name']; ?></h4>
+                <a href="<?php echo $category['link']; ?>">SHOP NOW</a> </div>
             </div>
           </li>
+          <? endforeach; ?>
           
-          <!-- Add Banner 2 -->
-          <li class="col-md-4 animate fadeInUp" data-wow-delay="0.4s">
-            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
-              <div class="upper">
-                <h4>CERAMIC</h4>
-                <a href="#.">SHOP NOW</a> </div>
-            </div>
-          </li>
-          
-          <!-- Add Banner 3 -->
-          <li class="col-md-4 animate fadeInRight" data-wow-delay="0.4s">
-            <div class="inn-sec"> <img src="<?php echo base_url().'assets/images/watches/add-img-1.jpg' ?>" alt="">
-              <div class="upper">
-                <h4>ACCESSORIS</h4>
-                <a href="#.">SHOP NOW</a> </div>
-            </div>
-          </li>
         </ul>
       </div>
     </div>

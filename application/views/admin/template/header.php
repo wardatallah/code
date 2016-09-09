@@ -9,6 +9,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/dashboard/jquery.lighter.js'; ?>" type="text/javascript"></script>
 	<link href="<?php echo base_url() .'assets/css/dashboard/jquery.lighter.css'; ?>" rel="stylesheet" type="text/css" />
+	
+	
+	<script src="<?php echo base_url() .'assets/js/dashboard/bootbox.js'; ?>" type="text/javascript"></script>
+	<script src="<?php echo base_url() .'assets/js/bootstrap.min.js'; ?>" type="text/javascript"></script>
  <script>
 window.ajax = function(url, method,body) {
     var fullURL = "http://[::1]/code/" + url;
@@ -59,7 +63,7 @@ $( document ).ready(function() {
 				 
 	});
 	
-	
+		
 	$("#formImage").submit(function(e) {
 		
 		e.preventDefault();
@@ -72,6 +76,18 @@ $( document ).ready(function() {
 	});
 	
 });
+
+var alertDelete = function(id){
+				bootbox.confirm("Are you sure you want to delete this image?", function(result) {
+					if(result===true){
+						$('#'+id).submit();
+					}
+				  
+				});
+				return false;
+				
+				
+}
 
 var callLibrary = function(){
 		$('.imagelibrary').addClass('active');
@@ -90,9 +106,15 @@ var callUpload = function(){
 </script>
 
 <style>
- 
+ .modal-body , .modal-footer {
+	 background:#fff;
+ }
+.modal-footer { 
+	border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 .modal-dialog {
-    width: 90% !important; 
+    
 	height : 600px;	
     margin: 30px auto;
 }
@@ -122,6 +144,14 @@ var callUpload = function(){
 	border:1px solid #ccc ; border-top : 0px;	
 }
 
+.modal-open .modal {
+	padding-right: 0px !important;
+	border-radius: 5px;
+    width: 50%;
+    left: 25%;
+	top:5%;
+    height: auto;
+}
 </style>
   </head>
   <body>
@@ -199,11 +229,7 @@ var callUpload = function(){
 	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
 	                    <ul class="nav navbar-nav">
 	                      <li class="dropdown">
-	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
-	                        <ul class="dropdown-menu animated fadeInUp">
-	                          <li><a href="#">Profile</a></li>
-	                          <li><a href="<?php echo base_url() . 'Userlogin/logout'; ?>">Logout</a></li>
-	                        </ul>
+	                        <a href="<?php echo base_url() . 'Userlogin/logout'; ?>">Logout  <i class="glyphicon glyphicon-log-out"></i></a>
 	                      </li>
 	                    </ul>
 	                  </nav>
@@ -234,12 +260,8 @@ var callUpload = function(){
 							<li <?php if ($actual_link==base_url(). 'editpages/contact') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/contact'; ?>">Contact Us</a></li>
                         </ul>
                     </li>
-					<li <?php if ($actual_link==base_url(). 'Admin/library') echo 'class="active"';?>><a href="<?php echo base_url() . 'Admin/library'; ?>"><i class="glyphicon glyphicon-picture"></i> Media Library</a></li>
-                    <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
-                    <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li>
-                    <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li>
-                    <li><a href="editors.html"><i class="glyphicon glyphicon-pencil"></i> Editors</a></li>
-                    <li><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li>
+					<li <?php if ($actual_link==base_url(). 'Admin/library') echo 'class="active"';?> ><a href="<?php echo base_url() . 'Admin/library'; ?>"><i class="glyphicon glyphicon-picture"></i> Media Library</a></li>
+                    <li  <?php if ($actual_link==base_url(). 'Admin/categories') echo 'class="active"';?> ><a href="<?php echo base_url() . 'Admin/categories'; ?>"><i class="glyphicon glyphicon-th"></i>Categories</a></li>
                     <li <?php if ($actual_link==base_url(). 'Admin/settings') echo 'class="active"';?> ><a href="<?php echo base_url() . 'Admin/settings'; ?>"><i class="glyphicon glyphicon-cog"></i> Settings</a></li>
                 </ul>
              </div>

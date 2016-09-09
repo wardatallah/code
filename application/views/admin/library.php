@@ -1,5 +1,5 @@
 		  
-		  <div class="col-md-8">
+		  <div class="col-md-10">
 		  	<div class="row">
 		  		<div class="col-md-12">
 		  			<div class="panel-default">
@@ -7,7 +7,7 @@
 							<div class="panel-title">Media Library</div>
 						</div>
 		  				<div class="content-box-large box-with-header">
-							<div class="row">
+							<div class="row astable">
 								<?php 	$x =0;
 										$dir    = $_SERVER['DOCUMENT_ROOT'].'/code/assets/images';
 										if ($handle = opendir($dir)) {
@@ -76,15 +76,15 @@
 		function print_img($path,$name){
 			global $x;
 			$x++;
-			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$x.'" onsubmit="return confirm(\'Are you sure you want to delete this image?\');">';
+			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$x.'" class="hidden">';
 			echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
 			echo '</form>';
-			echo '<div class="col-md-3 img-container" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain;">
+			echo '<div class="col-md-2 img-container" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain;">
 						<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>
-						<button type="submit" class="delete" form="imgform'.$x.'"></button>
+						<div onclick="alertDelete(\'imgform'.$x.'\');" class="delete" ></div>
 					</div>';
 				  
-			if ($x%4==0 && $x!==0){
+			if ($x%6==0 && $x!==0){
 				echo '<div class="clearfix"></div>';
 			}
 		}

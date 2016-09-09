@@ -39,6 +39,11 @@ class Home_model extends CI_Model {
 				return $query->result_array();
 		}
 		
+		public function get_main_categories(){
+				$query = $this->db->get('main-categories');
+				return $query->result_array();
+		}
+		
 		
 		
 }

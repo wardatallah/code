@@ -55,7 +55,7 @@
         
         <!-- TITTLE -->
         <div class="tittle tittle-cont  animate fadeInUp" data-wow-delay="0.4s">
-          <h3>OUR Location</h3>
+          <h3>Our Locations</h3>
           <hr>
         </div>
         <ul class="row">
@@ -86,7 +86,7 @@
           <div class="testi-slides  animate fadeInUp" data-wow-delay="0.4s"> 
             <?php foreach ($clients_say_section as $client): ?>
             <div class="testi">
-              <div class="avatar"> <img src="<?php echo base_url().'assets/'; ?><?php echo $client['img_name']; ?>" alt=""> </div>
+              <div class="avatar"> <img src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_name']; ?>"> </div>
               <p>“<?php echo $client['client_text']; ?>”</p>
               <h5><?php echo $client['client_name']; ?></h5>
               <p class="posi"><?php echo $client['client_position']; ?></p>
@@ -113,7 +113,7 @@
 		  <!--  Client Logo Slider -->
 		  <div class="client-slide  animate fadeInUp" data-wow-delay="0.4s">
 		  <?php foreach ($our_clients_section as $client): ?>
-			<div class="slide"><a href="<?php echo $client['img_link']; ?>"><img class="img-responsive" src="<?php echo base_url().'assets/'; ?><?php echo $client['img_name']; ?>" alt=""></a></div>
+			<div class="slide"><a href="<?php echo $client['client_link']; ?>"><img class="img-responsive" src="<?php echo $client['img_path']; ?>" alt=""></a></div>
 		  <?php endforeach; ?>		 
 		 </div>
 		</div>

@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 			 {
 				   parent::__construct();
 				   $this->load->model('header_model');
+				   $this->load->model('home_model');
 				   $this->load->helper('url_helper');
 			 }
 
@@ -82,6 +83,25 @@ class Admin extends CI_Controller {
 			   }
 			 }
 			 
+			 function categories(){
+				 if($this->session->userdata('logged_in'))
+			   {
+					 $this->load->library('form_validation');
+					 $session_data = $this->session->userdata('logged_in');
+					 $data['username'] = $session_data['username'];
+					 
+					 $data['categories'] = $this->home_model->get_main_categories();
+					 
+					 
+					 $this->load->view('admin/template/header', $data);
+					 $this->load->view('admin/categories',$data);
+					 $this->load->view('admin/template/footer', $data);	
+			   }
+			   else {
+				   redirect("admin","refresh");
+			   }
+			 }
+			 
 			 function deleteImg(){
 				 if($this->session->userdata('logged_in'))
 			   {
@@ -95,9 +115,9 @@ class Admin extends CI_Controller {
 					   if (unlink($basefile)){
 					   }
 					}				   
-				   $this->load->view('admin/template/header', $data);
-				   $this->load->view('admin/library',$data);
-				   $this->load->view('admin/template/footer', $data);	
+				   
+				   redirect("Admin/library","refresh");
+				   
 				   
 				   
 			   } else {
@@ -105,6 +125,8 @@ class Admin extends CI_Controller {
 			   }
 				 
 			 }
+			 
+			 
 			 
 			 
 }

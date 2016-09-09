@@ -30,6 +30,7 @@ class Home extends CI_Controller {
 				$data['banner_home'] = $this->home_model->get_slider("banner");
 				$data['slider_home'] = $this->home_model->get_slider("slider-home");
 				$data['welcome_section'] = $this->home_model->get_heading("home","welcome");
+				$data['categories'] = $this->home_model->get_main_categories();
 				$data['banner_quote'] = $this->home_model->get_banner("home");
 				$data['products_section'] = $this->home_model->get_heading("home","products");
 				$data['products_view'] = $this->home_model->get_products();
