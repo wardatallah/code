@@ -121,8 +121,8 @@ var callUpload = function(){
 
 
 .uploadedImage {
-	height: 400px;
-	width: 400px;
+	height: 200px;
+	width: 200px;
 	margin: 0 40px;
 }
 
@@ -137,11 +137,14 @@ var callUpload = function(){
 .uploadedContent {
 	border:1px solid #ccc ; 
 	border-top : 0px;
+	height : 400px ;
 	display:none;
 }
 
 .libraryContent {
-	border:1px solid #ccc ; border-top : 0px;	
+	border:1px solid #ccc ; border-top : 0px;
+	height : 400px ;
+	overflow-y : scroll  ;	
 }
 
 .modal-open .modal {
@@ -155,7 +158,7 @@ var callUpload = function(){
 </style>
   </head>
   <body>
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -163,20 +166,58 @@ var callUpload = function(){
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Select Media</h4>
         </div>
         <div class="modal-body">
           <ul class="nav nav-tabs">
-			<li role="presentation" class="imagelibrary" onclick="callLibrary();">
+			<li role="presentation" class="imagelibrary active" onclick="callLibrary();">
 			<a href="#">Library</a>
 			</li>
 			
-			<li role="presentation" class="imageUpload  active" onclick="callUpload();" >
+			<li role="presentation" class="imageUpload " onclick="callUpload();" >
 			<a href="#">Upload</a></li>
 			
 		  </ul>
-		  <div class="libraryContent" class="libraryContent">
-			 library
+		  <div class="libraryContent">
+						 
+		  				<div class="content-box-large box-with-header">
+							<div class="row">
+							
+							 <?php 	$x1 =0;
+										$dir1    = $_SERVER['DOCUMENT_ROOT'].'/code/assets/images';
+										if ($handle1 = opendir($dir1)) {
+										$files1 =  scandir($dir1);
+										foreach($files1 as $file1):
+										$entry1=$_SERVER['DOCUMENT_ROOT'].'/code/assets/images/'.$file1;
+										if ($file1 !== "." && $file1 !== ".."){
+											if (!is_dir($entry1) ){
+												$ext1 = pathinfo($file1, PATHINFO_EXTENSION);
+												if ($ext1 === 'png' || $ext1 === 'jpg' || $ext1 === 'jpeg'){ 
+															$path1=base_url() . 'assets/images/';
+															print_img1($path1,$file1); 
+												}
+											
+											} else {
+													$subdir1=$_SERVER['DOCUMENT_ROOT'].'/code/assets/images/'.$file1;
+													$subfiles1=get_sub1($subdir1,$file1);
+														
+														foreach($subfiles1 as $sub1):
+														
+															$entry1=$_SERVER['DOCUMENT_ROOT'].'/code/assets/images/'.$file1 .'/'.$sub1;
+															if (!is_dir($entry1) ){
+																$ext1 = pathinfo($sub1, PATHINFO_EXTENSION);
+																if ($ext1 === 'png' || $ext1 === 'jpg' || $ext1 === 'jpeg'){
+																	$imgpath1 = base_url() . 'assets/images/' .$file1.'/';
+																	print_img1($imgpath1,$sub1);
+																}
+															}
+														endforeach;
+											}
+										}
+										endforeach; }?>
+							 
+							</div>
+						</div>
 		  </div>
 		  <div class="uploadContent uploadedContent" >
 			   <div style="padding:40px;">
@@ -189,13 +230,55 @@ var callUpload = function(){
 		  </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="background: #6196e1;color: #f4f4f4;border: 1px #6196e1 solid;">Done</button>
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
   </div>
-  
+  <?php 
+		function get_sub1($dir,$sub){
+			if ($handle = opendir($dir)) {
+			$files =  scandir($dir);
+			$filesarray=array();
+			
+			$counter=0;
+			foreach($files as $file):
+				$entry=$dir . $file;
+				if ($entry !== "." && $entry !== ".."){
+					if (!is_dir($entry) ){
+						$ext = pathinfo($file, PATHINFO_EXTENSION);
+						if ($ext === 'png' || $ext === 'jpg' || $ext === 'jpeg'){
+							$filesarray[$counter]= $file;
+							$counter++;
+						}
+					}
+				}
+			endforeach;
+			}
+		return $filesarray;
+		}
+		
+		
+		function print_img1($path,$name){
+			global $x;
+			$x++;
+			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$x.'" onsubmit="return confirm(\'Are you sure you want to delete this image?\');">';
+			echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
+			echo '</form>';
+			echo '<div class="col-md-1 img-container img-lib" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain; width:100px;height:100px;cursor:hand;"  onclick= $(\'#img-lib\').addClass(\'aaa\')  >
+						<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>
+						 
+					</div>';
+				  
+			if ($x%4==0 && $x!==0){
+				echo '<div class="clearfix"></div>';
+			}
+		}
+		
+		?>
+		
   <?php 
 		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		if (!isset($this->session->userdata['logged_in'])) {

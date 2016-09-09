@@ -21,7 +21,7 @@
 									<div class="form-group row">
 											<label class="col-md-1 control-label">File input</label>
 											<div class="col-md-4">
-												<input type="file" class="btn btn-default" >
+											<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Upload Image</button>
 											</div>
 											<label class="col-md-1 control-label">Image Link</label>
 											<div class="col-md-6">

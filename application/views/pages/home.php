@@ -3,7 +3,7 @@
     <div class="tp-banner-container">
       <div class="tp-banner">
         <ul>
-          <?php foreach($banner_home as $ban): ?>
+          <?php foreach($banner_home as $ban) ?>
           <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
