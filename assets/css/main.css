@@ -265,7 +265,7 @@ header nav .ownmenu ul.dropdown .indicator {
 }
 .ownmenu > li > .megamenu.full-width {
 	width: 100%;
-	left: 0;
+	/*left: 0;*/
 	text-align: left;
 }
 /* MEGAMENU FORM CONFIGURATION
@@ -523,8 +523,8 @@ header .ownmenu {
 	display: block;
 }
 .ownmenu > li > .megamenu.full-width {
-	max-width: 1140px;
-	left: 0;
+	max-width: 750px;
+	/*left: 0;*/
 	text-align: left;
 	width: 100%;
 	margin-left: 15px;

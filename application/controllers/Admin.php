@@ -26,6 +26,7 @@ class Admin extends CI_Controller {
 			   {
 				 //If no session, redirect to login page
 				$data['header_logo'] = $this->header_model->get_logo("header");
+				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
@@ -124,6 +125,45 @@ class Admin extends CI_Controller {
 				   redirect("admin","refresh");
 			   }
 				 
+			 }
+			 
+			 function header_section(){
+				 if($this->session->userdata('logged_in'))
+			   {
+				   $session_data = $this->session->userdata('logged_in');
+				   $data['username'] = $session_data['username'];
+				   			   
+				   $data['header_logo'] = $this->header_model->get_logo("header");
+				   $data['social_media'] = $this->header_model->get_social();
+				   
+				   $this->load->view('admin/template/header', $data);
+				   $this->load->view('admin/header',$data);
+				   $this->load->view('admin/template/footer', $data);	
+				   
+				   
+				   
+			   } else {
+				   redirect("admin","refresh");
+			   }
+			 }
+			 
+			 function footer_section(){
+				 if($this->session->userdata('logged_in'))
+			   {
+				   $session_data = $this->session->userdata('logged_in');
+				   $data['username'] = $session_data['username'];
+				   
+				   
+				   
+				   $this->load->view('admin/template/header', $data);
+				   $this->load->view('admin/footer',$data);
+				   $this->load->view('admin/template/footer', $data);	
+				   
+				   
+				   
+			   } else {
+				   redirect("admin","refresh");
+			   }
 			 }
 			 
 			 

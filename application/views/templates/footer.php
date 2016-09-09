@@ -1,7 +1,7 @@
 <!--======= Footer =========-->
   <footer>
     <div class="container">
-      <div class="text-center footer-logo"> <a href="#."><img src="<?php echo base_url().'assets/'; ?>images/footer-logo.png" alt=""></a><br>
+      <div class="text-center footer-logo"> <a href="#."><img src="<?php echo $footer_logo->path; ?>" alt=""></a><br>
         <p class="intro-small margin-t-40">Multipurpose E-Commerce Theme is suitable for furniture store, fashion shop, accessories, electric shop. We have included multiple layouts for home page to give you best selections in customization.</p>
       </div>
       

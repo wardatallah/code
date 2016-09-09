@@ -68,6 +68,7 @@ Class Userlogin extends CI_Controller {
 					if(isset($this->session->userdata['logged_in'])){
 						redirect('admin', 'refresh');
 					}else{
+						$data['footer_logo'] = $this->header_model->get_logo("footer");
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
@@ -103,7 +104,7 @@ Class Userlogin extends CI_Controller {
 						$data = array(
 						'error_message' => 'Invalid Username or Password'
 						);
-						
+						$data['footer_logo'] = $this->header_model->get_logo("footer");
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
@@ -149,6 +150,7 @@ Class Userlogin extends CI_Controller {
 						$this->load->view('admin/settings');
 						$this->load->view('admin/template/footer', $data);
 					}else{
+						$data['footer_logo'] = $this->header_model->get_logo("footer");
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter

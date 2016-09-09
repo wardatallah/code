@@ -83,7 +83,7 @@
     
     <!-- Logo -->
     <div class="container">
-      <div class="logo"> <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url().'assets/'; ?>images/<?php echo $header_logo->name; ?>" alt=""></a> </div>
+      <div class="logo"> <a href="<?php echo base_url(); ?>"><img src="<?php echo $header_logo->path; ?>" alt=""></a> </div>
     </div>
     
     <!-- Nav -->
@@ -101,28 +101,28 @@
               <ul class="megamenu full-width">
                 <li class="row nav-post">
                   <div class="col-sm-4">
-                    <h6>By Country</h6>
-                    <ul>
-                      <li><a href="#">Lebanon</a></li>
-					  <li><a href="#">Spain</a></li>
-					  <li><a href="#">China</a></li>
-                      
-                    </ul>
-                  </div>
-                  <div class="col-sm-4">
                     <h6>By Type</h6>
                     <ul>
                       <li><a href="#">Type 1</a></li>
 					  <li><a href="#">Type 2</a></li>
-					  <li><a href="#">Type 3</a></li>                      
+					  <li><a href="#">Type 3</a></li>   
+                      
                     </ul>
                   </div>
                   <div class="col-sm-4">
-                    <h6>By Material</h6>
+                    <h6>By Origin</h6>
                     <ul>
-                      <li><a href="#">Material 1</a></li>
-					  <li><a href="#">Material 2</a></li>
-					  <li><a href="#">Material 3</a></li>                      
+                      <li><a href="#">Origin 1</a></li>
+					  <li><a href="#">Origin 2</a></li>
+					  <li><a href="#">Origin 3</a></li>                      
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <h6>By Format</h6>
+                    <ul>
+                      <li><a href="#">Format 1</a></li>
+					  <li><a href="#">Format 2</a></li>
+					  <li><a href="#">Format 3</a></li>                      
                     </ul>
                   </div>
                 </li>
@@ -159,9 +159,9 @@
                 <li class="row">
                   <div class="col-sm-4 no-padding">
                     <select class="selectpicker">
-                      <option>COUNTRY</option>
                       <option>TYPE</option>
-                      <option>MATERIAL</option>
+                      <option>ORIGIN</option>
+                      <option>FORMAT</option>
                     </select>
                   </div>
                   <div class="col-sm-8 no-padding">

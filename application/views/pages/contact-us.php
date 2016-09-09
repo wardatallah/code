@@ -156,7 +156,7 @@ if ($('#map').length) {
 		position: myLatLng,
 		map: map,
 		title: 'Intermed',
-		icon: '<?php echo base_url().'assets/images/'.$map_logo->name; ?>'
+		icon: '<?php echo $map_logo->path; ?>'
 	});
 	
 	marker.addListener('click', function() {

@@ -22,6 +22,7 @@ class Products extends CI_Controller {
 					show_404();
 				}
 				$data['header_logo'] = $this->header_model->get_logo("header");
+				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				
@@ -50,6 +51,7 @@ class Products extends CI_Controller {
 		public function view($id = NULL){
 			
 				$data['header_logo'] = $this->header_model->get_logo("header");
+				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				

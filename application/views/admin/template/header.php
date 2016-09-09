@@ -329,6 +329,8 @@ var callUpload = function(){
                 <ul class="nav">
                     <!-- Main menu -->
                     <li <?php if ($actual_link==base_url(). 'admin') echo 'class="active"';?> ><a href="<?php echo base_url() . 'admin'; ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+					<li <?php if ($actual_link==base_url(). 'Admin/header_section') echo 'class="active"';?> ><a href="<?php echo base_url() . 'Admin/header_section'; ?>"><i class="glyphicon glyphicon-menu-up"></i> Header</a></li>
+					<li <?php if ($actual_link==base_url(). 'Admin/footer_section') echo 'class="active"';?> ><a href="<?php echo base_url() . 'Admin/footer_section'; ?>"><i class="glyphicon glyphicon-menu-down"></i> Footer</a></li>
                     <li class="submenu <?php if (strpos($actual_link, 'editpages') !== false) echo "open";?>">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Pages

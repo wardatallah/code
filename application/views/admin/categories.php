@@ -15,27 +15,25 @@
 									<div  class="thumbnail">
 									  <img src="<?php echo $category['img_link']; ?>" alt="<?php echo $category['name']; ?>">
 									</div>
+									<div class="form-group row astable">
+												<div class="col-md-4">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+												</div>
+									</div>
 								</div>
 								<div class="col-xs-6 col-md-9">
 									<div class="form-group row">
-											<label class="col-md-1 control-label">Title</label>
-											<div class="col-md-4">
+											<label class="col-md-3 control-label">Title</label>
+											<div class="col-md-9">
 												<input type="text" class="form-control"  value="<?php echo $category['name']; ?>">
 											</div>
-											<label class="col-md-1 control-label">Button link</label>
-											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $category['link']; ?>">
-											</div>
+											
 									</div>
-									<hr/>
+									<hr width="90%" />
 									<div class="form-group row">
-											<label class="col-md-1 control-label">File input</label>
-											<div class="col-md-4">
-												<input type="file" class="btn btn-default" >
-											</div>
-											<label class="col-md-1 control-label">Image Link</label>
-											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $category['img_link']; ?>">
+											<label class="col-md-3 control-label">Button link</label>
+											<div class="col-md-9">
+												<input type="text" class="form-control"  value="<?php echo $category['link']; ?>">
 											</div>
 									</div>
 								</div>
@@ -47,6 +45,3 @@
 		  		</div>
 		  	</div>
 		</div>
-		
-		
-		
