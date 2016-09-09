@@ -140,7 +140,7 @@ if ($('#map').length) {
 	
 	
 	
-	var myLatLng = new google.maps.LatLng(33.8584621 , 35.5163281);
+	var myLatLng = new google.maps.LatLng(<?php echo $locations[0]['lat']; ?> , <?php echo $locations[0]['lng']; ?>);
 	var mapOptions = {
 		zoom: 15,
 		center: myLatLng,
@@ -155,7 +155,7 @@ if ($('#map').length) {
 	var marker = new google.maps.Marker({
 		position: myLatLng,
 		map: map,
-		title: 'Intermid',
+		title: 'Intermed',
 		icon: '<?php echo base_url().'assets/images/'.$map_logo->name; ?>'
 	});
 	

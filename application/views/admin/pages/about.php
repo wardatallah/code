@@ -121,13 +121,11 @@
 							<div class="panel-title">Location</div>
 						</div>
 		  				<div class="content-box-large box-with-header">
-							
 							<div class="row">
 								<div class="col-xs-6 col-md-12">
 									<a href="<?php echo base_url() . 'editpages/contact'; ?>" >Click here to edit location section</a>
 								</div>
 							</div>
-							
 		  				</div>
 		  			</div>
   				</div>
@@ -147,30 +145,27 @@
 									<div  class="thumbnail">
 									  <img src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_text']; ?>">
 									</div>
+									<div class="form-group row astable">
+												<div class="col-md-4">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+												</div>
+									</div>
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<label class="col-md-1 control-label">File input</label>
-											<div class="col-md-3">
-												<input type="file" class="btn btn-default" >
+											<label class="col-md-2 control-label">Client Name</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $client['client_name']; ?>">
 											</div>
-											<label class="col-md-1 control-label">Image Link</label>
-											<div class="col-md-7">
-												<input type="text" class="form-control"  value="<?php echo $client['img_link']; ?>">
+											<label class="col-md-2 control-label">Position</label>
+											<div class="col-md-4">
+												<input type="text" class="form-control"  value="<?php echo $client['client_position']; ?>" />
 											</div>
 									</div>
 									<hr/>
 									<div class="form-group row">
-											<label class="col-md-1 control-label">Client Name</label>
-											<div class="col-md-2">
-												<input type="text" class="form-control"  value="<?php echo $client['client_name']; ?>">
-											</div>
-											<label class="col-md-1 control-label">Position</label>
-											<div class="col-md-2">
-												<input type="text" class="form-control"  value="<?php echo $client['client_position']; ?>" />
-											</div>
-											<label class="col-md-1 control-label">Testimonial</label>
-											<div class="col-md-5">
+											<label class="col-md-2 control-label">Testimonial</label>
+											<div class="col-md-10">
 												<textarea rows="3" class="form-control" ><?php echo $client['client_text']; ?></textarea>
 											</div>
 									</div>
@@ -191,25 +186,39 @@
 							<div class="panel-title">Our Clients Section</div>
 						</div>
 		  				<div class="content-box-large box-with-header">
+							<div class="row">
+								<div class="col-xs-6 col-md-2">
+									<label class="col-md-12 control-label">Title</label>
+								</div>
+								<div class="col-xs-6 col-md-10">
+									<div class="form-group row">
+											<input type="text" class="form-control" value="<?php echo $our_clients_heading[0]['title']; ?>">
+									</div>
+								</div>
+								<hr/>
+								<div class="col-xs-6 col-md-2">
+									<label class="col-md-12 control-label">Sub Title</label>
+								</div>
+								<div class="col-xs-6 col-md-10">
+									<div class="form-group row">
+											<textarea rows="4" class="form-control" ><?php echo $our_clients_heading[0]['subtitle']; ?></textarea>
+									</div>
+								</div>
+							</div>
+							<hr/>
 							<?php foreach($our_clients_section as $client): ?>
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
 									  <img src="<?php echo $client['img_path']; ?>" alt="">
 									</div>
+									<div class="form-group row astable">
+												<div class="col-md-4">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+												</div>
+									</div>
 								</div>
 								<div class="col-xs-6 col-md-10">
-									<div class="form-group row">
-											<label class="col-md-1 control-label">File input</label>
-											<div class="col-md-3">
-												<input type="file" class="btn btn-default" >
-											</div>
-											<label class="col-md-1 control-label">Image Link</label>
-											<div class="col-md-7">
-												<input type="text" class="form-control"  value="<?php echo $client['img_path']; ?>">
-											</div>
-									</div>
-									<hr/>
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Client Link</label>
 											<div class="col-md-10">

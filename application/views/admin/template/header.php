@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/dashboard/jquery.lighter.js'; ?>" type="text/javascript"></script>
 	<link href="<?php echo base_url() .'assets/css/dashboard/jquery.lighter.css'; ?>" rel="stylesheet" type="text/css" />
-	
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.ico"/>
 	
 	<script src="<?php echo base_url() .'assets/js/dashboard/bootbox.js'; ?>" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/bootstrap.min.js'; ?>" type="text/javascript"></script>

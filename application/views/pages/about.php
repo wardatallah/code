@@ -61,7 +61,7 @@
         <ul class="row">
           <?php foreach ($locations_section as $location): ?>
           <!-- TEAM 1 -->
-          <li class="col-md-3  animate fadeInLeft" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo base_url().'assets/'; ?><?php  echo $location['img_name']  ; ?>" alt="" >
+          <li class="col-md-3  animate fadeInLeft" data-wow-delay="0.4s"> <img class="img-responsive" src="<?php echo $location['img_path']  ; ?>" alt="" >
             <h4><?php  echo $location['title']  ; ?></h4>
           </li>
           <?php endforeach; ?>
@@ -103,7 +103,7 @@
 		<div class="container"> 
 		  <!--  Tittle -->
 		  <div class="tittle tittle-cont  animate fadeInUp" data-wow-delay="0.4s">
-			<h3>OUR CLIENTS</h3>
+			<h3><?php echo $our_clients_heading[0]['title']; ?></h3>
 			<hr>
 			
 			<!--  Text Intro -->

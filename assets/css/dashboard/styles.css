@@ -5,6 +5,7 @@ body {
   margin: 0px;
   font-size: 12px;
   padding: 0px;
+  padding-right: 0px !important;
 }
 
 .page-content > .row {
@@ -57,7 +58,7 @@ footer .copy{
 }
 
 .header .logo h1{
-   font-size:30px;
+   font-size:25px;
    margin:0px;
    padding:10px 0px;
 }
@@ -715,9 +716,20 @@ input.save-section {
 
 .clearfix {
     margin-bottom: 10px;
+	clear: both;
 }
 
 .astable {
 	display:table;
 	margin:0 auto;
+}
+
+ul.imgflex {
+    display: flex;
+    list-style: none;
+}
+
+.product-panel.row , .project-panel.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }

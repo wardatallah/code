@@ -8,12 +8,14 @@ class Products_model extends CI_Model {
 		
 		
 		
-		public function get_ProductById($id = FALSE){
+		public function get_ProductById($id = FALSE,$private=0){
 			
 				if ($id === FALSE)
 				{
-					$query = $this->db->get('products');
-					
+					if ($private===0)
+						$query = $this->db->get_where('products', array('isPrivate' => $private));
+					else
+						$query = $this->db->get('products');
 					return $query->result_array();
 				}
 

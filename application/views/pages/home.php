@@ -3,7 +3,7 @@
     <div class="tp-banner-container">
       <div class="tp-banner">
         <ul>
-          <?php foreach($banner_home as $ban) ?>
+          <?php foreach($banner_home as $ban): ?>
           <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
@@ -120,7 +120,7 @@
       </div>
     </div>
 	
-	<!--======= PARALLAX SECTION =========-->
+	
     <section class="parallex parallex-fur animate fadeInUp" data-wow-delay="0.4s" data-stellar-background-ratio="0.5">
       <div class="overlay banner">
         <div class="container">
@@ -131,10 +131,10 @@
     </section>
 	
 	
-    <!--======= FURNITURE ITEMS =========-->
+   
     <section class="section-p-60px no-padding-b">
       <div class="container"> 
-        <!--  Tittle -->
+        <!--  Title -->
         <div class="tittle tittle-2 animate fadeInUp" data-wow-delay="0.4s">
           <h5><?php echo $products_section->title; ?></h5>
           <hr>
@@ -150,10 +150,10 @@
         <li class="animate fadeInUp" data-wow-delay="<?php echo $delayer; ?>s">
           <div class="item-inn"> 
             <!-- ITEM IMAGE --> 
-            <img class="img-responsive" src="<?php echo base_url().'assets/'; ?>images/products/<?php echo $product['img_name']; ?>" alt="" > 
+            <img class="img-responsive" src="<?php echo $product['img_path']; ?>" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="<?php echo base_url().'assets/'; ?>images/products/<?php echo $product['img_name']; ?>" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <a class="zoom" href="<?php echo $product['img_path']; ?>" data-lighter><i class="fa fa-search"></i></a> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
                 <h6><?php echo $product['name']; ?></h6>
@@ -192,7 +192,6 @@
           <?php foreach ($types_view as $type){ ?>
           <li class="item int arch build col-sm-3">
             <article> <img src="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" alt=""> 
-              <!-- Hover Info -->
               <div class="hover-port">
                 <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $type['link']; ?>"><i class="fa fa-link"></i></a>
                   <h6><?php echo $type['name']; ?></h6>

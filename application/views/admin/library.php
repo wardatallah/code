@@ -8,7 +8,7 @@
 						</div>
 		  				<div class="content-box-large box-with-header">
 							<div class="row astable">
-								<?php 	$x =0;
+								<?php 	$imgCounter = 0;
 										$dir    = $_SERVER['DOCUMENT_ROOT'].'/code/assets/images';
 										if ($handle = opendir($dir)) {
 										$files =  scandir($dir);
@@ -40,7 +40,11 @@
 													
 											}
 										}
-										endforeach; }?>
+										endforeach; 
+										if ($imgCounter%6!==0 && $imgCounter>0){
+											echo '</div>';
+										}
+										echo '<div class="clearfix"></div>';}?>
 							</div>
 		  				</div>
 		  			</div>
@@ -74,19 +78,28 @@
 		
 		
 		function print_img($path,$name){
-			global $x;
-			$x++;
-			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$x.'" class="hidden">';
+			global $imgCounter;
+			$imgCounter++;
+			
+			if ($imgCounter==1 || $imgCounter%6==0){
+				echo "<ul class='imgflex'>";
+			}
+			echo '<li>';
+			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$imgCounter.'" class="hidden">';
 			echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
 			echo '</form>';
 			echo '<div class="col-md-2 img-container" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain;">
 						<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>
-						<div onclick="alertDelete(\'imgform'.$x.'\');" class="delete" ></div>
+						<div onclick="alertDelete(\'imgform'.$imgCounter.'\');" class="delete" ></div>
 					</div>';
-				  
-			if ($x%6==0 && $x!==0){
-				echo '<div class="clearfix"></div>';
+			echo '</li>';
+			if ($imgCounter%5==0 && $imgCounter>0){
+				echo '</ul><div class="clearfix"></div>';
+				$imgCounter=0;
 			}
+			
+			
+			
 		}
 		
 		?>

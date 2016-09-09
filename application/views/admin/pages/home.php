@@ -12,23 +12,17 @@
 		  				<div class="content-box-large box-with-header">
 							<?php foreach($banner_home as $banner): ?>
 							<div class="row">
-								<div class="col-xs-6 col-md-3">
+								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
 									  <img src="<?php echo base_url() . 'assets/images/slides/' .$banner['img_name']; ?>" alt="<?php echo $banner['title']; ?>">
 									</div>
-								</div>
-								<div class="col-xs-6 col-md-9">
-									<div class="form-group row">
-											<label class="col-md-1 control-label">File input</label>
-											<div class="col-md-4">
-											<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Upload Image</button>
-											</div>
-											<label class="col-md-1 control-label">Image Link</label>
-											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/slides/' .$banner['img_name']; ?>">
-											</div>
+									<div class="form-group row astable">
+												<div class="col-md-4">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+												</div>
 									</div>
-									<hr/>
+								</div>
+								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Title</label>
 											<div class="col-md-4">
@@ -78,23 +72,17 @@
 		  				<div class="content-box-large box-with-header">
 							<?php foreach($slider_home as $slider): ?>
 							<div class="row">
-								<div class="col-xs-6 col-md-3">
+								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
 									  <img src="<?php echo base_url() . 'assets/images/slides/' .$slider['img_name']; ?>" alt="<?php echo $slider['title']; ?>">
 									</div>
-								</div>
-								<div class="col-xs-6 col-md-9">
-									<div class="form-group row">
-											<label class="col-md-1 control-label">File input</label>
-											<div class="col-md-4">
-												<input type="file" class="btn btn-default" >
-											</div>
-											<label class="col-md-1 control-label">Image Link</label>
-											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/slides/' .$slider['img_name']; ?>">
-											</div>
+									<div class="form-group row astable">
+												<div class="col-md-4">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+												</div>
 									</div>
-									<hr/>
+								</div>
+								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Title</label>
 											<div class="col-md-4">
@@ -239,23 +227,17 @@
 		  				<div class="content-box-large box-with-header">
 							<?php foreach($types_view as $type): ?>
 							<div class="row">
-								<div class="col-xs-6 col-md-3">
+								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
 									  <img src="<?php echo base_url() . 'assets/images/types/' .$type['img_name']; ?>" alt="<?php echo $type['name']; ?>">
 									</div>
-								</div>
-								<div class="col-xs-6 col-md-9">
-									<div class="form-group row">
-											<label class="col-md-2 control-label">File input</label>
+									<div class="form-group row astable">
 												<div class="col-md-4">
-													<input type="file" class="btn btn-default" >
-												</div>
-												<label class="col-md-2 control-label">Image Link</label>
-												<div class="col-md-4">
-													<input type="text" class="form-control"  value="<?php echo base_url() . 'assets/images/types/' .$type['img_name']; ?>">
+													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
-									<hr/>
+								</div>
+								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Title</label>
 											<div class="col-md-4">

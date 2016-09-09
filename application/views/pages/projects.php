@@ -34,10 +34,10 @@
           
           <?php foreach($projects as $project): ?>
           <li class="item int plumb">
-            <article> <img src="<?php echo base_url().'assets/images/projects/' . $project['img_name']; ?>" alt="<?php echo $project['title']; ?>"> 
+            <article> <img src="<?php echo $project['img_path']; ?>" alt="<?php echo $project['title']; ?>"> 
               <!-- Hover Info -->
               <div class="hover-port">
-                <div class="position-center-center"> <a href="<?php echo base_url().'assets/images/projects/' . $project['img_name']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $project['id']; ?>"><i class="fa fa-link"></i></a>
+                <div class="position-center-center"> <a href="<?php echo $project['img_path']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $project['id']; ?>"><i class="fa fa-link"></i></a>
                   <h6><?php echo $project['title']; ?></h6>
                 </div>
               </div>

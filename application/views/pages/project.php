@@ -22,7 +22,7 @@
           <div class="col-md-6 animate fadeInLeft" data-wow-delay="0.4s">
             <div class="product-slides"> 
               <!-- Img 1 -->
-              <div> <img class="img-responsive" src="<?php echo base_url().'assets/images/projects/' . $project->img_name; ?>" alt=""> </div>
+              <div> <img class="img-responsive" src="<?php echo $project->img_path; ?>" alt=""> </div>
               <!-- Img 2 -->
             </div>
           </div>

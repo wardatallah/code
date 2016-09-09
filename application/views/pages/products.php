@@ -66,16 +66,13 @@
 				 <li class="col-sm-3 animate fadeIn productitemsample" data-wow-delay="0.2s" style="display:none;">
 					  <div class="items-in"> 
 						<!-- Image --> 
-						<img src="<?php echo base_url().'assets/images/products/'; ?>#img_name" alt=""> 
+						<img src="#img_path" alt=""> 
 						<!-- Hover Details -->
 						<div class="over-item">
 						  <ul class="animated fadeIn">
-							<li> <a href="<?php echo base_url().'assets/images/products/'; ?>#img_name_a" data-lighter><i class="ion-search"></i></a></li>
+							<li> <a href="#img_path_a" data-lighter><i class="ion-search"></i></a></li>
 							<li> <a href="#link"><i class="fa fa-link"></i></a></li>
-							<li> <a href="#."><i class="fa fa-heart-o"></i></a></li>
 							<li class="full-w"> <a href="#." class="btn">ADD TO CART</a></li>
-							<!-- Rating Stars -->
-							<li class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></li>
 						  </ul>
 						</div>
 						<!-- Item Name -->

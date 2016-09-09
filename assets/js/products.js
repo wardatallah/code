@@ -34,8 +34,8 @@ var createLiElement = function(data){
 						new_li.removeClass("productitemsample");
 						new_li.addClass("productitem");
 						new_li.css("display", ""); 
-						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_name",item.img_name);
-						innerhtml	=  innerhtml.replace("#img_name_a",item.img_name);
+						var innerhtml	=  new_li[0].innerHTML.toString().replace("#img_path",item.img_path);
+						innerhtml	=  innerhtml.replace("#img_path_a",item.img_path);
 						innerhtml	=  innerhtml.replace("#name",item.name);
 						innerhtml	=  innerhtml.replace("#link",item.id);
 						new_li.html(innerhtml);
