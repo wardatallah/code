@@ -1,8 +1,8 @@
-<div style="position:absolute;min-width:20px;">
- <input type="submit" class="save-section" value="Save" />
-</div>
-<div class="col-md-10">
-
+		<div style="position:absolute;min-width:20px;">
+		 <input type="submit" class="save-section" value="Save" form="about-form"/>
+		</div>
+		<form id="about-form" action="<?php echo base_url(). 'Save/saveAbout'; ?>" method="post">
+		<div class="col-md-10">
 		  	<div class="row">
   				<div class="col-md-12">
   					<div class="panel-default">
@@ -16,7 +16,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $welcome_section->title; ?>">
+											<input type="text" class="form-control" name="welcomeTitle" value="<?php echo $welcome_section->title; ?>">
 									</div>
 								</div>
 								<hr/>
@@ -25,7 +25,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<textarea rows="4" class="form-control" ><?php echo $welcome_section->subtitle; ?></textarea>
+											<textarea rows="4" class="form-control" name="welcomeSubTitle" ><?php echo $welcome_section->subtitle; ?></textarea>
 									</div>
 								</div>
 							</div>
@@ -49,7 +49,8 @@
 								</div>
 								<div class="col-xs-6 col-md-2">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $whatsection['title']; ?>">
+											<input type="text" class="hidden" name="whatId[]" value="<?php echo $whatsection['id']; ?>">
+											<input type="text" class="form-control" name="whatTitle[]" value="<?php echo $whatsection['title']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-1">
@@ -57,7 +58,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<textarea rows="4" class="form-control" ><?php echo $whatsection['subtitle']; ?></textarea>
+											<textarea rows="4" class="form-control" name="whatSubTitle[]" ><?php echo $whatsection['subtitle']; ?></textarea>
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-1">
@@ -65,7 +66,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $whatsection['icon']; ?>" />
+											<input type="text" class="form-control" name="whatIcon[]" value="<?php echo $whatsection['icon']; ?>" />
 									</div>
 								</div>
 							</div>
@@ -89,7 +90,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $about_banner_section[0]['title']; ?>">
+											<input type="text" class="form-control" name="quoteBannerTitle" value="<?php echo $about_banner_section[0]['title']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -97,7 +98,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $about_banner_section[0]['btn_text']; ?>">
+											<input type="text" class="form-control" name="quoteBtnText" value="<?php echo $about_banner_section[0]['btn_text']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -105,7 +106,7 @@
 								</div>
 								<div class="col-xs-6 col-md-9">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $about_banner_section[0]['btn_link']; ?>">
+											<input type="text" class="form-control" name="quoteBtnLink" value="<?php echo $about_banner_section[0]['btn_link']; ?>">
 									</div>
 								</div>
 							</div>
@@ -143,7 +144,9 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_text']; ?>">
+									  <img src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_name']; ?>">
+									  <input type="text" class="hidden" name="testoId[]" value="<?php echo $client['id']; ?>">
+									  <input type="text" class="hidden" name="testoImages[]" value="<?php echo $client['img_link']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -155,18 +158,18 @@
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Client Name</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $client['client_name']; ?>">
+												<input type="text" class="form-control" name="testoName[]" value="<?php echo $client['client_name']; ?>">
 											</div>
 											<label class="col-md-2 control-label">Position</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $client['client_position']; ?>" />
+												<input type="text" class="form-control" name="testoPosition[]" value="<?php echo $client['client_position']; ?>" />
 											</div>
 									</div>
 									<hr/>
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Testimonial</label>
 											<div class="col-md-10">
-												<textarea rows="3" class="form-control" ><?php echo $client['client_text']; ?></textarea>
+												<textarea rows="3" class="form-control" name="testoText[]" ><?php echo $client['client_text']; ?></textarea>
 											</div>
 									</div>
 								</div>
@@ -192,7 +195,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $our_clients_heading[0]['title']; ?>">
+											<input type="text" class="form-control" name="clientsTitle" value="<?php echo $our_clients_heading[0]['title']; ?>">
 									</div>
 								</div>
 								<hr/>
@@ -201,7 +204,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<textarea rows="4" class="form-control" ><?php echo $our_clients_heading[0]['subtitle']; ?></textarea>
+											<textarea rows="4" class="form-control" name="clientsSubTitle" ><?php echo $our_clients_heading[0]['subtitle']; ?></textarea>
 									</div>
 								</div>
 							</div>
@@ -211,6 +214,8 @@
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
 									  <img src="<?php echo $client['img_path']; ?>" alt="">
+									  <input type="text" class="hidden" name="clientsId[]" value="<?php echo $client['id']; ?>">
+									  <input type="text" class="hidden" name="clientsImages[]" value="<?php echo $client['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -222,7 +227,7 @@
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Client Link</label>
 											<div class="col-md-10">
-												<input type="text" class="form-control"  value="<?php echo $client['client_link']; ?>">
+												<input type="text" class="form-control" name="clientsLink[]" value="<?php echo $client['client_link']; ?>">
 											</div>
 									</div>
 								</div>
@@ -232,6 +237,6 @@
 		  				</div>
 		  			</div>
   				</div>
-			</div>
-  			
-</div>
+			</div>		
+		</div>
+		</form>

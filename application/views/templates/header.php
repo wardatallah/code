@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>INTERMED CERAMICA</title>
-<meta name="keywords" content="HTML5,CSS3,HTML,Template,Multi-Purpose,M_Adnan,Corporate Theme,SEBIAN Multi Purpose Care,eCommerce,SEBIAN - Multi Purpose eCommerce HTML5 Template">
-<meta name="description" content="SEBIAN - Multi Purpose eCommerce HTML5 Template">
-<meta name="author" content="M_Adnan">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
 
 <!-- FONTS ONLINE -->
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -66,11 +66,8 @@
     <div class="top-bar">
       <div class="container"> 
         <!-- Language -->
-        <div class="language"> <a href="#." class="active">EN</a> <a href="#.">FR</a> <a href="#.">GE</a> </div>
+        <div class="language"> <a href="#." class="active">EN</a> <a href="#.">FR</a> <a href="#.">AR</a> </div>
         <div class="top-links">
-          <ul>
-            <li><a href="#.">MY ACCOUNT</a></li>
-          </ul>
           <!-- Social Icons -->
           <ul class="social_icons">
             <?php foreach ($social_media as $media): ?>
@@ -94,9 +91,9 @@
           <!-- MENU BUTTON RESPONSIVE -->
           <div class="menu-toggle"> <i class="fa fa-bars"> </i> </div>
           <ul class="ownmenu">
-            <li class="active"><a href="<?php echo base_url(); ?>">HOME</a></li>
-            <li><a href="<?php echo base_url(); ?>about/">About Us</a></li>
-            <li class="meganav"><a href="<?php echo base_url(); ?>products/">Products</a> 
+            <li <?php if($actual_link===base_url()) echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>">HOME</a></li>
+            <li <?php if($actual_link===base_url().'about/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>about/">About Us</a></li>
+            <li <?php if($actual_link===base_url().'products/') echo 'class="active"'; ?> class="meganav"><a href="<?php echo base_url(); ?>products/">Products</a> 
               <!--======= MEGA MENU =========-->
               <ul class="megamenu full-width">
                 <li class="row nav-post">
@@ -128,9 +125,9 @@
                 </li>
               </ul>
             </li>
-            <li><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
-			<li><a href="#" data-toggle="modal" data-target="#myModal" >Collection</a></li>
-            <li><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
+            <li <?php if($actual_link===base_url().'projects/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
+			<li <?php if($actual_link===base_url().'collection/') echo 'class="active"'; ?>><a href="#" data-toggle="modal" data-target="#myModal" >Collection</a></li>
+            <li <?php if($actual_link===base_url().'contact-us/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
             
             <!--======= Shopping Cart =========-->
             <li class="shop-cart"><a href="#."><i class="fa fa-shopping-cart"></i></a> <span class="numb">2</span>

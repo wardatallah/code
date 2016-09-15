@@ -2,6 +2,7 @@
   <head>
     <title>Control Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.ico"/>
     <!-- Bootstrap -->
     <link href="<?php echo base_url(). 'assets/css/bootstrap.min.css'; ?>" rel="stylesheet">
     <!-- styles -->
@@ -9,11 +10,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/dashboard/jquery.lighter.js'; ?>" type="text/javascript"></script>
 	<link href="<?php echo base_url() .'assets/css/dashboard/jquery.lighter.css'; ?>" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.ico"/>
 	
 	<script src="<?php echo base_url() .'assets/js/dashboard/bootbox.js'; ?>" type="text/javascript"></script>
 	<script src="<?php echo base_url() .'assets/js/bootstrap.min.js'; ?>" type="text/javascript"></script>
  <script>
+ var inputId="",imageId="",bg_url="";
 window.ajax = function(url, method,body) {
     var fullURL = "http://[::1]/code/" + url;
     var deferred = $.Deferred();
@@ -43,6 +44,29 @@ window.ajax = function(url, method,body) {
 
 
 $( document ).ready(function() {
+	$("#selectImage").click(function(event){
+			console.log("done test : " + inputId + " " + imageId + " " + bg_url);
+			document.getElementById(inputId).value = bg_url;
+			document.getElementById(imageId).src = bg_url;
+	});
+	
+	$(".uploadImage").click(function(event){
+			var id = $(this).attr('id');
+			var result = id.split("-");
+			imageId=result[1];
+			inputId=result[2];
+			
+			
+	});
+	
+	$(".img-lib").click(function(event){
+			$(".img-lib.selected").removeClass("selected");
+			$(this).addClass("selected");
+			var bg = $(this).css('background-image');
+			bg_url = /^url\((['"]?)(.*)\1\)$/.exec(bg);
+			bg_url = bg_url ? bg_url[2] : "";
+			
+	});
 	$("#fileImage").change(function(evt) {
 		        console.log("test");
 				var input = evt.target;
@@ -77,16 +101,15 @@ $( document ).ready(function() {
 	
 });
 
+
+
 var alertDelete = function(id){
 				bootbox.confirm("Are you sure you want to delete this image?", function(result) {
 					if(result===true){
 						$('#'+id).submit();
 					}
-				  
 				});
-				return false;
-				
-				
+				return false;		
 }
 
 var callLibrary = function(){
@@ -230,7 +253,7 @@ var callUpload = function(){
 		  </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" style="background: #6196e1;color: #f4f4f4;border: 1px #6196e1 solid;">Done</button>
+          <button type="button" class="btn btn-default" id="selectImage" data-dismiss="modal" style="background: #6196e1;color: #f4f4f4;border: 1px #6196e1 solid;">Done</button>
 		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -264,10 +287,8 @@ var callUpload = function(){
 		function print_img1($path,$name){
 			global $x;
 			$x++;
-			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$x.'" onsubmit="return confirm(\'Are you sure you want to delete this image?\');">';
-			echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
-			echo '</form>';
-			echo '<div class="col-md-1 img-container img-lib" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain; width:100px;height:100px;cursor:hand;"  onclick= $(\'#img-lib\').addClass(\'aaa\')  >
+
+			echo '<div class="col-md-1 img-container img-lib" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain; width:100px;height:100px;cursor:hand;"    >
 						<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>
 						 
 					</div>';
@@ -340,8 +361,8 @@ var callUpload = function(){
                          <ul>
                             <li <?php if ($actual_link==base_url(). 'editpages/home') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/home'; ?>">Home</a></li>
 							<li <?php if ($actual_link==base_url(). 'editpages/about') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/about'; ?>">About Us</a></li>
-							<li <?php if ($actual_link==base_url(). 'editpages/products') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/products'; ?>">Products</a></li>
-							<li <?php if ($actual_link==base_url(). 'editpages/projects') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/projects'; ?>">Projects</a></li>
+							<li <?php if (strpos($actual_link, 'editpages/product')) echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/products'; ?>">Products</a></li>
+							<li <?php if (strpos($actual_link, 'editpages/project')) echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/projects'; ?>">Projects</a></li>
 							<li <?php if ($actual_link==base_url(). 'editpages/contact') echo 'class="active"';?>><a href="<?php echo base_url() . 'editpages/contact'; ?>">Contact Us</a></li>
                         </ul>
                     </li>

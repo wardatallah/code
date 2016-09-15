@@ -119,7 +119,7 @@ function initialize_map() {
 if ($('#map').length) {
 	var contentString = '<div id="map-content"> ' +
 							'<div id="siteNotice"></div>' +
-								'<img src="<?php echo base_url().'assets/'; ?>images/<?php echo $header_logo->name; ?>" width="200px">' + 
+								'<img src="<?php echo $header_logo->path; ?>" width="200px">' + 
 									'<div id="bodyContent" class="map-info">'+
 										'<h6><?php echo $locations[0]['title']; ?></h6>' + '<div class="boxes-in"><ul class="location">' + 
 											'<li> <i class="fa fa-location-arrow"></i>'+

@@ -28,6 +28,7 @@ class Admin extends CI_Controller {
 				$data['header_logo'] = $this->header_model->get_logo("header");
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
+				$data['locations'] = $this->contact_model->get_locations("about");
 				$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 		
@@ -109,6 +110,7 @@ class Admin extends CI_Controller {
 				   $session_data = $this->session->userdata('logged_in');
 				   $data['username'] = $session_data['username'];
 				   $file=$this->input->post('path');
+				   
 				   if (isset($file)){
 					   $base=base_url();
 					   $path=$_SERVER['DOCUMENT_ROOT'].'/code/';
@@ -132,6 +134,7 @@ class Admin extends CI_Controller {
 			   {
 				   $session_data = $this->session->userdata('logged_in');
 				   $data['username'] = $session_data['username'];
+				   
 				   			   
 				   $data['header_logo'] = $this->header_model->get_logo("header");
 				   $data['social_media'] = $this->header_model->get_social();

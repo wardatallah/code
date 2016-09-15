@@ -1,38 +1,32 @@
 <!--======= Footer =========-->
   <footer>
     <div class="container">
-      <div class="text-center footer-logo"> <a href="#."><img src="<?php echo $footer_logo->path; ?>" alt=""></a><br>
-        <p class="intro-small margin-t-40">Multipurpose E-Commerce Theme is suitable for furniture store, fashion shop, accessories, electric shop. We have included multiple layouts for home page to give you best selections in customization.</p>
-      </div>
       
       <!--  Footer Links -->
       <div class="footer-link row">
         <div class="col-md-6">
           <ul>
             
+			<!-- MY ACCOUNT -->
+            <li class="col-sm-6">
+              <h5>ABOUT US</h5>
+              <div class="footer-logo"> <a href="#."><img src="<?php echo $footer_logo->path; ?>" alt=""></a></div>
+			  <p class="intro-small">Multipurpose E-Commerce Theme is suitable for furniture store, fashion shop, accessories, electric shop. We have included multiple layouts for home page to give you best selections in customization.</p>
+            </li>
+			
             <!--  INFOMATION -->
             <li class="col-sm-6">
-              <h5>INFOMATION</h5>
+              <h5>LEARN MORE</h5>
               <ul class="f-links">
-                <li><a href="#.">ABOUT US</a></li>
-                <li><a href="#."> DELIVERY INFOMATION</a></li>
-                <li><a href="#."> PRIVACY & POLICY</a></li>
-                <li><a href="#."> TEMRS & CONDITIONS</a></li>
-                <li><a href="#."> MANUFACTURES</a></li>
+			  <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+                <li <?php if($actual_link===base_url().'about/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>about/">About Us</a></li>
+                <li <?php if($actual_link===base_url().'products/') echo 'class="active"'; ?> class="meganav"><a href="<?php echo base_url(); ?>products/">Products</a> </li>
+                <li <?php if($actual_link===base_url().'projects/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
+				<li <?php if($actual_link===base_url().'collection/') echo 'class="active"'; ?>><a href="#" data-toggle="modal" data-target="#myModal" >Collection</a></li>
+				<li <?php if($actual_link===base_url().'contact-us/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
               </ul>
             </li>
             
-            <!-- MY ACCOUNT -->
-            <li class="col-sm-6">
-              <h5>MY ACCOUNT</h5>
-              <ul class="f-links">
-                <li><a href="#.">MY ACCOUNT</a></li>
-                <li><a href="#."> LOGIN</a></li>
-                <li><a href="#."> MY CART</a></li>
-                <li><a href="#."> WISHLIST</a></li>
-                <li><a href="#."> CHECKOUT</a></li>
-              </ul>
-            </li>
           </ul>
         </div>
         
@@ -48,15 +42,15 @@
             
             <!-- FLICKR PHOTO -->
             <li class="col-sm-6">
-              <h5>FLICKR PHOTO</h5>
-              <ul class="flicker">
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-1.jpg" alt=""></a></li>
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-2.jpg" alt=""></a></li>
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-3.jpg" alt=""></a></li>
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-4.jpg" alt=""></a></li>
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-5.jpg" alt=""></a></li>
-                <li><a href="#."><img src="<?php echo base_url().'assets/'; ?>images/flicker-6.jpg" alt=""></a></li>
-              </ul>
+              <h5>CONTACT INFORMATION</h5>
+              <div>
+				  <ul class="location infooter">
+					<li> <i class="fa fa-location-arrow"></i><p><?php echo $locations[0]['address']; ?></p></li>
+					<li> <i class="fa fa-phone"></i><p><?php echo $locations[0]['Tel']; ?></p></li>
+					<li> <i class="fa fa-fax"></i><p><?php echo $locations[0]['Fax']; ?></p></li>
+					<li> <i class="fa fa-envelope"></i><p><?php echo $locations[0]['email']; ?></p></li>
+				  </ul>
+			  </div>
             </li>
           </ul>
         </div>
@@ -64,7 +58,7 @@
       
       <!-- Rights -->
       <div class="rights">
-        <p>© 2015 HTML5 TEMPLATE SEBIAN. All Rights Reserved. Powered By WPELITE</p>
+        <p>© 2016 INTERMED CERAMICA. All Rights Reserved. Developed By <a href='http://www.greynab.com' target="_new">Greynab</a></p>
       </div>
     </div>
   </footer>

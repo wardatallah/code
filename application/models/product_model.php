@@ -6,6 +6,13 @@ class Product_model extends CI_Model {
                 $this->load->database();
         }
 		
+		public function remove_product($id){
+				$this->db->where('id',$id);
+				$query = $this->db->delete('products');
+			
+		}
+		
+		
 		public function get_categories($page,$category){
 				$array = array('page' => $page, 'cat_name' => $category);
 				$this->db->where($array);

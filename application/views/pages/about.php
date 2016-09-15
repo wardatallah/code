@@ -113,7 +113,7 @@
 		  <!--  Client Logo Slider -->
 		  <div class="client-slide  animate fadeInUp" data-wow-delay="0.4s">
 		  <?php foreach ($our_clients_section as $client): ?>
-			<div class="slide"><a href="<?php echo $client['client_link']; ?>"><img class="img-responsive" src="<?php echo $client['img_path']; ?>" alt=""></a></div>
+			<div class="slide"><a href="<?php echo $client['client_link']; ?>" target="_new"><img class="img-responsive" src="<?php echo $client['img_path']; ?>" alt=""></a></div>
 		  <?php endforeach; ?>		 
 		 </div>
 		</div>

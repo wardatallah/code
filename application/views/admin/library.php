@@ -81,21 +81,21 @@
 			global $imgCounter;
 			$imgCounter++;
 			
-			if ($imgCounter==1 || $imgCounter%6==0){
+			if ($imgCounter==1 || $imgCounter%5==1){
 				echo "<ul class='imgflex'>";
 			}
 			echo '<li>';
-			echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$imgCounter.'" class="hidden">';
-			echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
-			echo '</form>';
-			echo '<div class="col-md-2 img-container" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain;">
-						<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>
-						<div onclick="alertDelete(\'imgform'.$imgCounter.'\');" class="delete" ></div>
-					</div>';
+			echo '<div class="col-md-2 img-container" style="background:url(' . $path . $name . ') no-repeat 50%;background-size: contain;">';
+						echo '<a class="img-lighter" href="' . $path . $name . '" data-lighter ></a>';
+						echo '<form action="'.base_url().'Admin/deleteImg" method="post" id="imgform'.$imgCounter.'" >';
+							echo '<input type="text" name="path" value="' . $path . $name . '" class="hidden" />';
+							echo '<div class="delete" onclick="alertDelete(\'imgform'.$imgCounter.'\')"></div>';
+						echo '</form>';
+					echo '</div>';
 			echo '</li>';
-			if ($imgCounter%5==0 && $imgCounter>0){
+			if ($imgCounter%5==0){
 				echo '</ul><div class="clearfix"></div>';
-				$imgCounter=0;
+				//$imgCounter=0;
 			}
 			
 			

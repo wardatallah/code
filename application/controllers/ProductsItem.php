@@ -20,6 +20,7 @@ class ProductsItem extends CI_Controller {
 		$data['header_logo'] = $this->header_model->get_logo("header");
 		$data['footer_logo'] = $this->header_model->get_logo("footer");
 		$data['social_media'] = $this->header_model->get_social();
+		$data['locations'] = $this->contact_model->get_locations("about");
 		
 		
 		if ($page == 'home'){

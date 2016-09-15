@@ -7,6 +7,7 @@ class About extends CI_Controller {
 				parent::__construct();
 				$this->load->model('header_model');
 				$this->load->model('about_model');
+				$this->load->model('contact_model');
                 $this->load->helper('url_helper');
 				
         }
@@ -24,6 +25,7 @@ class About extends CI_Controller {
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
+				$data['locations'] = $this->contact_model->get_locations("about");
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("About Us"); 

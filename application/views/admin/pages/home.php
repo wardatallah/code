@@ -1,8 +1,8 @@
-<div style="position:absolute;min-width:20px;">
- <input type="submit" class="save-section" value="Save" />
-</div>
-<div class="col-md-10">
-
+		<div style="position:absolute;min-width:20px;">
+		 <input type="submit" class="save-section" value="Save" form="home-form"/>
+		</div>
+		<form id="home-form" action="<?php echo base_url(). 'Save/saveHome'; ?>" method="post">
+		<div class="col-md-10">
 		  	<div class="row">
   				<div class="col-md-12">
   					<div class="panel-default">
@@ -14,7 +14,9 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo base_url() . 'assets/images/slides/' .$banner['img_name']; ?>" alt="<?php echo $banner['title']; ?>">
+									  <img src="<?php echo $banner['img_path']; ?>" alt="<?php echo $banner['title']; ?>">
+									  <input type="text" class="hidden" name="sliderIds[]" value="<?php echo $banner['id']; ?>">
+									  <input type="text" class="hidden" name="sliderImages[]" value="<?php echo $banner['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -26,33 +28,33 @@
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Title</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $banner['title']; ?>">
+												<input type="text" class="form-control" name="sliderTitles[]" value="<?php echo $banner['title']; ?>">
 											</div>
 											<label class="col-md-1 control-label">Sub Title</label>
 											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $banner['sub_title']; ?>">
+												<input type="text" class="form-control" name="sliderSubTitles[]" value="<?php echo $banner['sub_title']; ?>">
 											</div>
 									</div>
 									<hr/>
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Button Title</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $banner['btn_text']; ?>">
+												<input type="text" class="form-control" name="sliderBtnTitles[]" value="<?php echo $banner['btn_text']; ?>">
 											</div>
 											<label class="col-md-1 control-label">Button Link</label>
 											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $banner['btn_link']; ?>">
+												<input type="text" class="form-control" name="sliderBtnLinks[]" value="<?php echo $banner['btn_link']; ?>">
 											</div>
 									</div>
 									<hr/>
 									<div class="form-group row">
 											<label class="col-md-1 control-label">X-Position</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $banner['xposition']; ?>">
+												<input type="text" class="form-control" name="sliderPosition[]" value="<?php echo $banner['xposition']; ?>">
 											</div>
 											<label class="col-md-1 control-label">Font Size</label>
 											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $banner['fontsize'].'px'; ?>">
+												<input type="text" class="form-control" name="sliderFont[]" value="<?php echo $banner['fontsize'].'px'; ?>">
 											</div>
 									</div>
 								</div>
@@ -74,7 +76,9 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo base_url() . 'assets/images/slides/' .$slider['img_name']; ?>" alt="<?php echo $slider['title']; ?>">
+									  <img src="<?php echo $slider['img_path']; ?>" alt="<?php echo $slider['title']; ?>">
+									  <input type="text" class="hidden" name="carouselIds[]" value="<?php echo $slider['id']; ?>">
+									  <input type="text" class="hidden" name="carouselImages[]" value="<?php echo $slider['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -86,22 +90,22 @@
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Title</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $slider['title']; ?>">
+												<input type="text" class="form-control" name="carouselTitles[]" value="<?php echo $slider['title']; ?>">
 											</div>
 											<label class="col-md-1 control-label">Sub Title</label>
 											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $slider['sub_title']; ?>">
+												<input type="text" class="form-control" name="carouselSubTitles[]" value="<?php echo $slider['sub_title']; ?>">
 											</div>
 									</div>
 									<hr/>
 									<div class="form-group row">
 											<label class="col-md-1 control-label">Button Title</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $slider['btn_text']; ?>">
+												<input type="text" class="form-control" name="carouselBtnTitles[]" value="<?php echo $slider['btn_text']; ?>">
 											</div>
 											<label class="col-md-1 control-label">Button Link</label>
 											<div class="col-md-6">
-												<input type="text" class="form-control"  value="<?php echo $slider['btn_link']; ?>">
+												<input type="text" class="form-control" name="carouselBtnLinks[]" value="<?php echo $slider['btn_link']; ?>">
 											</div>
 									</div>
 								</div>
@@ -126,7 +130,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $welcome_section->title; ?>">
+											<input type="text" class="form-control" name="welcomeTitle" value="<?php echo $welcome_section->title; ?>">
 									</div>
 								</div>
 								<hr/>
@@ -135,7 +139,7 @@
 								</div>
 								<div class="col-xs-6 col-md-10">
 									<div class="form-group row">
-											<textarea rows="4" class="form-control" ><?php echo $welcome_section->subtitle; ?></textarea>
+											<textarea rows="4" class="form-control" name="welcomeSubTitle" ><?php echo $welcome_section->subtitle; ?></textarea>
 									</div>
 								</div>
 							</div>
@@ -157,7 +161,8 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['title']; ?>">
+											<input type="text" class="hidden" name="quoteBannerId" value="<?php echo $banner_quote[0]['id']; ?>">
+											<input type="text" class="form-control" name="quoteBannerTitle" value="<?php echo $banner_quote[0]['title']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -165,7 +170,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['btn_text']; ?>">
+											<input type="text" class="form-control" name="quoteBtnText" value="<?php echo $banner_quote[0]['btn_text']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -173,7 +178,7 @@
 								</div>
 								<div class="col-xs-6 col-md-9">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $banner_quote[0]['btn_link']; ?>">
+											<input type="text" class="form-control" name="quoteBtnLink" value="<?php echo $banner_quote[0]['btn_link']; ?>">
 									</div>
 								</div>
 							</div>
@@ -193,7 +198,8 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $banner_quote[1]['title']; ?>">
+											<input type="text" class="hidden" name="AndoridId" value="<?php echo $banner_quote[1]['id']; ?>">
+											<input type="text" class="form-control" name="AndoridTitle" value="<?php echo $banner_quote[1]['title']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -201,7 +207,7 @@
 								</div>
 								<div class="col-xs-6 col-md-3">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo $banner_quote[1]['btn_text']; ?>">
+											<input type="text" class="form-control" name="AndoridBtnText" value="<?php echo $banner_quote[1]['btn_text']; ?>">
 									</div>
 								</div>
 								<div class="col-xs-6 col-md-3">
@@ -209,7 +215,7 @@
 								</div>
 								<div class="col-xs-6 col-md-9">
 									<div class="form-group row">
-											<input type="text" class="form-control" value="<?php echo base_url() . 'assets/'.$banner_quote[1]['btn_link']; ?>">
+											<input type="text" class="form-control" name="AndoridBtnLink" value="<?php echo $banner_quote[1]['btn_link']; ?>">
 									</div>
 								</div>
 							</div>
@@ -229,7 +235,9 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo base_url() . 'assets/images/types/' .$type['img_name']; ?>" alt="<?php echo $type['name']; ?>">
+									  <img src="<?php echo $type['img_path']; ?>" alt="<?php echo $type['name']; ?>">
+									  <input type="text" class="hidden" name="typeIds[]" value="<?php echo $type['id']; ?>">
+									  <input type="text" class="hidden" name="typeImages[]" value="<?php echo $type['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -241,11 +249,11 @@
 									<div class="form-group row">
 											<label class="col-md-2 control-label">Title</label>
 											<div class="col-md-4">
-												<input type="text" class="form-control"  value="<?php echo $type['name']; ?>">
+												<input type="text" class="form-control" name="typeTitles[]" value="<?php echo $type['name']; ?>">
 											</div>
 											<label class="col-md-2 control-label">Button Link</label>
 												<div class="col-md-4">
-													<input type="text" class="form-control"  value="<?php echo $type['link']; ?>">
+													<input type="text" class="form-control" name="typeLinks[]" value="<?php echo $type['link']; ?>">
 												</div>
 									</div>
 								</div>
@@ -256,7 +264,5 @@
 		  			</div>
   				</div>
 			</div>
-
-
-
-</div>
+		</div>
+		</form>

@@ -1,6 +1,9 @@
-<div style="position:absolute;min-width:20px;">
- <input type="submit" class="save-section" value="Save" />
-</div>
+		<div style="position:absolute;min-width:20px;">
+		 <input type="submit" class="save-section" value="Save" form="cat-form" />
+		</div>
+		
+		
+		<form id="cat-form" action="<?php echo base_url(). 'Save/saveCat'; ?>" method="post">
 		  <div class="col-md-10">
 		  	<div class="row">
 		  		<div class="col-md-12">
@@ -14,6 +17,8 @@
 								<div class="col-xs-6 col-md-3">
 									<div  class="thumbnail">
 									  <img src="<?php echo $category['img_link']; ?>" alt="<?php echo $category['name']; ?>">
+									  <input type="text" class="hidden" name="id[]" value="<?php echo $category['id']; ?>" >
+									  <input type="text" class="hidden" name="img_link[]" value="<?php echo $category['img_link']; ?>" >
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
@@ -25,7 +30,7 @@
 									<div class="form-group row">
 											<label class="col-md-3 control-label">Title</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control"  value="<?php echo $category['name']; ?>">
+												<input type="text" class="form-control" name="name[]" value="<?php echo $category['name']; ?>">
 											</div>
 											
 									</div>
@@ -33,7 +38,7 @@
 									<div class="form-group row">
 											<label class="col-md-3 control-label">Button link</label>
 											<div class="col-md-9">
-												<input type="text" class="form-control"  value="<?php echo $category['link']; ?>">
+												<input type="text" class="form-control" name="link[]" value="<?php echo $category['link']; ?>">
 											</div>
 									</div>
 								</div>
@@ -45,3 +50,5 @@
 		  		</div>
 		  	</div>
 		</div>
+		
+		</form>

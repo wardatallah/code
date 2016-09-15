@@ -5,6 +5,10 @@
 						<div class="panel-default">
 							<div class="content-box-header  panel-heading">
 								<div class="panel-title">Products</div>
+								
+								<div class="panel-options">
+									<a href="<?php echo base_url() . 'editpages/product/add'; ?>"><i class="glyphicon glyphicon-plus-sign"></i></a>
+								</div>
 							</div>
 							<div class="content-box-large box-with-header">
 								<div class="row product-panel">
@@ -20,7 +24,8 @@
 																<label class="control-label product-name"><?php echo $product['name']; ?></label>
 															</div>
 															<div class="col-md-2">
-																<a href="<?php echo base_url() . 'editpages/product/edit/'.$product['id']; ?>" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+																<a href="<?php echo base_url() . 'editpages/product/remove/'.$product['id']; ?>" onclick="return confirm('Are You Sure?')"><i class="glyphicon glyphicon-remove"></i></a>
+																<a href="<?php echo base_url() . 'editpages/product/edit/'.$product['id']; ?>"><i class="glyphicon glyphicon-cog"></i></a>
 															</div>
 														</div>
 													</div>

@@ -745,3 +745,12 @@ ul.imgflex {
 ul.social_icons li a {
     font-size: 15px;
 }
+
+i.glyphicon.glyphicon-remove {
+    color: #e24f4f;
+}
+
+
+.col-md-1.img-container.img-lib.selected {
+    border: 4px solid #3b6bb0;
+}

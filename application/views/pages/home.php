@@ -4,7 +4,7 @@
       <div class="tp-banner">
         <ul>
           <?php foreach($banner_home as $ban): ?>
-          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo base_url().'assets/'; ?>images/slides/<?php echo $ban['img_name']; ?>" data-bgposition="center top" alt="" /> 
+          <li data-transition="fade" data-slotamount="7"> <img src="<?php echo $ban['img_path']; ?>" data-bgposition="center top" alt="" /> 
             
             <!-- Layer -->
             <div class="tp-caption sfb text-uppercase font-montserrat text-center tp-resizeme" 
@@ -67,7 +67,7 @@
       <div class="fur-slide"> 
         
         <?php foreach ($slider_home as $slider){ ?>
-        <div class="item"> <img src="<?php echo base_url().'assets/images/slides/' .$slider['img_name']; ?>" alt="" >
+        <div class="item"> <img src="<?php echo $slider['img_path']; ?>" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
@@ -177,7 +177,7 @@
       <div class="overlay banner">
         <div class="container">
           <div class="col-sm-8"><h3 class="text-left" ><?php echo $banner_quote[1]['title']; ?> </h3></div>
-          <div class="col-sm-4"><a href="<?php echo base_url().'assets/'.$banner_quote[1]['btn_link']; ?>" class="btn margin-top-20"><i class="fa fa-android android-size" aria-hidden="true"></i><?php echo $banner_quote[1]['btn_text']; ?></a> </div>
+          <div class="col-sm-4"><a href="<?php echo $banner_quote[1]['btn_link']; ?>" class="btn margin-top-20"><i class="fa fa-android android-size" aria-hidden="true"></i><?php echo $banner_quote[1]['btn_text']; ?></a> </div>
 		</div>
       </div>
     </section>
@@ -191,9 +191,9 @@
           
           <?php foreach ($types_view as $type){ ?>
           <li class="item int arch build col-sm-3">
-            <article> <img src="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" alt=""> 
+            <article> <img src="<?php echo $type['img_path']; ?>" alt="<?php echo $type['name']; ?>"> 
               <div class="hover-port">
-                <div class="position-center-center"> <a href="<?php echo base_url().'assets/'; ?>images/types/<?php echo $type['img_name']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $type['link']; ?>"><i class="fa fa-link"></i></a>
+                <div class="position-center-center"> <a href="<?php echo $type['img_path']; ?>" data-lighter><i class="fa fa-search"></i></a> <a href="<?php echo $type['link']; ?>"><i class="fa fa-link"></i></a>
                   <h6><?php echo $type['name']; ?></h6>
                 </div>
               </div>

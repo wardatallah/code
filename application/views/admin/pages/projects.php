@@ -5,6 +5,11 @@
 						<div class="panel-default">
 							<div class="content-box-header  panel-heading">
 								<div class="panel-title">Projects</div>
+							
+							
+								<div class="panel-options">
+									<a href="<?php echo base_url() . 'editpages/project/add'; ?>"><i class="glyphicon glyphicon-plus-sign"></i></a>
+								</div>
 							</div>
 							<div class="content-box-large box-with-header">
 								<div class="row project-panel">
@@ -20,6 +25,7 @@
 																<label class="control-label project-name"><?php echo $project['title']; ?></label>
 															</div>
 															<div class="col-md-2">
+																<a href="<?php echo base_url() . 'editpages/project/remove/'.$project['id']; ?>" onclick="return confirm('Are You Sure?')"><i class="glyphicon glyphicon-remove"></i></a>
 																<a href="<?php echo base_url() . 'editpages/project/edit/'.$project['id']; ?>" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
 															</div>
 														</div>
