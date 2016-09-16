@@ -190,7 +190,7 @@ Class Userlogin extends CI_Controller {
 								  'smtp_host' => 'ssl://smtp.googlemail.com',
 								  'smtp_port' => 465,
 								  'smtp_user' => 'wardatallah66@gmail.com', // change it to yours
-								  'smtp_pass' => 'googleworld6592', // change it to yours
+								  'smtp_pass' => 'xxxxx', // change it to yours
 								  'mailtype' => 'html',
 								  'charset' => 'iso-8859-1',
 								  'wordwrap' => TRUE
@@ -210,7 +210,7 @@ Class Userlogin extends CI_Controller {
 								 {
 								  echo 'Email sent.';
 								 } else	{
-								 show_error($this->email->print_debugger());
+									show_error($this->email->print_debugger());
 								 }
 								
 								
