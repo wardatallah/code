@@ -13,13 +13,13 @@
 								<div class="row">
 									<div class="col-xs-6 col-md-2">
 										<div  class="thumbnail">
-										  <img src="<?php echo $product->img_path;?>" alt="<?php echo $product->name;?>">
+										  <img id="productimg" src="<?php echo $product->img_path;?>" alt="<?php echo $product->name;?>">
 										  <input type="text" class="hidden" name="productId" value="<?php echo $product->id;?>">
-										  <input type="text" class="hidden" name="productImage" value="<?php echo $product->img_path;?>">
+										  <input id="productinput" type="text" class="hidden" name="productImage" value="<?php echo $product->img_path;?>">
 										</div>
 										<div class="form-group row astable">
 													<div class="col-md-4">
-														<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+														<button type="button" id="upload-productimg-productinput" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 													</div>
 										</div>
 									</div>

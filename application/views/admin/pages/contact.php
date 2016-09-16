@@ -14,13 +14,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $location['img_path']; ?>" alt="<?php echo $location['title']; ?>">
+									  <img id="locationimg<?php echo $location['id']; ?>" src="<?php echo $location['img_path']; ?>" alt="<?php echo $location['title']; ?>">
 									  <input type="text" class="hidden" name="locationId[]" value="<?php echo $location['id']; ?>">
-									  <input type="text" class="hidden" name="locationImage[]" value="<?php echo $location['img_path']; ?>">
+									  <input id="locationinput<?php echo $location['id']; ?>" type="text" class="hidden" name="locationImage[]" value="<?php echo $location['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button type="button" id="upload-locationimg<?php echo $location['id']; ?>-locationinput<?php echo $location['id']; ?>" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>

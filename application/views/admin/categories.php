@@ -16,13 +16,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-3">
 									<div  class="thumbnail">
-									  <img src="<?php echo $category['img_link']; ?>" alt="<?php echo $category['name']; ?>">
+									  <img id="catimg<?php echo $category['id']; ?>" src="<?php echo $category['img_link']; ?>" alt="<?php echo $category['name']; ?>">
 									  <input type="text" class="hidden" name="id[]" value="<?php echo $category['id']; ?>" >
-									  <input type="text" class="hidden" name="img_link[]" value="<?php echo $category['img_link']; ?>" >
+									  <input id="catinput<?php echo $category['id']; ?>" type="text" class="hidden" name="img_link[]" value="<?php echo $category['img_link']; ?>" >
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button type="button" id="upload-catimg<?php echo $category['id']; ?>-catinput<?php echo $category['id']; ?>" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>

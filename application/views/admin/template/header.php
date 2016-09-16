@@ -45,7 +45,7 @@ window.ajax = function(url, method,body) {
 
 $( document ).ready(function() {
 	$("#selectImage").click(function(event){
-			console.log("done test : " + inputId + " " + imageId + " " + bg_url);
+			console.log("image id : " + imageId + " input id : " + inputId + " bg url : " + bg_url);
 			document.getElementById(inputId).value = bg_url;
 			document.getElementById(imageId).src = bg_url;
 	});
@@ -76,6 +76,7 @@ $( document ).ready(function() {
 				  reader.onload = function (e) {
 					  var data = e.target.result;
 					  $('#displayImg').attr('src', data ) ; 
+					  
 				  };
 				
 				 reader.readAsDataURL(input.files[0]);
@@ -95,6 +96,8 @@ $( document ).ready(function() {
 						console.log(error);
 					}).done(function(data) {
 						console.log(data);
+						var imgName=JSON.parse(data).name;
+						bg_url = "http://" +document.location.hostname + "/code/assets/images/uploaded/"+imgName;
 					});
 					
 	});

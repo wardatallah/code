@@ -13,13 +13,13 @@
 								<div class="row">
 									<div class="col-xs-6 col-md-2">
 										<div  class="thumbnail">
-										  <img src="<?php echo $project->img_path;?>" alt="<?php echo $project->title;?>">
+										  <img id="projectimg" src="<?php echo $project->img_path;?>" alt="<?php echo $project->title;?>">
 										  <input type="text" class="hidden" name="projectId" value="<?php echo $project->id;?>">
-										  <input type="text" class="hidden" name="projectImage" value="<?php echo $project->img_path;?>">
+										  <input id="projectinput" type="text" class="hidden" name="projectImage" value="<?php echo $project->img_path;?>">
 										</div>
 										<div class="form-group row astable">
 													<div class="col-md-4">
-														<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+														<button type="button" id="upload-projectimg-projectinput" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 													</div>
 										</div>
 									</div>

@@ -144,13 +144,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_name']; ?>">
+									  <img id="testoimg<?php echo $client['id']; ?>" src="<?php echo $client['img_link']; ?>" alt="<?php echo $client['client_name']; ?>">
 									  <input type="text" class="hidden" name="testoId[]" value="<?php echo $client['id']; ?>">
-									  <input type="text" class="hidden" name="testoImages[]" value="<?php echo $client['img_link']; ?>">
+									  <input id="testoinput<?php echo $client['id']; ?>" type="text" class="hidden" name="testoImages[]" value="<?php echo $client['img_link']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button type="button" id="upload-testoimg<?php echo $client['id']; ?>-testoinput<?php echo $client['id']; ?>" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>
@@ -213,13 +213,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $client['img_path']; ?>" alt="">
+									  <img id="clientimg<?php echo $client['id']; ?>" src="<?php echo $client['img_path']; ?>" alt="">
 									  <input type="text" class="hidden" name="clientsId[]" value="<?php echo $client['id']; ?>">
-									  <input type="text" class="hidden" name="clientsImages[]" value="<?php echo $client['img_path']; ?>">
+									  <input id="clientinput<?php echo $client['id']; ?>" type="text" class="hidden" name="clientsImages[]" value="<?php echo $client['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button type="button" id="upload-clientimg<?php echo $client['id']; ?>-clientinput<?php echo $client['id']; ?>" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>

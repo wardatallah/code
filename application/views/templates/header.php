@@ -71,7 +71,7 @@
           <!-- Social Icons -->
           <ul class="social_icons">
             <?php foreach ($social_media as $media): ?>
-			<li class="<?php echo $media['type']; ?>"><a href="<?php echo $media['link']; ?>"><i class="fa fa-<?php echo $media['type']; ?>"></i> </a></li>
+			<li class="<?php echo $media['type']; ?>"><a href="<?php echo $media['link']; ?>" target="_new" ><i class="fa fa-<?php echo $media['type']; ?>"></i> </a></li>
             <?php endforeach; ?>
           </ul>
         </div>

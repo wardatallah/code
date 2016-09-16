@@ -14,13 +14,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $banner['img_path']; ?>" alt="<?php echo $banner['title']; ?>">
+									  <img id="sliderimg<?php echo $banner['id']; ?>" src="<?php echo $banner['img_path']; ?>" alt="<?php echo $banner['title']; ?>">
 									  <input type="text" class="hidden" name="sliderIds[]" value="<?php echo $banner['id']; ?>">
-									  <input type="text" class="hidden" name="sliderImages[]" value="<?php echo $banner['img_path']; ?>">
+									  <input id="sliderinput<?php echo $banner['id']; ?>" type="text" class="hidden" name="sliderImages[]" value="<?php echo $banner['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button type="button" id="upload-sliderimg<?php echo $banner['id']; ?>-sliderinput<?php echo $banner['id']; ?>" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>
@@ -76,13 +76,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $slider['img_path']; ?>" alt="<?php echo $slider['title']; ?>">
+									  <img id="carouselimg<?php echo $slider['id']; ?>" src="<?php echo $slider['img_path']; ?>" alt="<?php echo $slider['title']; ?>">
 									  <input type="text" class="hidden" name="carouselIds[]" value="<?php echo $slider['id']; ?>">
-									  <input type="text" class="hidden" name="carouselImages[]" value="<?php echo $slider['img_path']; ?>">
+									  <input id="carouselinput<?php echo $slider['id']; ?>" type="text" class="hidden" name="carouselImages[]" value="<?php echo $slider['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button id="upload-carouselimg<?php echo $slider['id']; ?>-carouselinput<?php echo $slider['id']; ?>" type="button" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>
@@ -235,13 +235,13 @@
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
-									  <img src="<?php echo $type['img_path']; ?>" alt="<?php echo $type['name']; ?>">
+									  <img id="typeimg<?php echo $type['id']; ?>" src="<?php echo $type['img_path']; ?>" alt="<?php echo $type['name']; ?>">
 									  <input type="text" class="hidden" name="typeIds[]" value="<?php echo $type['id']; ?>">
-									  <input type="text" class="hidden" name="typeImages[]" value="<?php echo $type['img_path']; ?>">
+									  <input id="typeinput<?php echo $type['id']; ?>" type="text" class="hidden" name="typeImages[]" value="<?php echo $type['img_path']; ?>">
 									</div>
 									<div class="form-group row astable">
 												<div class="col-md-4">
-													<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Image</button>
+													<button id="upload-typeimg<?php echo $type['id']; ?>-typeinput<?php echo $type['id']; ?>" type="button" class="btn btn-info btn-lg uploadImage" data-toggle="modal" data-target="#myModal">Edit Image</button>
 												</div>
 									</div>
 								</div>
