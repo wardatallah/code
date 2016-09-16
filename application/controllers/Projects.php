@@ -25,6 +25,8 @@ class Projects extends CI_Controller {
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("projects"); 
@@ -47,6 +49,8 @@ class Projects extends CI_Controller {
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				$data['locations'] = $this->contact_model->get_locations("about");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("projects"); 

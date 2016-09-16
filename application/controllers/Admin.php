@@ -30,6 +30,7 @@ class Admin extends CI_Controller {
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['locations'] = $this->contact_model->get_locations("about");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 		
@@ -156,7 +157,9 @@ class Admin extends CI_Controller {
 			   {
 				   $session_data = $this->session->userdata('logged_in');
 				   $data['username'] = $session_data['username'];
-				   
+				   $data['footer_logo'] = $this->header_model->get_logo("footer");
+				   $data['footer_about'] = $this->header_model->get_heading("all","footer");
+				   $data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				   
 				   
 				   $this->load->view('admin/template/header', $data);

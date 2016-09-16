@@ -25,7 +25,9 @@ class Home extends CI_Controller {
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['locations'] = $this->contact_model->get_locations("about");
+				
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("Home"); 

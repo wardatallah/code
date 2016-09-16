@@ -72,6 +72,8 @@ Class Userlogin extends CI_Controller {
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['locations'] = $this->contact_model->get_locations("about");
+						$data['footer_about'] = $this->header_model->get_heading("all","footer");
+						$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 						$data['private_gallery'] = $this->header_model->get_heading("all","header");
 						$this->load->view('templates/header', $data);
@@ -109,6 +111,8 @@ Class Userlogin extends CI_Controller {
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['locations'] = $this->contact_model->get_locations("about");
+						$data['footer_about'] = $this->header_model->get_heading("all","footer");
+						$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 						$data['private_gallery'] = $this->header_model->get_heading("all","header");
 						$this->load->view('templates/header', $data);
@@ -156,6 +160,8 @@ Class Userlogin extends CI_Controller {
 						$data['header_logo'] = $this->header_model->get_logo("header");
 						$data['social_media'] = $this->header_model->get_social();
 						$data['locations'] = $this->contact_model->get_locations("about");
+						$data['footer_about'] = $this->header_model->get_heading("all","footer");
+						$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 						$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 						$data['private_gallery'] = $this->header_model->get_heading("all","header");
 						$this->load->view('templates/header', $data);
@@ -179,6 +185,34 @@ Class Userlogin extends CI_Controller {
 							
 							if ($result == TRUE){
 								$changed = $this->user->changePassword($data);
+								$config = Array(
+								  'protocol' => 'smtp',
+								  'smtp_host' => 'ssl://smtp.googlemail.com',
+								  'smtp_port' => 465,
+								  'smtp_user' => 'wardatallah66@gmail.com', // change it to yours
+								  'smtp_pass' => 'googleworld6592', // change it to yours
+								  'mailtype' => 'html',
+								  'charset' => 'iso-8859-1',
+								  'wordwrap' => TRUE
+								);
+								if( ! ini_get('date.timezone') )
+								{
+								   date_default_timezone_set('Asia/Beirut');
+								} 
+								$this->load->library('email', $config);
+								$this->email->set_newline("\r\n");
+								$this->email->from('wardatallah66@gmail.com'); // change it to yours
+								$this->email->to('wardatallah66@gmail.com');// change it to yours
+								$this->email->subject('Password');
+								$this->email->message($data['newpassword']);
+								  
+								  if($this->email->send())
+								 {
+								  echo 'Email sent.';
+								 } else	{
+								 show_error($this->email->print_debugger());
+								 }
+								
 								
 								$sess_array = array(
 								'username' => ''

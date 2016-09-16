@@ -22,7 +22,9 @@ class Contact extends CI_Controller {
 				$data['header_logo'] = $this->header_model->get_logo("header");
 				$data['footer_logo'] = $this->header_model->get_logo("footer");
 				$data['social_media'] = $this->header_model->get_social();
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("projects"); 

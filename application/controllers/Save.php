@@ -39,6 +39,23 @@ class Save extends CI_Controller {
 					 redirect('admin', 'refresh');
 				 }
 			 }
+			 
+			 function saveFooter(){
+				 if(isset($this->session->userdata['logged_in'])){
+					 
+					 $data['footer_logo']=$this->input->post('footerlogo');
+					 $data['title']=$this->input->post('title');
+					 $data['subtitle']=$this->input->post('subtitle');
+					 $data['copyright']=$this->input->post('copyright');
+					 
+					 $result = $this->save_model->update_footer($data);
+					 
+					 redirect('Admin/footer_section', 'refresh');
+					 
+				 } else {
+					 redirect('admin', 'refresh');
+				 }
+			 }
 
 			 
 			 function saveCat(){

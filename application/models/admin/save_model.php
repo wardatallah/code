@@ -29,6 +29,23 @@ class Save_model extends CI_Model {
 			$this->db->update('logo_images',$enddata);
 
 		}
+		
+		public function update_footer($data){
+			
+			
+			$enddata=array('path'=>$data['footer_logo']);
+			$this->db->where('section','footer');
+			$this->db->update('logo_images',$enddata);
+			
+			$enddata=array('title'=>$data['title'],'subtitle'=>$data['subtitle']);
+			$this->db->where(array('section'=>'footer','page'=>'all'));
+			$this->db->update('heading',$enddata);
+			
+			$enddata=array('subtitle'=>$data['copyright']);
+			$this->db->where(array('section'=>'footer','page'=>'down'));
+			$this->db->update('heading',$enddata);
+			
+		}
 
 
 		public function update_categories($data){

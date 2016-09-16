@@ -27,6 +27,8 @@ class Products extends CI_Controller {
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				$data['locations'] = $this->contact_model->get_locations("about");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				
 				
 				
@@ -57,15 +59,19 @@ class Products extends CI_Controller {
 				$data['social_media'] = $this->header_model->get_social();
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				$data['locations'] = $this->contact_model->get_locations("about");
+				$data['footer_about'] = $this->header_model->get_heading("all","footer");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
+				
+				$data['product'] = $this->products_model->get_ProductById($id);
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("products"); 
 				
 				$this->load->helper('url');
 				
-				$data['product'] = $this->products_model->get_ProductById($id);
 				
 				
+				//echo "<script>console.log($data['product']['name']);</script>";
 				$this->load->view('templates/header', $data);
 				$this->load->view('pages/product', $data);
 				$this->load->view('templates/footer', $data);

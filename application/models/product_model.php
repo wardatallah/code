@@ -42,4 +42,6 @@ class Product_model extends CI_Model {
 				$query = $this->db->get('products');
 			    return $query->result_array();
 		}
+		
+		
 }

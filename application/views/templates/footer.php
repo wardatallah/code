@@ -9,9 +9,9 @@
             
 			<!-- MY ACCOUNT -->
             <li class="col-sm-6">
-              <h5>ABOUT US</h5>
-              <div class="footer-logo"> <a href="#."><img src="<?php echo $footer_logo->path; ?>" alt=""></a></div>
-			  <p class="intro-small">Multipurpose E-Commerce Theme is suitable for furniture store, fashion shop, accessories, electric shop. We have included multiple layouts for home page to give you best selections in customization.</p>
+              <h5><?php echo $footer_about->title; ?></h5>
+              <div class="footer-logo"> <a href="#"><img src="<?php echo $footer_logo->path; ?>" alt=""></a></div>
+			  <p class="intro-small"><?php echo $footer_about->subtitle; ?></p>
             </li>
 			
             <!--  INFOMATION -->
@@ -58,7 +58,7 @@
       
       <!-- Rights -->
       <div class="rights">
-        <p>© 2016 INTERMED CERAMICA. All Rights Reserved. Developed By <a href='http://www.greynab.com' target="_new">Greynab</a></p>
+        <p><?php echo $footer_copyright->subtitle; ?></p>
       </div>
     </div>
   </footer>
@@ -75,7 +75,7 @@
 <script src="<?php echo base_url().'assets/'; ?>js/jquery.magnific-popup.min.js"></script> 
 <script src="<?php echo base_url().'assets/'; ?>js/jquery.flexslider-min.js"></script> 
 <script src="<?php echo base_url().'assets/'; ?>js/jquery.isotope.min.js"></script> 
-
+<!-- Developer : Ward Atallah -->
 <!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
 <script type="text/javascript" src="<?php echo base_url().'assets/'; ?>rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
 <script type="text/javascript" src="<?php echo base_url().'assets/'; ?>rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
