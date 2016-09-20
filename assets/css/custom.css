@@ -118,3 +118,38 @@ ul.location.infooter li i {
 ul.f-links li a {
     color: #b8b8b8;
 }
+
+header.header.header-dark {
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 0px 3px 10px rgba(255,255,255,0.5);
+}
+
+span.prod-class {
+    font-size: 16px;
+}
+
+p.get-black {
+	color:#292929;
+}
+
+.astable {
+    display: table;
+    margin: 0 auto;
+}
+
+.img-responsive {
+    display: table !important;
+    margin: 0 auto;
+}
+
+h5.product-name {
+	color: #0b479d;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.furniture .item-detail a.btn-small {
+    font-size: 12px !important;
+}

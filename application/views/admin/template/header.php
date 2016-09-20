@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Control Panel</title>
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="<?php echo base_url().'assets/images/'; ?>favicon.ico"/>
     <!-- Bootstrap -->
@@ -44,6 +45,22 @@ window.ajax = function(url, method,body) {
 
 
 $( document ).ready(function() {
+	
+	$(".deleteClient").click(function(event){
+			var id = $(this).attr('id');
+			var result = id.split("-");
+			Id=result[1];
+			document.getElementById("clientId").value =Id;
+			console.log(Id);
+			bootbox.confirm("Are you sure you want to delete this Client?", function(result) {
+					if(result===true){
+						$("#deleteClient").submit();
+						console.log("done");
+					}
+				});
+				return false;
+			
+	});
 	$("#selectImage").click(function(event){
 			console.log("image id : " + imageId + " input id : " + inputId + " bg url : " + bg_url);
 			document.getElementById(inputId).value = bg_url;
@@ -158,6 +175,9 @@ var callUpload = function(){
 	text-align: center;
 	border-radius: 5px;cursor: hand;
 	background: #f8f8f8;
+	display: table;
+	margin: 0 auto;
+    margin-top: 15px;
 }
 
 .uploadedContent {
@@ -217,7 +237,7 @@ var callUpload = function(){
 										$entry1=$_SERVER['DOCUMENT_ROOT'].'/code/assets/images/'.$file1;
 										if ($file1 !== "." && $file1 !== ".."){
 											if (!is_dir($entry1) ){
-												$ext1 = pathinfo($file1, PATHINFO_EXTENSION);
+												$ext1 = strtolower(pathinfo($file1, PATHINFO_EXTENSION));
 												if ($ext1 === 'png' || $ext1 === 'jpg' || $ext1 === 'jpeg'){ 
 															$path1=base_url() . 'assets/images/';
 															print_img1($path1,$file1); 
@@ -246,11 +266,13 @@ var callUpload = function(){
 						</div>
 		  </div>
 		  <div class="uploadContent uploadedContent" >
-			   <div style="padding:40px;">
+			   <div style="padding:30px 20px;">
 				<form id="formImage"  method="post" enctype="multipart/form-data">
-				   <input type="file" id="fileImage" name="fileImage"   style="display:none;">
-				   <span class="uploadedButton" onclick="$('#fileImage').click();">Upload Image</span>
-				   <img id="displayImg"  class="uploadedImage">
+				   <div class="row astable">
+					   <input type="file" id="fileImage" name="fileImage"   style="display:none;">
+					   <img id="displayImg"  class="uploadedImage">
+					   <span class="uploadedButton" onclick="$('#fileImage').click();">Upload Image</span>
+				   </div>
 				</form>  
 			   </div>
 		  </div>
@@ -307,7 +329,7 @@ var callUpload = function(){
 		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 		if (!isset($this->session->userdata['logged_in'])) {
 
-			header("location: http://localhost/code/admin");
+			header("location: $actual_link/admin");
 		}
 	?>
   	<div class="header">
@@ -332,15 +354,9 @@ var callUpload = function(){
 	              </div>
 	           </div>-->
 	           <div class="col-md-2">
-	              <div class="navbar navbar-inverse" role="banner">
-	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
-	                    <ul class="nav navbar-nav">
-	                      <li class="dropdown">
-	                        <a href="<?php echo base_url() . 'Userlogin/logout'; ?>">Logout  <i class="glyphicon glyphicon-log-out"></i></a>
-	                      </li>
-	                    </ul>
-	                  </nav>
-	              </div>
+					<div class="logoutButton astable">
+						<a href="<?php echo base_url() . 'Userlogin/logout'; ?>">Logout  <i class="glyphicon glyphicon-log-out"></i></a>
+					</div>
 	           </div>
 	        </div>
 	     </div>

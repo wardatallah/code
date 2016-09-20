@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 				$this->load->model('header_model');
 				$this->load->model('home_model');
 				$this->load->model('contact_model');
+				$this->load->model('projects_model');
                 $this->load->helper('url_helper');
 				
         }
@@ -27,6 +28,8 @@ class Home extends CI_Controller {
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
 				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['locations'] = $this->contact_model->get_locations("about");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
+				$data['projects'] = $this->projects_model->get_projects(false,6);
 				
 				
 				// Capitalize the first letter

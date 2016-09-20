@@ -10,7 +10,8 @@ class Products_model extends CI_Model {
 		
 		public function get_ProductById($id = false,$private=0){
 			
-				if ($id === false)
+				
+					if ($id === false)
 				{
 					if ($private===0)
 						$query = $this->db->get_where('products', array('isPrivate' => $private));
@@ -23,6 +24,18 @@ class Products_model extends CI_Model {
 				
 				return $query->row();
 				
+				
+		}
+		
+		
+		public function getProductsBySize($size){
+					if (!isset($this->session->userdata['private_user'])){
+						$query = $this->db->get_where('products', array('size' => $size , 'isPrivate' => 0));
+					} else {
+						$query = $this->db->get_where('products', array('size' => $size));
+					}
+					return $query->result_array();
+					
 		}
 		
 		

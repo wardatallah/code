@@ -32,6 +32,35 @@
 
 <script src="<?php echo base_url().'assets/'; ?>js/modernizr.js"></script>
 
+<script>
+function checkPassword() {
+	document.getElementById("txtHint").innerHTML = "";
+	str=document.getElementById("collectionpassword").value;
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "<div class='alert alert-warning'>Please enter your password !</div>";
+        return;
+    } else {
+		var letters = /[\<\>!@#\$%^&\*,]+/i;
+		
+		if(str.match(letters)){
+			document.getElementById("txtHint").innerHTML = "<div class='alert alert-danger'>Please input alphanumeric characters only!</div>";
+		} else {
+		
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+				if (this.responseText == "error")
+					document.getElementById("txtHint").innerHTML = "<div class='alert alert-danger'>Invalid password !</div>";
+				else if (this.responseText == "success")
+					window.location.replace("<?php echo base_url() . 'collection/'; ?>");
+            }
+        };
+        xmlhttp.open("POST", "<?php echo base_url() . 'checkPass/'; ?>" + str, true);
+        xmlhttp.send();
+		}
+    }
+}
+</script>
 
 
 </head>
@@ -68,6 +97,10 @@
         <!-- Language -->
         <div class="language"> <a href="#." class="active">EN</a> <a href="#.">FR</a> <a href="#.">AR</a> </div>
         <div class="top-links">
+		  <?php if (isset($this->session->userdata['private_user'])) { ?><ul>
+            <li><a href="<?php echo base_url() .'collection/logout'; ?>">Logout</a></li>
+          </ul>
+		  <?php } ?>
           <!-- Social Icons -->
           <ul class="social_icons">
             <?php foreach ($social_media as $media): ?>
@@ -100,33 +133,45 @@
                   <div class="col-sm-4">
                     <h6>By Type</h6>
                     <ul>
-                      <li><a href="#">Type 1</a></li>
-					  <li><a href="#">Type 2</a></li>
-					  <li><a href="#">Type 3</a></li>   
-                      
+                      <li><a href="#">Floor Tiles</a></li>
+					  <li><a href="#">Wall Tiles</a></li>
+					  <li><a href="#">Decoration Tiles</a></li>
+					  <li><a href="#">Borders</a></li>
+					  <li><a href="#">Bathroom Sets</a></li>
+					  <li><a href="#">Jacuzzi</a></li>
+					  <li><a href="#">Showers</a></li>
+					  <li><a href="#">Bathroom Furniture</a></li>
+					  <li><a href="#">Accessories</a></li>
+					  <li><a href="#">Mixer</a></li>
+					  <li><a href="#">Shower Panels</a></li>
+					  <li><a href="#">Marble Basins</a></li>
                     </ul>
                   </div>
                   <div class="col-sm-4">
                     <h6>By Origin</h6>
                     <ul>
-                      <li><a href="#">Origin 1</a></li>
-					  <li><a href="#">Origin 2</a></li>
-					  <li><a href="#">Origin 3</a></li>                      
+                      <li><a href="#">Spanish Tiles</a></li>
+					  <li><a href="#">Far East Tiles</a></li>
                     </ul>
                   </div>
                   <div class="col-sm-4">
                     <h6>By Format</h6>
                     <ul>
-                      <li><a href="#">Format 1</a></li>
-					  <li><a href="#">Format 2</a></li>
-					  <li><a href="#">Format 3</a></li>                      
+                      <li><a href="#">32x65</a></li>
+					  <li><a href="#">20x24</a></li>
+					  <li><a href="#">45x45</a></li> 
+					  <li><a href="#">30x90</a></li>
+					  <li><a href="#">20x40</a></li>
+					  <li><a href="#">80x80</a></li> 
                     </ul>
                   </div>
                 </li>
               </ul>
             </li>
             <li <?php if($actual_link===base_url().'projects/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>projects/">PROJECTS</a></li>
-			<li <?php if($actual_link===base_url().'collection/') echo 'class="active"'; ?>><a href="#" data-toggle="modal" data-target="#myModal" >Collection</a></li>
+			<li <?php if($actual_link===base_url().'collection/') echo 'class="active"'; ?>><a <? if (!isset($this->session->userdata['private_user'])) { echo 'href="#" data-toggle="modal" data-target="#myModal"'; } else {
+				echo "href='". base_url() . "collection/'"; 
+			} ?>>Collection</a></li>
             <li <?php if($actual_link===base_url().'contact-us/') echo 'class="active"'; ?>><a href="<?php echo base_url(); ?>contact-us/">CONTACT US</a></li>
             
             <!--======= Shopping Cart =========-->
@@ -187,10 +232,14 @@
 		<form method="post" action="">
         <div class="modal-body">
           <p><?php echo $private_gallery->subtitle; ?></p>
-		  <p><label for="password">Password</label><input name="password" id="password" type="password" class="form-control" required="true" /></p>
+		  <p>
+				<label for="password">Password</label>
+				<input name="password" id="collectionpassword" type="password" class="form-control" required="true" />
+				<div id="txtHint"></div>
+		   </p>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-default btn-dark">Enter</button>
+          <div class="btn btn-default btn-dark" onclick="checkPassword()">Enter</div>
         </div>
 		</form>
       </div>

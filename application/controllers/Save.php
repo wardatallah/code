@@ -5,6 +5,7 @@ class Save extends CI_Controller {
 			 {
 				   parent::__construct();
 				   $this->load->model('header_model');
+				   $this->load->model('user');
 				   $this->load->model('admin/save_model');
 				   $this->load->helper('url_helper');
 				   // Load form helper library
@@ -402,6 +403,30 @@ class Save extends CI_Controller {
 					 redirect('editpages/project/edit/'.$data['projectId'], 'refresh');
 					 
 					 
+				 } else {
+					 redirect('admin', 'refresh');
+				 }
+			 }
+			 
+			 
+			 function saveUserPass(){
+				 
+				 if(isset($this->session->userdata['logged_in'])){
+					 $data = array();
+					 
+					 $data["id"]=$this->input->post('userid');
+					 $data["password"]=$this->input->post('password');
+					 $data["username"]=$this->input->post('Username');
+					 $data["email"]=$this->input->post('email');
+					 
+					 if ($data["id"]==="")
+						$result = $this->user->add_user_pass($data);
+					 else
+						$result = $this->user->update_user_pass($data["id"],$data["password"]);
+					
+					 redirect('Admin/settings', 'refresh');
+
+				 
 				 } else {
 					 redirect('admin', 'refresh');
 				 }

@@ -69,10 +69,15 @@
   				<div class="col-md-12">
   					<div class="panel-default">
 		  				<div class="content-box-header  panel-heading">
-							<div class="panel-title">Carousel Slider</div>
+							<div class="panel-title">Carousel Projects</div>
 						</div>
 		  				<div class="content-box-large box-with-header">
-							<?php foreach($slider_home as $slider): ?>
+							<div class="row">
+								<div class="col-xs-6 col-md-12">
+									<a href="<?php echo base_url() . 'editpages/projects'; ?>" >Click here to edit Projects section</a>
+								</div>
+							</div>
+							<!--<?php foreach($slider_home as $slider): ?>
 							<div class="row">
 								<div class="col-xs-6 col-md-2">
 									<div  class="thumbnail">
@@ -111,7 +116,7 @@
 								</div>
 							</div>
 							<hr/>
-							<?php endforeach; ?>
+							<?php endforeach; ?> -->
 		  				</div>
 		  			</div>
   				</div>

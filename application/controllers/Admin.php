@@ -7,6 +7,8 @@ class Admin extends CI_Controller {
 				   $this->load->model('header_model');
 				   $this->load->model('home_model');
 				   $this->load->model('contact_model');
+				   $this->load->model('about_model');
+				   $this->load->model('user');
 				   $this->load->helper('url_helper');
 			 }
 
@@ -33,6 +35,7 @@ class Admin extends CI_Controller {
 				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['title'] = ucfirst("Login Panel"); // Capitalize the first letter
 				$data['private_gallery'] = $this->header_model->get_heading("all","header");
+				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 		
 		
 		
@@ -60,6 +63,10 @@ class Admin extends CI_Controller {
 					 $this->load->library('form_validation');
 					 $session_data = $this->session->userdata('logged_in');
 					 $data['username'] = $session_data['username'];
+					 
+					 $data["users"] = $this->user->get_users_pass();
+					 
+					 
 					 $this->load->view('admin/template/header', $data);
 					 $this->load->view('admin/settings',$data);
 					 $this->load->view('admin/template/footer', $data);	
@@ -173,7 +180,64 @@ class Admin extends CI_Controller {
 			   }
 			 }
 			 
-			 
+			function deleteClient(){
+				if($this->session->userdata('logged_in'))
+			   {
+				   $session_data = $this->session->userdata('logged_in');
+				   $data['username'] = $session_data['username'];
+				   
+				   $clientID=$this->input->post('clientId');
+				   
+				   $this->about_model->delete_client($clientID);
+				   
+				   redirect("editpages/about","refresh");	
+				   
+				   
+				   
+			   } else {
+				   redirect("admin","refresh");
+			   }
+			}
+			
+			function addPass(){
+				if($this->session->userdata('logged_in'))
+			   {
+				   
+				   $this->load->view('admin/template/header');
+				   $this->load->view('admin/adduserpass');
+				   $this->load->view('admin/template/footer');	
+				   
+				   
+			   } else {
+					redirect("admin","refresh");
+			   }
+			}
+			
+			function editPass($id){
+				if($this->session->userdata('logged_in'))
+			   {
+				   
+				   $data['user']=$this->user->get_users_pass($id);
+				   
+				   $this->load->view('admin/template/header', $data);
+				   $this->load->view('admin/edituserpass',$data);
+				   $this->load->view('admin/template/footer', $data);	
+				   
+				   
+			   } else {
+					redirect("admin","refresh");
+			   }
+			}
+			
+			function removePass($id){
+				if($this->session->userdata('logged_in'))
+			   {
+				   $result = $this->user->remove_user_pass($id);
+				   redirect("Admin/settings","refresh");
+			   } else {
+					redirect("admin","refresh");
+			   }
+			}
 			 
 			 
 }

@@ -62,16 +62,23 @@ class Products extends CI_Controller {
 				$data['footer_about'] = $this->header_model->get_heading("all","footer");
 				$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 				
+				
 				$data['product'] = $this->products_model->get_ProductById($id);
+				$res=$data['product'];
+				$size=$res->size;
+				$data['products'] = $this->products_model->getProductsBySize($size);
 				
 				// Capitalize the first letter
 				$data['title'] = ucfirst("products"); 
 				
 				$this->load->helper('url');
+				if($this->session->userdata('private_user')){
+					$data['private'] = true;
+				} else {
+					$data['private'] = false;
+				}
 				
 				
-				
-				//echo "<script>console.log($data['product']['name']);</script>";
 				$this->load->view('templates/header', $data);
 				$this->load->view('pages/product', $data);
 				$this->load->view('templates/footer', $data);

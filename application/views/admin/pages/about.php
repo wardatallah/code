@@ -230,6 +230,12 @@
 												<input type="text" class="form-control" name="clientsLink[]" value="<?php echo $client['client_link']; ?>">
 											</div>
 									</div>
+									<div class="form-group row">
+											<label class="col-md-11 control-label"></label>
+											<div class="col-md-1">
+												<div id="client-<?php echo $client['id']; ?>" class="deleteClient" ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+											</div>
+									</div>
 								</div>
 							</div>
 							<hr/>
@@ -239,4 +245,7 @@
   				</div>
 			</div>		
 		</div>
+		</form>
+		<form action="<?php echo base_url() .'Admin/deleteClient'; ?>" method="post" id="deleteClient">
+				<input type="text" class="hidden" name="clientId" id="clientId" value="">
 		</form>

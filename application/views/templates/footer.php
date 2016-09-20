@@ -58,7 +58,7 @@
       
       <!-- Rights -->
       <div class="rights">
-        <p><?php echo $footer_copyright->subtitle; ?></p>
+        <p>&copy; <?php echo $footer_copyright->subtitle; ?></p>
       </div>
     </div>
   </footer>

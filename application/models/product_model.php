@@ -22,8 +22,12 @@ class Product_model extends CI_Model {
 		
 		
 		public function get_products($country , $type , $color , $size,$private=0){
-				$this->db->where('isPrivate',$private);
-				if(isset($country)){
+				if(!isset($this->session->userdata['private_user']))
+			   {	
+					$this->db->where('isPrivate',$private);
+			   }
+			   
+			   if(isset($country)){
 						$this->db->where('country',$country);
 				}
 				

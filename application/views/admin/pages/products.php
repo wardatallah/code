@@ -24,8 +24,8 @@
 																<label class="control-label product-name"><?php echo $product['name']; ?></label>
 															</div>
 															<div class="col-md-2">
-																<a href="<?php echo base_url() . 'editpages/product/remove/'.$product['id']; ?>" onclick="return confirm('Are You Sure?')"><i class="glyphicon glyphicon-remove"></i></a>
 																<a href="<?php echo base_url() . 'editpages/product/edit/'.$product['id']; ?>"><i class="glyphicon glyphicon-cog"></i></a>
+																<a href="<?php echo base_url() . 'editpages/product/remove/'.$product['id']; ?>" onclick="return confirm('Are You Sure?')"><i class="glyphicon glyphicon-remove"></i></a>
 															</div>
 														</div>
 													</div>

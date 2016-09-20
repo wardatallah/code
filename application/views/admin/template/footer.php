@@ -1,6 +1,6 @@
 		</div>
     </div>
-
+	<div class="clearfooter"></div>
     <footer class="footer">
          <div class="container">
          

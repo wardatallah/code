@@ -66,14 +66,14 @@
     <section class="furniture-large animate fadeInUp" data-wow-delay="0.4s">
       <div class="fur-slide"> 
         
-        <?php foreach ($slider_home as $slider){ ?>
-        <div class="item"> <img src="<?php echo $slider['img_path']; ?>" alt="" >
+        <?php foreach ($projects as $project){ ?>
+        <div class="item"> <img src="<?php echo $project['img_path']; ?>" alt="" >
           <div class="item-inn">
             <div class="item-hover">
               <div class="position-center-center text-center">
-                <h3><?php echo $slider['title']; ?></h3>
-                <p><?php echo $slider['sub_title']; ?> </p>
-                <a href="<?php echo $slider['btn_link']; ?>" class="btn btn-small"><?php echo $slider['btn_text']; ?></a> </div>
+                <h3><?php echo $project['title']; ?></h3>
+                <p><?php echo $project['proj_date']; ?> </p>
+                <a href="<?php echo base_url() . 'projects/' .$project['id']; ?>" class="btn btn-small">Read More</a> </div>
             </div>
           </div>
         </div>
@@ -153,11 +153,14 @@
             <img class="img-responsive" src="<?php echo $product['img_path']; ?>" alt="" > 
             <!-- HOVER -->
             <div class="item-hover">
-              <div class="position-center-center"> <a class="zoom" href="<?php echo $product['img_path']; ?>" data-lighter><i class="fa fa-search"></i></a> </div>
+              <div class="position-center-center"> <!--<a class="zoom" href="<?php echo $product['img_path']; ?>" data-lighter><i class="fa fa-search"></i></a>--> </div>
               <!-- ITEM DETAILS -->
               <div class="item-detail">
-                <h6><?php echo $product['name']; ?></h6>
-                <div class="some-info"> <a href="#."><i class="ion-ios-cart"></i></a> <a href="#."><i class="fa fa-heart-o"></i></a> <a href="#."><i class="ion-shuffle"></i></a> </div>
+                <h6><a href="<?php echo base_url() . 'products/'.$product['id']; ?>"><?php echo $product['name']; ?></a></h6>
+				<hr>
+				<p><?php echo substr($product['prod_text'],0,100).'...'; ?></p>
+				<hr>
+                <div class="some-info row"><div class="col-sm-12 margin-top-10"><a href="#." class="btn btn-small"><i class="ion-ios-cart"> Add To Cart</i></a></div><div class="col-sm-12 margin-top-10"><a class="btn btn-small" href="<?php echo base_url() . 'products/'.$product['id']; ?>">Read More</a> </div></div>
               </div>
             </div>
           </div>

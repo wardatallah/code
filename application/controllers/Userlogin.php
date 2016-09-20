@@ -25,36 +25,6 @@ Class Userlogin extends CI_Controller {
 			$this->load->view('admin/login');
 		}
 
-		// Show registration page
-		public function user_registration_show() {
-			$this->load->view('registration_form');
-		}
-
-		// Validate and store registration data in database
-		public function new_user_registration() {
-
-					// Check validation for user input in SignUp form
-					$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-					$this->form_validation->set_rules('email_value', 'Email', 'trim|required|xss_clean');
-					$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
-					if ($this->form_validation->run() == FALSE) {
-						$this->load->view('registration_form');
-					} else {
-						$data = array(
-						'user_name' => $this->input->post('username'),
-						'user_email' => $this->input->post('email_value'),
-						'user_password' => $this->input->post('password')
-						);
-						$result = $this->login_database->registration_insert($data);
-					if ($result == TRUE) {
-						$data['message_display'] = 'Registration Successfully !';
-						$this->load->view('login_form', $data);
-					} else {
-						$data['message_display'] = 'Username already exist!';
-						$this->load->view('registration_form', $data);
-					}
-				}
-		}
 
 		// Check for user login process
 		public function login() {
@@ -132,7 +102,7 @@ Class Userlogin extends CI_Controller {
 			'username' => ''
 			);
 			$this->session->unset_userdata('logged_in', $sess_array);
-			$data['message_display'] = 'Successfully Logout';
+			$data['footer_copyright'] = $this->header_model->get_heading("down","footer");
 			redirect('admin', 'refresh');
 		}
 		
@@ -185,34 +155,6 @@ Class Userlogin extends CI_Controller {
 							
 							if ($result == TRUE){
 								$changed = $this->user->changePassword($data);
-								$config = Array(
-								  'protocol' => 'smtp',
-								  'smtp_host' => 'ssl://smtp.googlemail.com',
-								  'smtp_port' => 465,
-								  'smtp_user' => 'wardatallah66@gmail.com', // change it to yours
-								  'smtp_pass' => 'xxxxx', // change it to yours
-								  'mailtype' => 'html',
-								  'charset' => 'iso-8859-1',
-								  'wordwrap' => TRUE
-								);
-								if( ! ini_get('date.timezone') )
-								{
-								   date_default_timezone_set('Asia/Beirut');
-								} 
-								$this->load->library('email', $config);
-								$this->email->set_newline("\r\n");
-								$this->email->from('wardatallah66@gmail.com'); // change it to yours
-								$this->email->to('wardatallah66@gmail.com');// change it to yours
-								$this->email->subject('Password');
-								$this->email->message($data['newpassword']);
-								  
-								  if($this->email->send())
-								 {
-								  echo 'Email sent.';
-								 } else	{
-									show_error($this->email->print_debugger());
-								 }
-								
 								
 								$sess_array = array(
 								'username' => ''

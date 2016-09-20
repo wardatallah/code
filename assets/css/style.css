@@ -613,7 +613,7 @@ header .language {
 }
 header .language a {
 	font-size: 10px;
-	color: #ffffff;
+	color: #b5b5b5;
 	margin-right: 10px;
 	display: inline-block;
 }
@@ -1525,10 +1525,10 @@ header .ownmenu .look-book .media-body a {
 	background: #0b479d;
 }
 .new-arri-w-slide .popurlar_product .owl-nav .owl-next {
-	right: -60px;
+	right: 5px;
 }
 .new-arri-w-slide .popurlar_product .owl-nav .owl-prev {
-	left: -60px;
+	left: -10px;
 }
 /*===========================================
     Seasonals   
@@ -2106,7 +2106,7 @@ header .ownmenu .look-book .media-body a {
 	margin-bottom: 30px;
 }
 .single-detail p {
-	color: #b8b8b8;
+	color: #505050;
 	font-size: 12px;
 }
 .single-detail .client-info h6 {
@@ -4583,8 +4583,9 @@ footer .flicker img {
 	left: 0px;
 	bottom: -100%;
 	width: 100%;
-	background: #0b479d;
-	padding: 25px 20px;
+	height: 100%;
+	background: rgba(11, 71, 157,0.7);
+	padding: 20% 20px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -4604,7 +4605,7 @@ footer .flicker img {
 	color: #fff;
 	font-size: 10px;
 }
-.furniture .item-detail a {
+.furniture .item-detail a , .furniture .item-detail p{
 	color: #fff;
 	font-size: 16px;
 	margin: 0 0 0 5px;

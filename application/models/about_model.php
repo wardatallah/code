@@ -56,6 +56,12 @@ class About_model extends CI_Model {
 				return $query->result_array();
 		}
 		
+		public function delete_client($id){
+				$this->db->where('id',$id);
+				$query = $this->db->delete('our-client');
+		}
+		
+		
 		
 		
 		
